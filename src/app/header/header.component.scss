@@ -1,0 +1,184 @@
+.container-header-main {
+    width: 100%;
+    background: transparent;
+}
+
+.cont-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 24px;
+    margin-top: 16px;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+    padding: 0 14px;
+
+}
+
+.header-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right {
+    flex: 1;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+// --- BOTÓN "CONTACTA YA!" ESTILO WHATSAPP ---
+.header-btn-contacto {
+    background: #0da3de; // Color WhatsApp
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.15);
+    transition: 
+        background 0.2s,
+        transform 0.25s,
+        box-shadow 0.2s;
+
+    &:hover {
+        background: #d69e2e; // Más oscuro al pasar el mouse
+        transform: translateY(-2px) scale(1.04); // Levantamiento sutil
+        box-shadow: 0 4px 16px rgba(18, 140, 126, 0.18);
+        transition: transform 0.20s;
+    }
+
+    &:active {
+        background: #cfa043; // Más oscuro al hacer clic
+        transform: scale(0.97);
+        box-shadow: 0 1px 4px rgba(7, 94, 84, 0.18);
+    }
+}
+
+// --- ANIMACIÓN SIMPLE PARA BOTONES (EXCEPTO CONTACTA YA!) ---
+.header-btn:not(.header-btn-contacto) {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: transform 0.14s; // Transición para el levantamiento
+
+    // Línea animada debajo del texto
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 4px;
+        height: 2px;
+        background: #222;
+        border-radius: 2px;
+        transform: scaleX(0); // Oculta la línea por defecto
+        transition: transform 0.18s cubic-bezier(.4,0,.2,1);
+        transform-origin: left;
+    }
+
+    &:hover {
+        transform: translateY(-3px); // Levantamiento al pasar el mouse
+
+        &::after {
+            transform: scaleX(1); // Muestra la línea animada
+        }
+    }
+
+    &:active {
+        transform: scale(0.98); // Pequeño efecto al hacer clic
+    }
+}
+
+.font-16-400 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+// --- MENÚ DESPLEGABLE PARA COLLEGE ---
+.college-dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        min-width: 160px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        z-index: 10;
+        padding: 8px 0;
+        animation: fadeIn 0.2s; // Animación de aparición
+    }
+
+    &:hover .dropdown-menu {
+        display: block; // Muestra el menú al pasar el mouse
+    }
+
+    .dropdown-item {
+        padding: 10px 20px;
+        color: #222;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        transition: background 0.15s;
+        cursor: pointer;
+
+        &:hover {
+            background: #f0f0f0; // Fondo al pasar el mouse sobre la opción
+        }
+    }
+}
+
+// --- ANIMACIÓN PARA EL MENÚ DESPLEGABLE ---
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.header-center h2 {
+    font-size: 2.4rem; // Mucho más grande que los botones
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; // Tipografía llamativa y moderna
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-transform: uppercase;
+    // Degradado de gris azulado a gris oscuro
+    background: linear-gradient(90deg, #6a8ca4 0%, #4a5a68 50%, #23272b 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

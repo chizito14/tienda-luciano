@@ -1,0 +1,47 @@
+@import 'material-icons/iconfont/material-icons.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif
+    ;
+}
+
+@mixin font-create($size, $lineH, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineH;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.font-16-400 { @include font-create(16px, 14px, 400) }
+.font-16-500 { @include font-create(16px, 14px, 500) }
+.font-16-600 { @include font-create(16px, 14px, 600) }
+.font-16-700 { @include font-create(16px, 14px, 700) }
+
+.font-14-400 { @include font-create(14px, 18px, 400) }
+.font-14-500 { @include font-create(14px, 18px, 500) }
+.font-14-600 { @include font-create(14px, 18px, 600) }
+.font-14-700 { @include font-create(14px, 18px, 700) }
+
+.font-18-400 { @include font-create(18px, 18px, 400) }
+.font-18-500 { @include font-create(18px, 18px, 500) }
+.font-18-600 { @include font-create(18px, 18px, 600) }
+.font-18-700 { @include font-create(18px, 18px, 700) }
+
+.ft-green{color: rgb(0, 193, 16);}
+html, body { height: 100%; }
+
+.background-image-1{
+    background-image: url('/assets/img/foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

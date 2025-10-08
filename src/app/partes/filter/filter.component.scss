@@ -1,0 +1,73 @@
+.cont-filter {
+  padding: 0; // O reduce el padding lateral
+  display: flex;
+  justify-content: stretch; // O elimina esta línea
+  width: 260px; // O pon width: 100% si quieres que sea flexible
+}
+
+.filter-container-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 0;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.filter-input {
+  padding: 4px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  width: 100%;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+  text-align: start;
+  
+}
+
+.filter-input:focus {
+  border-color: #b197fc;
+}
+
+.filter-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0da3de;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+
+&:hover {
+        background: #d69e2e; // Más oscuro al pasar el mouse
+        transform: translateY(-2px) scale(1.04); // Levantamiento sutil
+        box-shadow: 0 4px 16px rgba(18, 140, 126, 0.18);
+        transition: transform 0.20s;
+    }
+&:active {
+        background: #cfa043; // Más oscuro al hacer clic
+        transform: scale(0.97);
+        box-shadow: 0 1px 4px rgba(7, 94, 84, 0.18);
+    }
+}
+
+/* Quita las flechas de los inputs type="number" en todos los navegadores */
+.filter-container-vertical input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.filter-container-vertical input[type="number"]::-webkit-outer-spin-button,
+.filter-container-vertical input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

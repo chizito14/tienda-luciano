@@ -1,0 +1,20 @@
+<div class="container-main"> 
+    <div class="cont-img">
+        <img [src]="img" alt="Producto" class="img-producto" 
+             [class.has-hover]="img2" 
+             (mouseenter)="hover = true" 
+             (mouseleave)="hover = false">
+        <img *ngIf="img2" [src]="img2" alt="Producto hover" class="img-producto-hover"
+             [class.visible]="hover">
+    </div>
+    <div class="cont-contenido">
+        <div class="cont-precio">
+            <span class="precio">{{precio}}<sup>{{preciodecimal}}</sup></span>
+            
+        </div>
+        <div class="cont-titulo-envio">
+            <span class="titulo">{{titulo}}</span>
+            <span class="envio">{{envio}}</span>
+        </div>
+    </div>
+</div>

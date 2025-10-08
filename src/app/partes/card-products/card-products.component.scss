@@ -1,0 +1,113 @@
+.container-main{
+    width: 350px;
+    height: 450px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: scale 0.4s;
+    cursor: pointer;
+}
+.container-main:hover{
+    scale: 1.03;
+}
+.cont-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-producto,
+.img-producto-hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+.img-producto {
+  z-index: 1;
+}
+
+.img-producto-hover {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* El hover debe aplicarse al contenedor */
+.cont-img:hover .img-producto-hover,
+.img-producto-hover.visible {
+  opacity: 1;
+}
+
+.cont-contenido{
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 34px;
+    background-color: whitesmoke;
+
+}
+
+sup {
+    font-size: 0.6em; /* Ajusta el tamaño de los decimales */
+    vertical-align: super; /* Alinea los decimales correctamente */
+  }
+.con-precio {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con-titulo-envio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > p {
+    margin: 0;
+  }
+}
+.cont-precio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 22px;
+  color: #222;
+}
+
+.precio sup {
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.envio {
+  font-size: 13px;
+  color: #4caf50;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.titulo {
+  display: block;
+  font-size: 16px;
+  color: #888;
+  margin-top: 2px;
+  font-weight: 500;
+}
