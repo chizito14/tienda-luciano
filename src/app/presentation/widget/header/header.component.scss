@@ -1,12 +1,10 @@
 
 .main-cont {
     width: 100%;
-    background-color: red;
 }
 
 .sub-top {
     padding: 0.6em 1.4em;
-    background-color: white;
     gap: 2em;
     justify-content: end;
 }
@@ -16,7 +14,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.6em;
-    background-color: rgb(166, 127, 0);
+    color: white;
 }
 
 .sub-bot {
@@ -24,6 +22,5 @@
     align-items: center;
     height: 40px;
     width: 100%;
-    background-color: blue;
     gap: 2em;
 }

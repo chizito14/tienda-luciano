@@ -31,6 +31,21 @@
 
 [ft-36-400] { @include font-create(36px, 44px, 400) }
 
+/*
+Jet Black	#0A0A0A	Fondo, encabezados
+Racing Red	#D50000	Botones principales, CTA
+Pure White	#FFFFFF	Texto, contraste
+Asphalt Gray	#4B4B4B	Tarjetas, secciones
+Neon Yellow	#FFD700	Promociones, hover effects
+*/
+
+[bg-pr] {
+    background-color: #0A0A0A;
+}
+
+[bg-se] {
+    background-color: #D50000;
+}
 
 [icon] {
     font-family: 'Material Icons';
