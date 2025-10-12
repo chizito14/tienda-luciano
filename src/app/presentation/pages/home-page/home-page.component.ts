@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Route, Router, RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-root',
+    selector: 'home-page',
     standalone: true,
     imports: [
         RouterOutlet
     ],
-  template: '<h2>Hola Home Page</h2>',
+  templateUrl: './home-page.component.html',
 })
-export class HomePageComponent {}
+export class HomePageComponent {
+
+  private router: Router = inject(Router)  
+
+  goWhere(url: string) {
+    this.router.navigateByUrl(url)
+  }
+
+}
