@@ -4,13 +4,9 @@
 }
 
 .sub-top {
-    padding: 0.6em 1.4em;
-    gap: 2em;
-    justify-content: end;
-}
-
-.sub-top :first-child {
-    margin-right: 200px;
+    padding: 0.6em;
+    justify-content: center;
+    background-color: rgb(255, 255, 120);
 }
 
 .sub-bot {
