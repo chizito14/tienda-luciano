@@ -1,2 +1,28 @@
 
-<h2>Products</h2>
+<div flex-col class="main-cont">
+    
+    <div style="height: 24px; width: auto;"></div>
+
+    <div flex class="sub-top">
+        <p>Hola</p>
+        <button>Click</button>
+        <button>Click</button>
+    </div>
+
+    <div style="height: 24px; width: auto;"></div>
+
+    <div flex class="cont-list">
+        <div flex-col class="side-bar">
+
+        </div>
+
+        <div class="side-items">
+            @for( i of data; track $index ) {
+                <card-item [inputData]=i></card-item>
+            }
+        </div>
+
+    </div>
+
+
+</div>
