@@ -36,6 +36,10 @@
 
 [ft-36-400] { @include font-create(36px, 44px, 400) }
 
+[cp] {
+    cursor: pointer;
+}
+
 [bg-pr] {
     background-color: #0A0A0A;
 }

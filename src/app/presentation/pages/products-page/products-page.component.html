@@ -4,15 +4,38 @@
     <div style="height: 24px; width: auto;"></div>
 
     <div flex class="sub-top">
-        <p>Hola</p>
-        <button>Click</button>
-        <button>Click</button>
+        <input class="sub-top-inp" [formControl]="searchControl" placeholder="Buscar Producto" type="text" >
+        <button class="sub-top-btt" (click)="filterProducts()">Buscar</button>
     </div>
 
-    <div style="height: 24px; width: auto;"></div>
+    <div style="height: 2em; width: auto;"></div>
 
     <div flex class="cont-list">
         <div flex-col class="side-bar">
+
+            <div flex-col class="side-bar-categos">
+                <p ft-16-500>Categorías</p>
+                <div style="width: auto; height: 0.4em;"></div>
+                <p cp ft-14-400>Blusas</p>
+                <p cp ft-14-400>Vestidos</p>
+                <p cp ft-14-400>Ropa Interior para Dama</p>
+            </div>
+
+            <div flex-col class="side-bar-categos">
+                <p ft-16-500>Categorías</p>
+                <div style="width: auto; height: 0.4em;"></div>
+                <p cp ft-14-400>Blusas</p>
+                <p cp ft-14-400>Vestidos</p>
+                <p cp ft-14-400>Ropa Interior para Dama</p>
+            </div>
+
+            <div flex-col class="side-bar-categos">
+                <p ft-16-500>Categorías</p>
+                <div style="width: auto; height: 0.4em;"></div>
+                <p cp ft-14-400>Blusas</p>
+                <p cp ft-14-400>Vestidos</p>
+                <p cp ft-14-400>Ropa Interior para Dama</p>
+            </div>
 
         </div>
 
