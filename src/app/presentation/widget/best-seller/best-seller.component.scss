@@ -1,0 +1,36 @@
+/* Best Seller widget styles */
+.best-seller{
+  padding: 1.25rem 0;
+}
+
+.bs-header h2{margin:0 0 .25rem 0}
+.bs-sub{margin:0 0 1rem 0;color: #666}
+
+.bs-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.bs-card{
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-media img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:0.85rem;flex:1 1 auto;display:flex;flex-direction:column}
+.card-title{margin:0 0 .25rem 0;font-size:1rem}
+.card-price{margin:0 0 .5rem 0;color:#0a0a0a;font-weight:700}
+.card-desc{margin:0 0 .75rem 0;color:#555;flex:1}
+.card-actions{display:flex;gap:.5rem}
+.btn-outline{flex:1;padding:.5rem;border-radius:6px;border:1px solid rgba(0,0,0,0.08);background:transparent}
+.btn-primary{flex:1;padding:.5rem;border-radius:6px;border:none;background:#0a0a0a;color:#fff}
+
+@media (max-width:600px){
+  .card-media img{height:140px}
+}
+
