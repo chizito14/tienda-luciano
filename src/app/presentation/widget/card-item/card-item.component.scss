@@ -2,9 +2,10 @@
 .card-img-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 66.66%; // Aspect ratio 3:2 (ajustable)
+  height: 320px; 
+  padding-top: 66.66%; 
   overflow: hidden;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 .card-img {
@@ -16,45 +17,46 @@
   object-fit: cover;
 }
 
-.card {
+.card-cont:hover {
+  transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
+  transition: transform 0.4s, box-shadow 0.6s;
+}
+
+.card-cont {
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+
   overflow: hidden;
   transition: transform 0.2s ease;
-  background: #fff;
+  border: 1px solid #c7c7c7;
+  //border: 1px solid #e6e6e6;
+}
 
-  &:hover {
-    transform: translateY(-4px);
-  }
+.card-body {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;    
+}
 
-  .card-body {
-    padding: 1rem;
+.badge {
+  display: inline-block;
+  margin-top: 0.2rem;
+  background-color: #fff200;
+  color: rgb(0, 0, 0);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
 
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+.card-title {
+  //font-size: 1.1rem;
+  ///font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
-    .card-price {
-      font-size: 1rem;
-      color: #2e7d32;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-location {
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background-color: #ff9800;
-      color: white;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-    }
-  }
+.card-price {
+  //font-size: 1rem;
+  //color: #2e7d32;
+  margin-bottom: 0.5rem;
 }

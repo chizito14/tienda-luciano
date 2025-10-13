@@ -19,6 +19,9 @@
 [ft-16-600] { @include font-create(16px, 14px, 600) }
 [ft-16-700] { @include font-create(16px, 14px, 700) }
 
+[ft-12-400] { @include font-create(12px, 16px, 400) }
+[ft-12-500] { @include font-create(12px, 16px, 500) }
+
 [ft-14-400] { @include font-create(14px, 18px, 400) }
 [ft-14-500] { @include font-create(14px, 18px, 500) }
 [ft-14-600] { @include font-create(14px, 18px, 600) }
@@ -29,15 +32,9 @@
 [ft-18-600] { @include font-create(18px, 18px, 600) }
 [ft-18-700] { @include font-create(18px, 18px, 700) }
 
-[ft-36-400] { @include font-create(36px, 44px, 400) }
+[ft-28-400] { @include font-create(28px, 32px, 400) }
 
-/*
-Jet Black	#0A0A0A	Fondo, encabezados
-Racing Red	#D50000	Botones principales, CTA
-Pure White	#FFFFFF	Texto, contraste
-Asphalt Gray	#4B4B4B	Tarjetas, secciones
-Neon Yellow	#FFD700	Promociones, hover effects
-*/
+[ft-36-400] { @include font-create(36px, 44px, 400) }
 
 [bg-pr] {
     background-color: #0A0A0A;
