@@ -1,18 +1,30 @@
 import { Component } from '@angular/core';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
     selector: 'products-page',
     standalone: true,
     imports: [
-        CardItemComponent
+        CardItemComponent,
+        ReactiveFormsModule
     ],
     templateUrl: './products-page.component.html',
     styleUrl: './products-page.component.scss'
 })
 export class ProductsPageComponent {
-    
     data: IProducts[] = DataFiles
+    searchControl = new FormControl('')
+
+    filterProducts() {
+        console.log(this.searchControl)
+        if (this.searchControl.value == '') {
+            this.data = DataFiles
+        } else {
+            let num = (this.searchControl.value) ? Number.parseInt( (this.searchControl.value) ) : 0 
+            this.data = this.data.filter( e => e.price == num )
+        }
+    }
 
 }
 
