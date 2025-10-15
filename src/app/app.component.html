@@ -3,8 +3,15 @@
 
 <router-outlet></router-outlet>
 
-<img class="icon-whatsapp"
-    (click)="openWhatsApp()"
-    src="./../assets/icon/whatsapp-icon.png"    
->
+<div flex-col class="float-div">
+    <div class="cart-div">
+        <p class="bubble">{{cart.length}}</p>    
+        <p icon style="font-size: 32px; color: rgb(97, 97, 97);" >shopping_cart</p>
+    </div>
+
+    <img class="icon-whatsapp"
+        (click)="openWhatsApp()"
+        src="./../assets/icon/whatsapp-icon.png"    
+    >
+</div>
 

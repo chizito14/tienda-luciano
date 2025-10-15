@@ -1,14 +1,39 @@
 
-.icon-whatsapp {
+.float-div {
     position: fixed;
+    row-gap: 1em;
+    text-align: center;
     right: 1.6em;
     bottom: 1.6em;
+
+}
+
+.icon-whatsapp {
     height: 3em;
     width: 3em;
     cursor: pointer;
 }
 
-.icon-whatsapp:hover {
-    scale: 1.5;
+.cart-div {
+    cursor: pointer;
+    position: relative; 
+    padding: 0.4em;
+}
+
+.icon-whatsapp:hover, .cart-div:hover {
+    scale: 1.2;
     transition: scale 0.4s;
+}
+
+.bubble {
+    position: absolute; 
+    background-color: red;
+    color: white;
+    border-radius: 100px;
+    padding: 0.2em;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    
 }
