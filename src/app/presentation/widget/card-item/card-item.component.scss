@@ -31,7 +31,8 @@
   overflow: hidden;
   transition: transform 0.2s ease;
   border: 1px solid #c7c7c7;
-  //border: 1px solid #e6e6e6;
+
+  position: relative;
 }
 
 .card-body {
@@ -40,23 +41,32 @@
 }
 
 .badge {
+  top: 1em;
+  left: 1em;
+  position: absolute;
   display: inline-block;
-  margin-top: 0.2rem;
   background-color: #fff200;
   color: rgb(0, 0, 0);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .card-title {
-  //font-size: 1.1rem;
-  ///font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .card-price {
-  //font-size: 1rem;
-  //color: #2e7d32;
   margin-bottom: 0.5rem;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #4e4e4e;
+  margin-right: 0.6rem;
+}
+
+.price-new {
+  color: #1748db;
+  font-weight: 700;
 }
