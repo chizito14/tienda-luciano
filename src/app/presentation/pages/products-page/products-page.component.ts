@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { IProduct } from '../../../application/models/interface-product';
+import { ProductsData } from '../../../config/constants';
 
 @Component({
     selector: 'products-page',
@@ -15,8 +16,8 @@ import { IProduct } from '../../../application/models/interface-product';
 })
 export class ProductsPageComponent implements OnInit {
     
-    data: IProduct[] = DataFiles
-    products: IProduct[] = DataFiles    
+    data: IProduct[] = ProductsData
+    products: IProduct[] = ProductsData    
     inpSearch = new FormControl('')
     inpMin = new FormControl(null)
     inpMax = new FormControl(null)
@@ -31,7 +32,7 @@ export class ProductsPageComponent implements OnInit {
         let temp = this.data
 
         if (!this.inpSearch.value) {
-            this.products = DataFiles
+            this.products = ProductsData
         } else {
             const str = this.inpSearch.value.toLowerCase().trim()
             temp = temp.filter( p => p.description.toLowerCase().includes(str) )        
@@ -50,54 +51,4 @@ export class ProductsPageComponent implements OnInit {
         this.products = temp
 
     }
-
 }
-
-export const DataFiles: IProduct[] = [
-    {
-        description: 'Violet Photo 1',
-        precio: 400,
-        imagen: './../../../../assets/images/image1.jpg'
-    },
-    {
-        description: 'Violet Photo 2',
-        precio: 1500,
-        imagen: './../../../../assets/images/image2.jpg'
-    },
-    {
-        description: 'Violet Wallpaper',
-        precio: 930,
-        imagen: './../../../../assets/images/image3.jpg'
-    },
-        {
-        description: 'Violet Photo 1',
-        precio: 400,
-        imagen: './../../../../assets/images/image1.jpg'
-    },
-    {
-        description: 'Violet Photo 2',
-        precio: 1500,
-        imagen: './../../../../assets/images/image2.jpg'
-    },
-    {
-        description: 'Violet Wallpaper',
-        precio: 930,
-        imagen: './../../../../assets/images/image3.jpg'
-    },
-    {
-        description: 'Violet Photo 1',
-        precio: 400,
-        imagen: './../../../../assets/images/image1.jpg'
-    },
-    {
-        description: 'Violet Photo 2',
-        precio: 1500,
-        imagen: './../../../../assets/images/image2.jpg'
-    },
-    {
-        description: 'Violet Wallpaper',
-        precio: 930,
-        imagen: './../../../../assets/images/image3.jpg'
-    },
-
-]

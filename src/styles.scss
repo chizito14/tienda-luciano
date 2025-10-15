@@ -67,3 +67,13 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.inp-no-arrow::-webkit-inner-spin-button,
+.inp-no-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inp-no-arrow {
+  -moz-appearance: textfield;
+}

@@ -6,16 +6,17 @@
     <div flex class="sub-top">
         <input 
             class="sub-top-inp inp-a" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" >
-        <input 
-            class="sub-top-inp inp-b" [formControl]="inpMin" placeholder="Precio Minimo" type="number" >
-        <input
-            class="sub-top-inp inp-b" [formControl]="inpMax" placeholder="Precio Maximo" type="number" > 
     </div>
 
     <div style="height: 2em; width: auto;"></div>
 
     <div flex class="cont-list">
         <div flex-col class="side-bar">
+
+            <input 
+                class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMin" placeholder="Precio Minimo" type="number" min="0" >
+            <input
+                class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMax" placeholder="Precio Maximo" type="number" min="0" > 
 
             <div flex-col class="side-bar-categos">
                 <p ft-16-500>Categorías</p>
