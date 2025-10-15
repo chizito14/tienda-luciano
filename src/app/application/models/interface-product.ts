@@ -1,10 +1,15 @@
-export interface Product {
-  id: number;
-  imagen: string;
-  cantidad: number;
-  precio: number;
-  description: string;
-  especificaciones: string;
-  codigo: string;
-  discount?: string; // opcional, ejemplo: '20%'
+
+
+
+export interface IProduct {
+  
+  id?: number
+  imagen: string
+  cantidad?: number
+  precio: number
+  description: string // Nombre
+  especificaciones?: string // Descripcion
+  codigo?: string
+  discount?: string 
+
 }

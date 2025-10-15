@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { DataFiles, IProducts } from '../../pages/products-page/products-page.component';
+import { DataFiles } from '../../pages/products-page/products-page.component';
+import { IProduct } from '../../../application/models/interface-product';
 
 @Component({
   selector: 'card-item',
@@ -11,6 +12,6 @@ import { DataFiles, IProducts } from '../../pages/products-page/products-page.co
 export class CardItemComponent {
 
   @Input()
-  inputData: IProducts = DataFiles[0]
+  inputData: IProduct = DataFiles[0]
 
 }

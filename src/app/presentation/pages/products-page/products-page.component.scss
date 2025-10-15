@@ -4,21 +4,37 @@
     height: 100%;
     padding: 1.2em 2em;
     background-color: rgb(221, 221, 221);
+    min-height: 100vh;
 }
 
 .sub-top-inp {
     height: 3em;
     padding: 1em;
-    width: 40%;
     border: 0;
+    //width: 40%;
+}
+
+.sub-top-inp:focus {
+    outline-width: 0;
+}
+
+.inp-a {
+    width: 40%;
+}
+
+.inp-b {
+    width: auto;
 }
 
 .sub-top {
     width: 100%;
     padding: 1em;
     border-radius: 4px;
-    justify-content: center;
+    justify-content: start;
     background-color: rgb(108, 108, 108);
+
+    gap: 0.6em;
+
 }
 
 .sub-top-btt {

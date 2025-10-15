@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { IProduct } from '../../../application/models/interface-product';
 
 @Component({
     selector: 'products-page',
@@ -12,74 +13,91 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     templateUrl: './products-page.component.html',
     styleUrl: './products-page.component.scss'
 })
-export class ProductsPageComponent {
-    data: IProducts[] = DataFiles
-    searchControl = new FormControl('')
+export class ProductsPageComponent implements OnInit {
+    
+    data: IProduct[] = DataFiles
+    products: IProduct[] = DataFiles    
+    inpSearch = new FormControl('')
+    inpMin = new FormControl(null)
+    inpMax = new FormControl(null)
 
+    ngOnInit(): void {
+        this.inpSearch.valueChanges.subscribe( e => this.filterProducts() )
+        this.inpMin.valueChanges.subscribe( e => this.filterProducts() )
+        this.inpMax.valueChanges.subscribe( e => this.filterProducts() )
+    }
+    
     filterProducts() {
-        console.log(this.searchControl)
-        if (this.searchControl.value == '') {
-            this.data = DataFiles
+        let temp = this.data
+
+        if (!this.inpSearch.value) {
+            this.products = DataFiles
         } else {
-            let num = (this.searchControl.value) ? Number.parseInt( (this.searchControl.value) ) : 0 
-            this.data = this.data.filter( e => e.price == num )
+            const str = this.inpSearch.value.toLowerCase().trim()
+            temp = temp.filter( p => p.description.toLowerCase().includes(str) )        
         }
+
+        if (this.inpMax.value) {
+            const value = this.inpMax.value 
+            temp = temp.filter( p => value >= p.precio )
+        }
+
+        if (this.inpMin.value) {
+            const value = this.inpMin.value 
+            temp = temp.filter( p => value <= p.precio )
+        }
+
+        this.products = temp
+
     }
 
 }
 
-export interface IProducts {
-    name: string,
-    price: number,
-    image: string
-}
-
-
-export const DataFiles: IProducts[] = [
+export const DataFiles: IProduct[] = [
     {
-        name: 'Violet Photo 1',
-        price: 400,
-        image: './../../../../assets/images/image1.jpg'
+        description: 'Violet Photo 1',
+        precio: 400,
+        imagen: './../../../../assets/images/image1.jpg'
     },
     {
-        name: 'Violet Photo 2',
-        price: 1500,
-        image: './../../../../assets/images/image2.jpg'
+        description: 'Violet Photo 2',
+        precio: 1500,
+        imagen: './../../../../assets/images/image2.jpg'
     },
     {
-        name: 'Violet Wallpaper',
-        price: 930,
-        image: './../../../../assets/images/image3.jpg'
+        description: 'Violet Wallpaper',
+        precio: 930,
+        imagen: './../../../../assets/images/image3.jpg'
     },
         {
-        name: 'Violet Photo 1',
-        price: 400,
-        image: './../../../../assets/images/image1.jpg'
+        description: 'Violet Photo 1',
+        precio: 400,
+        imagen: './../../../../assets/images/image1.jpg'
     },
     {
-        name: 'Violet Photo 2',
-        price: 1500,
-        image: './../../../../assets/images/image2.jpg'
+        description: 'Violet Photo 2',
+        precio: 1500,
+        imagen: './../../../../assets/images/image2.jpg'
     },
     {
-        name: 'Violet Wallpaper',
-        price: 930,
-        image: './../../../../assets/images/image3.jpg'
+        description: 'Violet Wallpaper',
+        precio: 930,
+        imagen: './../../../../assets/images/image3.jpg'
     },
     {
-        name: 'Violet Photo 1',
-        price: 400,
-        image: './../../../../assets/images/image1.jpg'
+        description: 'Violet Photo 1',
+        precio: 400,
+        imagen: './../../../../assets/images/image1.jpg'
     },
     {
-        name: 'Violet Photo 2',
-        price: 1500,
-        image: './../../../../assets/images/image2.jpg'
+        description: 'Violet Photo 2',
+        precio: 1500,
+        imagen: './../../../../assets/images/image2.jpg'
     },
     {
-        name: 'Violet Wallpaper',
-        price: 930,
-        image: './../../../../assets/images/image3.jpg'
+        description: 'Violet Wallpaper',
+        precio: 930,
+        imagen: './../../../../assets/images/image3.jpg'
     },
 
 ]

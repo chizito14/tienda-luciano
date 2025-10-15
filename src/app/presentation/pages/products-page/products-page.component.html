@@ -4,8 +4,12 @@
     <div style="height: 24px; width: auto;"></div>
 
     <div flex class="sub-top">
-        <input class="sub-top-inp" [formControl]="searchControl" placeholder="Buscar Producto" type="text" >
-        <button class="sub-top-btt" (click)="filterProducts()">Buscar</button>
+        <input 
+            class="sub-top-inp inp-a" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" >
+        <input 
+            class="sub-top-inp inp-b" [formControl]="inpMin" placeholder="Precio Minimo" type="number" >
+        <input
+            class="sub-top-inp inp-b" [formControl]="inpMax" placeholder="Precio Maximo" type="number" > 
     </div>
 
     <div style="height: 2em; width: auto;"></div>
@@ -40,7 +44,7 @@
         </div>
 
         <div class="side-items">
-            @for( i of data; track $index ) {
+            @for( i of products; track $index ) {
                 <card-item [inputData]=i></card-item>
             }
         </div>
