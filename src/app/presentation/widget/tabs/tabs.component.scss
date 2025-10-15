@@ -1,0 +1,22 @@
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button.active {
+  border-color: #000;
+}
+
+.tabs-panel {
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,17 @@
+<nav class="tabs" role="tablist" aria-label="Pestañas de productos">
+	<button
+		*ngFor="let t of tabs"
+		role="tab"
+		[attr.aria-selected]="selected === t.id"
+		[class.active]="selected === t.id"
+		(click)="select(t.id)"
+	>
+		{{ t.label }}
+	</button>
+</nav>
+
+<section class="tabs-panel" role="tabpanel">
+	<app-best-seller *ngIf="selected === 'best'"></app-best-seller>
+	<app-toyota *ngIf="selected === 'toyota'"></app-toyota>
+</section>
+

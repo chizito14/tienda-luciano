@@ -3,6 +3,7 @@ import { Route, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { BestSellerComponent } from '../../widget/best-seller/best-seller.component';
+import { TabsComponent } from '../../widget/tabs/tabs.component';
 
 @Component({
     selector: 'home-page',
@@ -11,7 +12,8 @@ import { BestSellerComponent } from '../../widget/best-seller/best-seller.compon
         CommonModule,
         RouterModule,
         RouterOutlet,
-        BestSellerComponent
+        BestSellerComponent,
+        TabsComponent
     ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
