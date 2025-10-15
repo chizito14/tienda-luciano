@@ -1,31 +1,41 @@
 
 <div flex-col class="main-cont">
-    
-    <div style="height: 24px; width: auto;"></div>
-
-    <div flex class="sub-top">
-        <input 
-            class="sub-top-inp inp-a" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" >
-    </div>
 
     <div style="height: 2em; width: auto;"></div>
 
     <div flex class="cont-list">
         <div flex-col class="side-bar">
 
-            <input 
-                class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMin" placeholder="Precio Minimo" type="number" min="0" >
-            <input
-                class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMax" placeholder="Precio Maximo" type="number" min="0" > 
+            <p ft-16-500>Búsqueda</p>
 
-            <div style="width: auto; height: 0.5em;"></div>
+            <input 
+                class="sub-top-inp inp-a" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" >
+
+            <p ft-16-500>Filtros</p>
+
+            <div flex class="max-min-cont">
+                <input 
+                    class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMin" placeholder="Min." type="number" min="0" >
+
+                <p ft-28-400>-</p>
+
+                <input
+                    class="sub-top-inp inp-b inp-no-arrow" [formControl]="inpMax" placeholder="Max." type="number" min="0" > 
+
+                <button (click)="filterPrice()" class="side-bttn">Ok</button>
+            </div>
+
+
+            <div class="message">
+                <p ft-14-500>Si no consigues lo que buscas, no dudes en contactarme al WhatsApp</p>
+            </div>
 
             <div flex-col class="side-bar-categos">
-                <p ft-16-500>Categorías</p>
+                <p ft-16-500>Tipo de Repuesto</p>
                 <div style="width: auto; height: 0.3em;"></div>
-                <p cp ft-14-400>Blusas</p>
-                <p cp ft-14-400>Vestidos</p>
-                <p cp ft-14-400>Ropa Interior para Dama</p>
+                <p cp ft-14-400>Bujía</p>
+                <p cp ft-14-400>Ventilador</p>
+                <p cp ft-14-400>Bajante</p>
             </div>
 
             <div flex-col class="side-bar-categos">
@@ -33,17 +43,31 @@
                 <div style="width: auto; height: 0.3em;"></div>
                 <p cp ft-14-400>Hilux</p>
                 <p cp ft-14-400>Autana</p>
+                <p cp ft-14-400>Optra</p>
             </div>
 
         </div>
 
-        <div class="side-items">
-            @for( i of products; track $index ) {
-                <card-item [inputData]=i></card-item>
-            }
-        </div>
+        @if( products.length == 0 ) {
+            <div flex-col style="
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                min-height: 30em;
+                color: rgb(98, 98, 98);
+            "> 
+                <p icon style="font-size: 90px;">search_off</p>
+                <p ft-28-400>No hay resultados</p>
+            </div>
+        } @else {
+            <div class="side-items">
+                @for( i of products; track $index ) {
+                    <card-item [inputData]=i></card-item>
+                }
+            </div>
+        }
 
     </div>
-
 
 </div>

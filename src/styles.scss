@@ -34,9 +34,12 @@
 [ft-18-600] { @include font-create(18px, 18px, 600) }
 [ft-18-700] { @include font-create(18px, 18px, 700) }
 
+[ft-24-400] { @include font-create(24px, 30px, 400) }
+
 [ft-28-400] { @include font-create(28px, 32px, 400) }
 
 [ft-36-400] { @include font-create(36px, 44px, 400) }
+[ft-36-700] { @include font-create(36px, 44px, 700) }
 
 [cp] {
     cursor: pointer;

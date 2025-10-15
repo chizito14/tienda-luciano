@@ -14,7 +14,7 @@ import { TabsComponent } from '../../widget/tabs/tabs.component';
         RouterOutlet,
         BestSellerComponent,
         TabsComponent
-    ],
+  ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })

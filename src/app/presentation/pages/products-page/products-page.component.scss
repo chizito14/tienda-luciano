@@ -1,8 +1,16 @@
 
+.message {
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+    background-color: rgb(255, 255, 147);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
 .main-cont {
     width: 100%;
     height: 100%;
-    padding: 1.2em 2em;
+    padding: 1.2em 2em 3em 2em;
     background-color: rgb(221, 221, 221);
     min-height: 100vh;
 }
@@ -11,7 +19,6 @@
     height: 3em;
     padding: 1em;
     border: 0;
-    //width: 40%;
 }
 
 .sub-top-inp:focus {
@@ -19,27 +26,14 @@
 }
 
 .inp-a {
-    width: 40%;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .inp-b {
-    width: auto;
-}
-
-.sub-top {
-    width: 100%;
-    padding: 1em;
-    border-radius: 4px;
-    justify-content: start;
-    background-color: rgb(108, 108, 108);
-
-    gap: 0.6em;
-
-}
-
-.sub-top-btt {
-    padding: 0 1em;
-    border: 0;
+    max-width: 60px;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 206, 206);
 }
 
 .cont-list {
@@ -49,9 +43,11 @@
 
 .side-bar {
     flex: 0.4;
-    padding: 1.5em;
+    padding: 1.1em 1.5em;
     row-gap: 2em;
+    min-width: 20em;
 }
+
 
 .side-items {
     flex: 2;
@@ -62,4 +58,33 @@
 
 .side-bar-categos {
     row-gap: 8px;
+}
+
+.max-min-cont {
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-bttn {
+    height: 100%;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+    width: 40px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}          
+
+.side-bttn:hover {
+    background-color: rgb(168, 168, 168);
+}
+
+.side-bttn:active {
+    color: white;
+    background-color: rgb(32, 32, 32);
+}
+
+.inp-b:focus {
+    border: 1px solid rgb(56, 56, 56);
 }
