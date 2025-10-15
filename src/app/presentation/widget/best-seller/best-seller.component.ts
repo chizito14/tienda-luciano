@@ -27,11 +27,11 @@ export class BestSellerComponent {
     const pct = parseFloat(match[1]);
     if (isNaN(pct)) return p.precio;
     return +(p.precio * (1 - pct / 100)).toFixed(2);
-    
   }
 
   formatPrice(value: number): string {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
   }
+
 }
 
