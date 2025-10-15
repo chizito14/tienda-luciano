@@ -16,7 +16,7 @@ import { ProductsData } from './config/constants';
 })
 export class AppComponent {
 
-  whatsapp = 'https://wa.me/584129851697?text=Hola%2C%20quiero%20más%20información%20sobre:%20'
+  whatsapp = 'https://wa.me/584124445555?text=Hola%2C%20quiero%20más%20información%20sobre:%20'
   
   cart: IProduct[] = [
     ProductsData[0],
