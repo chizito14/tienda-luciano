@@ -3,7 +3,7 @@
 
 export interface IProduct {
   
-  id?: number
+  id: number
   cantidad?: number
   codigo?: string
   discount?: string 

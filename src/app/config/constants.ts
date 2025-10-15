@@ -1,5 +1,5 @@
+import { Observable } from "rxjs";
 import { IProduct } from "../application/models/interface-product";
-
 
 export const ProductsData: IProduct[] = [
     { id: 1, imagen: './assets/img-product/alternador toyota 4.5 1fz.jpeg', cantidad: 10, precio: 199.99, description: 'Smartphone de alta gama con cámara de 48MP.', especificaciones: 'Pantalla: 6.5" OLED, Cámara: 48MP, Batería: 4000mAh', codigo: 'SPH-001', discount: '20%' },

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { IProduct } from '../../../application/models/interface-product';
 import { ProductsData } from '../../../config/constants';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
     selector: 'products-page',
@@ -23,8 +24,13 @@ export class ProductsPageComponent implements OnInit {
     inpMin = new FormControl(null)
     inpMax = new FormControl(null)
     paramURL: string = ''
+    cartService = inject(CartService)
 
     constructor(private route: ActivatedRoute) {}
+
+    addItem(item: IProduct) {
+        this.cartService.addProduct(item)
+    }
 
     ngOnInit(): void {
         this.route.params.subscribe(params => {

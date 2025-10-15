@@ -4,7 +4,7 @@
 <router-outlet></router-outlet>
 
 <div flex-col class="float-div">
-    <div class="cart-div">
+    <div class="cart-div" (click)="goWhere('/cart')">
         <p class="bubble">{{cart.length}}</p>    
         <p icon style="font-size: 32px; color: rgb(97, 97, 97);" >shopping_cart</p>
     </div>

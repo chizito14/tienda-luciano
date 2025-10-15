@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./presentation/widget/header/header.component";
 import { IProduct } from './application/models/interface-product';
-import { ProductsData } from './config/constants';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -14,21 +14,28 @@ import { ProductsData } from './config/constants';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-
-  whatsapp = 'https://wa.me/584124445555?text=Hola%2C%20quiero%20más%20información%20sobre:%20'
+export class AppComponent implements OnInit {
   
-  cart: IProduct[] = [
-    ProductsData[0],
-    ProductsData[1],
-  ]
+  cartService = inject(CartService)
+  contact = '584124443333'
+  whatsapp = `https://wa.me/${this.contact}?text=Hola%2C%20quiero%20más%20información%20sobre:%20`
+  private router = inject(Router)
+  cart: IProduct[] = []
+
+  ngOnInit(): void {
+    this.cartService.products$.subscribe(data => {
+      this.cart = data
+    })
+  }
 
   openWhatsApp() {
-    const mensaje = this.cart.map(item =>
-      `• ${item.description} x${item.cantidad} - COD:${item.codigo}`
-    ).join('%0A'); 
-    const textoFinal = `${this.whatsapp}%0A${mensaje}`;
-    window.open(textoFinal, '_blank');
+    const message = this.cart.map(item =>`• ${item.description} x${item.cantidad} - COD:${item.codigo}`).join('%0A')
+    const text = `${this.whatsapp}%0A${message}`
+    window.open(text, '_blank')
+  }
+  
+  goWhere(url: string) {
+    this.router.navigateByUrl(url)
   }
 
 }

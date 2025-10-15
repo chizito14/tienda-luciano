@@ -1,0 +1,15 @@
+
+<div flex-col style="padding: 2em;">
+
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.2rem;
+    ">
+
+        @for (i of cart; track $index) {
+            <card-item [inputData]=i></card-item>
+        }
+    </div>
+
+</div>
