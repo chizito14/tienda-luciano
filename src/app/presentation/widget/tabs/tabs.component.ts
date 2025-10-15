@@ -1,26 +1,32 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BestSellerComponent } from '../best-seller/best-seller.component';
+import { ToyotaComponent } from "../toyota/toyota.component";
 
 @Component({
-	selector: 'app-tabs',
-	standalone: true,
-	imports: [CommonModule,
+    selector: 'app-tabs',
+    standalone: true,
+    templateUrl: './tabs.component.html',
+    styleUrls: ['./tabs.component.scss'],
+    imports: [
+        CommonModule,
         BestSellerComponent,
-        ],
-		templateUrl: './tabs.component.html',
-		styles: []
+        ToyotaComponent
+    ]
 })
 export class TabsComponent {
 	tabs = [
 		{ id: 'best', label: 'Más vendidos', selector: 'app-best-seller' },
-		{ id: 'toyota', label: 'Toyota', selector: 'app-toyota' }
+		{ id: 'toyota', label: 'Marca toyota', selector: 'app-toyota' },
+		{ id: 'nuevos', label: 'Nuevos', selector: 'app-nuevos' }
+
 	];
 
 	selected = this.tabs[0].id;
 
 	select(tabId: string) {
 		this.selected = tabId;
+		console.log('Selected tab:', tabId);
 	}
 
 	// Simple keyboard navigation: Left/Right arrows to move between tabs
