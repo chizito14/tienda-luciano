@@ -22,14 +22,17 @@ export class ProductsPageComponent implements OnInit {
     inpSearch = new FormControl('')
     inpMin = new FormControl(null)
     inpMax = new FormControl(null)
+    paramURL: string = ''
 
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit(): void {
-        const param = this.route.snapshot.paramMap.get('param')
+        this.route.params.subscribe(params => {
+            this.paramURL = params['param'] ?? ''
+        });
         this.inpSearch.valueChanges.subscribe( e => this.filterProducts() )
     }
-    
+
     filterPrice() {
         this.filterProducts()
         if (this.inpMax.value) {
