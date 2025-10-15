@@ -1,0 +1,30 @@
+<section class="faq">
+	<h2>Preguntas frecuentes</h2>
+
+	<div class="accordion" role="list">
+		<div class="accordion-item" *ngFor="let p of panels">
+			<h3>
+				<button
+					class="accordion-button"
+					[attr.aria-expanded]="p.open"
+					[attr.aria-controls]="p.id + '-panel'"
+					id="{{p.id}}"
+					(click)="toggle(p.id)"
+				>
+					{{ p.title }}
+				</button>
+			</h3>
+
+			<div
+				class="accordion-panel"
+				role="region"
+				[attr.aria-labelledby]="p.id"
+				id="{{p.id}}-panel"
+				[hidden]="!p.open"
+			>
+				<p>{{ p.content }}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
