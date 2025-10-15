@@ -1,14 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BestSellerComponent } from '../best-seller/best-seller.component';
-import { ToyotaComponent } from '../toyota/toyota.component';
 
 @Component({
 	selector: 'app-tabs',
 	standalone: true,
 	imports: [CommonModule,
         BestSellerComponent,
-        ToyotaComponent],
+        ],
 		templateUrl: './tabs.component.html',
 		styles: []
 })
