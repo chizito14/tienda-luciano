@@ -17,7 +17,7 @@ import { CartService } from './services/cart.service';
 export class AppComponent implements OnInit {
   
   cartService = inject(CartService)
-  contact = '584124443333'
+  contact = '584140530043'
   whatsapp = `https://wa.me/${this.contact}?text=Hola%2C%20quiero%20más%20información%20sobre:%20`
   private router = inject(Router)
   cart: IProduct[] = []

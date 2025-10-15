@@ -2,15 +2,13 @@
     display: flex;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 }
 .background-img {
   background-image: url('/assets/img/example1.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 38em;
+  height: 35em;
   position: relative;
 
   .hero-content{
@@ -33,7 +31,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 2em 5.8em;
     height: 100%;
@@ -51,7 +49,8 @@
 
   .hero-sub {
     color: rgba(255,255,255,0.95);
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    font-size: clamp(0.95rem, 2.6vw, 1.25rem);
     margin: 0 0 0.5rem 0;
     max-width: 70%;
   }
@@ -131,4 +130,29 @@
     .hero-sub{max-width: 100%}
     .form-card{max-width: 100%}
   }
+}
+
+.below-hero{
+  display: grid;
+  grid-template-columns: 1fr 360px; /* contenido + ancho fijo para FAQ */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 900px){
+  .below-hero{ grid-template-columns: 1fr; }
+  .faq-area{ order: 2; }
+}
+
+.contenido{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2em 5.8em;
+  padding: 0 1em;
+  justify-content: center;
 }

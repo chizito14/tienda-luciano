@@ -1,39 +1,73 @@
 :host {
-	display: block;
+  display: block;
+}
+.div-main {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  align-content: start;
+  padding: 2em;
+  gap: 2em;
+
 }
 
 .faq {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+.faq h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .accordion-item + .accordion-item {
-	margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .accordion-button {
-	width: 100%;
-	text-align: left;
-	padding: 0.75rem 1rem;
-	background: #fff;
-	border: 1px solid #e6e6e6;
-	border-radius: 6px;
-	cursor: pointer;
-	font-weight: 700;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .accordion-button:focus {
-	outline: none;
-	box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
 }
 
 .accordion-panel {
-	padding: 0.75rem 1rem;
-	border-left: 1px solid #e6e6e6;
-	border-right: 1px solid #e6e6e6;
-	border-bottom: 1px solid #e6e6e6;
-	border-radius: 0 0 6px 6px;
-	background: #fafafa;
+  padding: 0.75rem 1rem;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0 0 6px 6px;
+  background: #fafafa;
 }
 
+.div-video {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-video video{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  background: #000;
+}
+
+.div-video{
+	flex: 1;
+	background-color: #fff;
+}
