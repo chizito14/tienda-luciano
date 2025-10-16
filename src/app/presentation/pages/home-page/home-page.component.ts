@@ -28,4 +28,6 @@ export class HomePageComponent {
     this.router.navigateByUrl(url)
   }
 
+  
+
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
-import { ProductsData } from '../../../config/constants';
+import { ProductsData } from '../../../config/service/constants';
 
 @Component({
   selector: 'card-item',

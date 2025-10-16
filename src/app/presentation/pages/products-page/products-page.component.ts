@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { IProduct } from '../../../application/models/interface-product';
-import { ProductsData } from '../../../config/constants';
+import { ProductsData } from '../../../config/service/constants';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../../services/cart.service';
 
