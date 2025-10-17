@@ -3,13 +3,16 @@ import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./presentation/widget/header/header.component";
 import { IProduct } from './application/models/interface-product';
 import { CartService } from './services/cart.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    HeaderComponent
+    HeaderComponent,
+    HttpClientModule
+    
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -12,18 +12,21 @@
                 <div class="form-card">
                     <h2 id="hero-form-title">¿Quieres una cotización?</h2>
                     <p class="form-desc">Deja tu correo y te contactamos con la mejor oferta.</p>
-                    <form>
-                        <label for="name">Nombre</label>
-                        <input id="name" type="text" placeholder="Tu nombre" />
+                    <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+                      <label for="name">Nombre</label>
+                      <input id="name" type="text" formControlName="nombre" placeholder="Tu nombre" />
 
-                        <label for="email">Correo</label>
-                        <input id="email" type="email" placeholder="tu@correo.com" />
+                      <label for="email">Correo</label>
+                      <input id="email" type="email" formControlName="email" placeholder="tu@correo.com" />
 
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" rows="3" placeholder="¿Qué necesitas?"></textarea>
+                      <label for="message">Mensaje</label>
+                      <textarea id="message" rows="3" formControlName="mensaje" placeholder="¿Qué necesitas?"></textarea>
 
-                        <button type="submit" class="btn-primary">Solicitar Cotización</button>
+                      <button type="submit" class="btn-primary" [disabled]="enviando">Solicitar Cotización</button>
                     </form>
+
+                    <!-- Mensaje de estado -->
+                    <p *ngIf="mensajeEstado">{{ mensajeEstado }}</p>
                 </div>
             </aside>
         </div>
