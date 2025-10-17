@@ -1,7 +1,12 @@
 
 <div flex-col style="padding: 2em;">
 
+    <div flex style="padding: 0.4em 2em;">    
+        <button class="btn-add btn-del" (click)="cleanList()">Limpiar Carrito</button>
+    </div>
+
     <div style="
+        padding: 1em;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 1.2rem;

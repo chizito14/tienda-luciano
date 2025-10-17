@@ -1,7 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./presentation/widget/header/header.component";
-import { IProduct } from './application/models/interface-product';
 import { CartService, ITProduct } from './services/cart.service';
 
 @Component({
@@ -23,6 +22,7 @@ export class AppComponent implements OnInit {
   cart: ITProduct[] = []
 
   ngOnInit(): void {
+    this.cartService.initProducts()
     this.cartService.products$.subscribe(data => {
       this.cart = data
     })

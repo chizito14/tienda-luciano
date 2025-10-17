@@ -23,4 +23,8 @@ export class CartPageComponent implements OnInit {
   cartService = inject(CartService)
   cart: ITProduct[] = []
 
+  cleanList() {
+    this.cartService.cleanProduct()
+  }
+
 }
