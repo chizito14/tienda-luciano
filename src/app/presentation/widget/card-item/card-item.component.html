@@ -10,15 +10,19 @@
         <div style="height: 12px; width: auto;"></div>
 
         @if ( inputData.discount ) {
-        
         	<span class="price-old">{{ formatPrice(inputData.precio) }}</span>
 			<span class="price-new">{{ formatPrice(getDiscountedPrice(inputData)) }}</span>
-						  
             <span class="badge" ft-14-500 >-{{inputData.discount}}</span>
         } @else {
             <p ft-16-700 class="card-price">$ {{inputData.precio}}</p>
             <span class="badge" ft-12-500 style="visibility: hidden;" >-</span>
         }
+
+        <div style="height: 12px; width: auto;"></div>
+
+		<div class="card-actions">
+			<button class="btn-add">Agregar al Carrito</button>
+		</div>
 
     </div>
 

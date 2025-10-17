@@ -1,13 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { IProduct } from '../../../application/models/interface-product';
-import { CartService } from '../../../services/cart.service';
-import { CardItemComponent } from '../../widget/card-item/card-item.component';
+import { CartService, ITProduct } from '../../../services/cart.service';
+import { CartItemComponent } from '../../widget/cart-item/cart-item.component';
+import { ProductsData } from '../../../config/service/constants';
 
 @Component({
   selector: 'app-cart-page',
   standalone: true,
   imports: [
-    CardItemComponent
+    CartItemComponent
   ],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.scss'
@@ -21,6 +21,6 @@ export class CartPageComponent implements OnInit {
   }
 
   cartService = inject(CartService)
-  cart: IProduct[] = []
+  cart: ITProduct[] = []
 
 }
