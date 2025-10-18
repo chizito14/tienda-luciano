@@ -17,9 +17,7 @@ export class CardItemComponent {
   cartService = inject(CartService)
   
   addItem() {
-    if ( !this.cartService.exitsProduct(this.inputData) ) {
-      this.cartService.addProduct(this.inputData)
-    } 
+    this.cartService.addProduct(this.inputData) 
   }
 
   getDiscountedPrice(p: IProduct): number {

@@ -24,18 +24,16 @@ export class CartService {
 
   addProduct(product: IProduct) {
     const current = this.productsSubject.getValue()
-    this.productsSubject.next([...current, {
-      product: product,
-      quantity: 1
-    }])
-    this.setStorage()
-  }
-
-  exitsProduct(product: IProduct) {
-    const current = this.productsSubject.getValue()
     const result = current.find( e => e.product.codigo == product.codigo )
-    if (result) return true
-    return false
+    
+    if ( !result ) {
+      this.productsSubject.next([...current, {
+        product: product,
+        quantity: 1
+      }])
+      this.setStorage()
+    }
+    
   }
 
   addUnit(product: ITProduct) {
