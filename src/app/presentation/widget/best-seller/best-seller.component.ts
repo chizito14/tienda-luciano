@@ -15,8 +15,8 @@ import { bs_recambio } from '../../../config/service/BS-recambio';
   styleUrls: ['./best-seller.component.scss'],
 })
 export class BestSellerComponent {
-  cartService = inject(CartService)
   products: IProduct[] = bs_recambio
+  cartService = inject(CartService)
 
   addItem(item: IProduct) {
         this.cartService.addProduct(item)

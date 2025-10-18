@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BestSellerComponent } from '../best-seller/best-seller.component';
 import { ToyotaComponent } from "../toyota/toyota.component";
+import { TabsNewComponent } from "../tabs-new/tabs-new.component";
 
 @Component({
     selector: 'app-tabs',
@@ -9,18 +10,17 @@ import { ToyotaComponent } from "../toyota/toyota.component";
     templateUrl: './tabs.component.html',
     styleUrls: ['./tabs.component.scss'],
     imports: [
-        CommonModule,
-        BestSellerComponent,
-        ToyotaComponent
-    ]
-})
+    CommonModule,
+    BestSellerComponent,
+    ToyotaComponent,
+    TabsNewComponent
+]})
 export class TabsComponent {
 	tabs = [
-		{ id: 'best', label: 'Más vendidos', selector: 'app-best-seller' },
-		{ id: 'toyota', label: 'Marca toyota', selector: 'app-toyota' },
-		{ id: 'nuevos', label: 'Nuevos', selector: 'app-nuevos' }
-
-	];
+		{ id: 'best', label: 'Más Vendidos', selector: 'app-best-seller' },
+		{ id: 'toyota', label: 'Marca Toyota', selector: 'app-toyota' },
+		{ id: 'nuevos', label: 'Nuevos', selector: 'tabs-new' }
+	]
 
 	selected = this.tabs[0].id;
 

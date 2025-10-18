@@ -1,3 +1,4 @@
+
 <nav class="tabslist">
 	<button
 		*ngFor="let t of tabs"
@@ -10,8 +11,11 @@
 	</button>
 </nav>
 
+<div style="height: 1.2em; width: auto;"></div>
+
 <div class="tabs-panel" role="tabpanel">
 	<app-best-seller *ngIf="selected === 'best'"></app-best-seller>
 	<app-toyota *ngIf="selected === 'toyota'"></app-toyota>
+	<tabs-new *ngIf="selected === 'nuevos'"></tabs-new>
 </div>
 

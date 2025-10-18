@@ -1,10 +1,16 @@
 <section class="best-seller">
 	
+	@if ( products.length == 0 ) {
+		<div flex-col style="align-items: center; row-gap: 12px; color: rgb(69, 68, 68);">
+			<p icon style="font-size: 40px;">search_off</p>
+			<p ft-20-400>Sin Productos Registrados</p>
+		</div>
+	} @else {
+
 	<div class="bs-grid">
 		<article
 			class="bs-card"
 			*ngFor="let p of products; trackBy: trackById"
-			
 		>
 			<div class="card-media">
 				<img [src]="p.imagen" [alt]="p.description" loading="lazy" />
@@ -20,7 +26,6 @@
 					<span *ngIf="p.soldCount"> • {{ p.soldCount }} vendidos</span>
 				</p>
 
-				<!-- Si existe descuento, mostramos precio original tachado y el precio con descuento -->
 				<p ft-14-600 class="card-price">
 					<ng-container *ngIf="p.discount; else noDiscount">
 						<span class="price-old">{{ formatPrice(p.precio) }}</span>
@@ -37,5 +42,6 @@
 			</div>
 		</article>
 	</div>
+	}
 </section>
 
