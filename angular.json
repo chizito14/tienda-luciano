@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "roselab": {
+    "lucishop": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -19,7 +19,7 @@
 "server": {
   "builder": "@angular-devkit/build-angular:server",
   "options": {
-    "outputPath": "dist/roselab-server",
+    "outputPath": "dist/lucishop-server",
     "main": "src/main.server.ts",
     "tsConfig": "tsconfig.server.json"
   },
@@ -35,23 +35,23 @@
 "serve-ssr": {
   "builder": "@nguniversal/builders:ssr-dev-server",
   "options": {
-    "browserTarget": "roselab:build",
-    "serverTarget": "roselab:server"
+    "browserTarget": "lucishop:build",
+    "serverTarget": "lucishop:server"
   }
 },
 
 "prerender": {
     "builder": "@angular-devkit/build-angular:prerender",
     "options": {
-      "browserTarget": "roselab:build:production",
-      "serverTarget": "roselab:server:production",
+      "browserTarget": "lucishop:build:production",
+      "serverTarget": "lucishop:server:production",
       "routes": [ "/" ]
     }
 },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/roselab",
+            "outputPath": "dist/lucishop",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -78,12 +78,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "3000kb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "3kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -101,10 +101,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "roselab:build:production"
+              "buildTarget": "lucishop:build:production"
             },
             "development": {
-              "buildTarget": "roselab:build:development"
+              "buildTarget": "lucishop:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -112,7 +112,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "roselab:build"
+            "buildTarget": "lucishop:build"
           }
         },
         "test": {

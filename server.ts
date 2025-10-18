@@ -41,6 +41,7 @@ export function app(): express.Express {
 
 // npm run serve:ssr
 // npm install && npm run build:ssr
+// ULT: npm run serve:ssr:lucishop
 
 function run(): void {
   const port = process.env['PORT'] || 80;

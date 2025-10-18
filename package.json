@@ -1,17 +1,15 @@
 {
-  "name": "roselab",
+  "name": "lucishop",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:roselab": "node dist/roselab/server/server.mjs",
-    "dev:ssr": "ng run roselab:server",
-    "build:ssr": "ng build && ng run roselab:server",
-    "serve:ssr": "node dist/roselab/server/main.js",
-    "prerender": "ng run roselab:prerender"
+    "serve:ssr:lucishop": "node dist/lucishop/server/server.mjs",
+    
+    "dev:ssr": "ng run lucishop:server",
+    "build:ssr": "ng build && ng run lucishop:server",
+    "prerender": "ng run lucishop:prerender"
   },
   "private": true,
   "dependencies": {
