@@ -2,7 +2,7 @@
 <div flex-col class="card-cont">
 
     <div class="card-img-wrapper">
-        <img class="card-img" src="{{inputData.imagen}}" alt="{{inputData.description}}">
+        <img class="card-img" src="{{inputData.imagen}}" alt="{{inputData.description}}" loading="lazy">
     </div>
 
     <div class="card-body">
@@ -10,15 +10,19 @@
         <div style="height: 12px; width: auto;"></div>
 
         @if ( inputData.discount ) {
-        
         	<span class="price-old">{{ formatPrice(inputData.precio) }}</span>
 			<span class="price-new">{{ formatPrice(getDiscountedPrice(inputData)) }}</span>
-						  
             <span class="badge" ft-14-500 >-{{inputData.discount}}</span>
         } @else {
             <p ft-16-700 class="card-price">$ {{inputData.precio}}</p>
             <span class="badge" ft-12-500 style="visibility: hidden;" >-</span>
         }
+
+        <div style="height: 12px; width: auto;"></div>
+
+		<div class="card-actions">
+			<button class="btn-add" (click)="addItem()" >Agregar al Carrito</button>
+		</div>
 
     </div>
 

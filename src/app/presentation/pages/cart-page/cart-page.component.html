@@ -1,15 +1,30 @@
 
 <div flex-col style="padding: 2em;">
 
+    <div flex style="padding: 0.4em 2em;">    
+        <button class="btn-add btn-del" (click)="cleanList()">Limpiar Carrito</button>
+    </div>
+
     <div style="
+        padding: 1em;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 1.2rem;
     ">
-
         @for (i of cart; track $index) {
-            <card-item [inputData]=i></card-item>
+            <cart-item [inputData]=i></cart-item>
         }
+
     </div>
+
+    @if (cart.length == 0) {
+        <div flex-col style="
+            align-items: center;
+            justify-content: center; width: 100%; min-height: 60vh;">
+            <p icon style="color: rgb(74, 74, 74); font-size: 72px;">sick</p>
+            <div style="height: 16px; width: auto;"></div>
+            <p ft-16-500>Carrito Vacio</p>
+        </div>
+    }
 
 </div>

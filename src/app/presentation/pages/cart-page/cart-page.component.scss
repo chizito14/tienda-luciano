@@ -1,0 +1,31 @@
+
+.btn-add {
+  padding:.5rem;
+  border-radius:6px;
+  font-weight: 500;
+  font-size: 12px;
+  border:none;
+  background-color:#0a0a0a;
+  color:#fff;
+  cursor:pointer;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.btn-add:hover {
+  background-color:#656565;
+}
+
+.btn-add:active {
+  background-color:#373737;
+}
+
+.btn-del {
+  background-color:#ff0000;
+  color:#fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-del:hover {
+  background-color:#b03232;
+  box-shadow: 0 0 0;
+}

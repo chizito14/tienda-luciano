@@ -28,16 +28,15 @@
 .nav-links p {
     display: inline-block;
     margin: 0;
-    /* reserve space so hover won't shift siblings */
     padding: 0.2em 1em;
     border-radius: 22px;
+    transition: color 0.3s, background-color 0.5s;
 }
 
 .nav-links p:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-    
 }
 
 

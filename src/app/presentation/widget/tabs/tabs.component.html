@@ -1,3 +1,4 @@
+
 <nav class="tabslist">
 	<button
 		*ngFor="let t of tabs"
@@ -5,13 +6,17 @@
 		[attr.aria-selected]="selected === t.id"
 		[class.active]="selected === t.id"
 		(click)="select(t.id)"
+		style="padding-bottom: 0.8em;"
 	>
 		{{ t.label }}
 	</button>
 </nav>
 
+<div style="height: 1.2em; width: auto;"></div>
+
 <div class="tabs-panel" role="tabpanel">
 	<app-best-seller *ngIf="selected === 'best'"></app-best-seller>
 	<app-toyota *ngIf="selected === 'toyota'"></app-toyota>
+	<tabs-new *ngIf="selected === 'nuevos'"></tabs-new>
 </div>
 

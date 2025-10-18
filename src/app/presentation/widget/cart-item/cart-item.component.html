@@ -1,0 +1,21 @@
+
+<div flex-col class="card-cont">
+
+    <div class="card-img-wrapper">
+        <img class="card-img" src="{{inputData.product.imagen}}" alt="{{inputData.product.description}}" loading="lazy">
+    </div>
+
+    <div class="card-body">
+        <p ft-12-500 class="card-title">{{inputData.product.description}}</p>
+        <div style="height: 12px; width: auto;"></div>
+        <p ft-16-700 class="card-price">$ {{inputData.product.precio}}</p>    
+        <div style="height: 12px; width: auto;"></div>
+		<div flex class="card-actions">
+			<button class="btn-add" (click)="delUnit()">Quitar</button>
+		    <p ft-14-600>{{inputData.quantity}}</p>
+			<button class="btn-add" (click)="addUnit()">Agregar</button>
+        </div>
+
+    </div>
+
+</div>

@@ -5,9 +5,13 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { BestSellerComponent } from '../../widget/best-seller/best-seller.component';
 import { TabsComponent } from '../../widget/tabs/tabs.component';
 import { QuestionFrequencyComponent } from '../../widget/question-frequency/question-frequency.component';
+<<<<<<< HEAD
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RecaptchaFormsModule, RecaptchaV3Module, ReCaptchaV3Service } from 'ng-recaptcha';
 import { FormService } from '../../../services/gmail.service';
+=======
+import { FooterComponent } from '../../widget/footer/footer.component';
+>>>>>>> a3a02f5d437421059950270e1e31945292d21e5d
 
 @Component({
     selector: 'home-page',
@@ -19,10 +23,13 @@ import { FormService } from '../../../services/gmail.service';
         BestSellerComponent,
         TabsComponent,
         QuestionFrequencyComponent,
+<<<<<<< HEAD
         ReactiveFormsModule,
         RecaptchaModule,
         RecaptchaFormsModule,
         RecaptchaV3Module,
+=======
+>>>>>>> a3a02f5d437421059950270e1e31945292d21e5d
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],

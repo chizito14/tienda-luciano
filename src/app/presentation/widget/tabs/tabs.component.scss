@@ -1,4 +1,5 @@
-.tabslist{
+
+.tabslist {
   display: flex;
   margin-top:2em ;
   height: 40px;
@@ -7,19 +8,20 @@
   align-items: center;
   gap: 2em;
 }
-.tabslist button{
+
+.tabslist button {
   background: transparent;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: 400;
-  font-size: 24px;
-  position: relative; /* necesario para el pseudo-elemento */
+  font-size: 18px;
+  position: relative; 
   color: #111;
   outline: none;
 }
+
 .tabslist button::after {
-  /* línea que crecerá desde el centro */
   content: '';
   position: absolute;
   left: 0;
@@ -37,8 +39,8 @@
   transform: scaleX(1);
 }
 
-.tabs-panel{
-  width: max-content;
+.tabs-panel {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

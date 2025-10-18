@@ -1,25 +1,28 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
-import { ProductsData } from '../../../config/service/constants';
+import { bs_recambio } from '../../../config/service/BS-recambio';
 import { CartService } from '../../../services/cart.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'card-item',
+  selector: 'tabs-new',
   standalone: true,
-  imports: [],
-  templateUrl: './card-item.component.html',
-  styleUrl: './card-item.component.scss'
+  imports: [
+    CommonModule,
+  ],
+  templateUrl: './tabs-new.component.html',
+  styleUrl: './tabs-new.component.scss'
 })
-export class CardItemComponent {
-
-  @Input()
-  inputData: IProduct = ProductsData[0]
+export class TabsNewComponent {
+  products: IProduct[] = bs_recambio
   cartService = inject(CartService)
-  
-  addItem() {
-    this.cartService.addProduct(this.inputData) 
-  }
 
+  addItem(item: IProduct) {
+        this.cartService.addProduct(item)
+    }
+  trackById(_: number, item: IProduct) {
+    return item.id;
+  }
   getDiscountedPrice(p: IProduct): number {
     if (!p.discount) return p.precio;
     const match = String(p.discount).match(/(\d+(?:\.\d+)?)/);
@@ -27,6 +30,7 @@ export class CardItemComponent {
     const pct = parseFloat(match[1]);
     if (isNaN(pct)) return p.precio;
     return +(p.precio * (1 - pct / 100)).toFixed(2);
+    
   }
 
   formatPrice(value: number): string {
