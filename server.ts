@@ -4,8 +4,8 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import http from 'http';
 
-// The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -17,14 +17,10 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
 
-  // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
@@ -43,14 +39,19 @@ export function app(): express.Express {
   return server;
 }
 
-function run(): void {
-  const port = process.env['PORT'] || 4000;
+// npm run serve:ssr
+// npm install && npm run build:ssr
 
-  // Start up the Node server
-  const server = app();
-  server.listen(port, () => {
+function run(): void {
+  const port = process.env['PORT'] || 80;
+  const server = app()
+  const httpServer = http.createServer(server)
+  httpServer.listen( 80, '0.0.0.0', () => {
+    console.log(`Node Express server listening on http://${'0.0.0.0'}:${port}`);
+  })
+  /*server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
-  });
+  });*/
 }
 
 run();
