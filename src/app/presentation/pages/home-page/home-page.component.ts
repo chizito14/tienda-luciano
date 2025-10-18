@@ -5,6 +5,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { BestSellerComponent } from '../../widget/best-seller/best-seller.component';
 import { TabsComponent } from '../../widget/tabs/tabs.component';
 import { QuestionFrequencyComponent } from '../../widget/question-frequency/question-frequency.component';
+import { FooterComponent } from '../../widget/footer/footer.component';
 
 @Component({
     selector: 'home-page',
@@ -15,7 +16,7 @@ import { QuestionFrequencyComponent } from '../../widget/question-frequency/ques
         RouterOutlet,
         BestSellerComponent,
         TabsComponent,
-        QuestionFrequencyComponent
+        QuestionFrequencyComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],

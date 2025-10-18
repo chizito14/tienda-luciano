@@ -2,13 +2,15 @@ import { Component, Inject, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./presentation/widget/header/header.component";
 import { CartService, ITProduct } from './services/cart.service';
+import { FooterComponent } from './presentation/widget/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
