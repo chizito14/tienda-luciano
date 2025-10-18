@@ -31,6 +31,13 @@ export class CartService {
     this.setStorage()
   }
 
+  exitsProduct(product: IProduct) {
+    const current = this.productsSubject.getValue()
+    const result = current.find( e => e.product.codigo == product.codigo )
+    if (result) return true
+    return false
+  }
+
   addUnit(product: ITProduct) {
     const current = this.productsSubject.getValue()
     const find = current.find( e => e.product.codigo == product.product.codigo )

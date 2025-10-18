@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
 import { ProductsData } from '../../../config/service/constants';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'card-item',
@@ -13,6 +14,13 @@ export class CardItemComponent {
 
   @Input()
   inputData: IProduct = ProductsData[0]
+  cartService = inject(CartService)
+  
+  addItem() {
+    if ( !this.cartService.exitsProduct(this.inputData) ) {
+      this.cartService.addProduct(this.inputData)
+    } 
+  }
 
   getDiscountedPrice(p: IProduct): number {
     if (!p.discount) return p.precio;
