@@ -5,5 +5,3 @@ import { AppComponent } from './app/app.component';
 imports: []
 bootstrapApplication(AppComponent, appConfig,)
   .catch((err) => console.error(err));
-
-  // npm run dev:ssr

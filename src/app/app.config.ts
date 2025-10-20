@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import  {RECAPTCHA_SETTINGS, RECAPTCHA_V3_SITE_KEY, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
@@ -20,6 +20,7 @@ export const appConfig: ApplicationConfig = {
       provide: RECAPTCHA_V3_SITE_KEY,
       useValue: '6LfBEO4rAAAAAFkPqye6ALKIJKbj_6qJaQuAoi-o'
     },
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    importProvidersFrom(BrowserAnimationsModule)
    ]
 };

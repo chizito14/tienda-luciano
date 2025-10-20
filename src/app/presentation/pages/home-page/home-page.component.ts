@@ -8,11 +8,12 @@ import { QuestionFrequencyComponent } from '../../widget/question-frequency/ques
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RecaptchaFormsModule, RecaptchaV3Module, ReCaptchaV3Service } from 'ng-recaptcha';
 import { FormService } from '../../../services/gmail.service';
+import { SeoService } from '../../../services/seo.service';
 
 @Component({
-    selector: 'home-page',
-    standalone: true,
-    imports: [
+  selector: 'home-page',
+  standalone: true,
+  imports: [
         CommonModule,
         RouterModule,
         RouterOutlet,
@@ -28,16 +29,22 @@ import { FormService } from '../../../services/gmail.service';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
+ 
+  seo = inject(SeoService)
 
   ngOnInit() {
-    this.executeRecaptcha();
+    this.seo.title.setTitle('Repuesto de Vehiculos | LuciShop');
+    this.seo.meta.updateTag({ name: 'description', content: 'Compra de respuestos de vehiculos con envío gratis y descuentos exclusivos.' });
+    this.seo.setCanonicalURL('https://web-gyyu6m1m320a.up-de-fra1-k8s-1.apps.run-on-seenode.com/');
+    this.seo.setIndexFollow(true)
+    this.executeRecaptcha()
   }
 
   private router: Router = inject(Router) 
-  contactoForm: FormGroup;
-  enviando = false;
-  mensajeEstado = '';
-  recaptchaToken = ''; 
+  contactoForm: FormGroup
+  enviando = false
+  mensajeEstado = ''
+  recaptchaToken = '' 
 
   goWhere(url: string) {
     this.router.navigateByUrl(url)
@@ -45,9 +52,9 @@ export class HomePageComponent implements OnInit {
   }
   
   // Inyectar servicios
-  private fb = inject(FormBuilder);
-  private formService = inject(FormService);
-  private recaptchaService = inject(ReCaptchaV3Service);
+  private fb = inject(FormBuilder)
+  private formService = inject(FormService)
+  private recaptchaService = inject(ReCaptchaV3Service)
 
   constructor() {
     this.contactoForm = this.fb.group({
@@ -55,49 +62,49 @@ export class HomePageComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       telefono: [''],
       mensaje: ['', [Validators.required, Validators.minLength(10)]]
-    });
+    })
   }
 
   executeRecaptcha() {
     this.recaptchaService.execute('contact_form')
       .subscribe({
         next: (token: string) => {
-          this.recaptchaToken = token;
-          console.log('reCAPTCHA token generado');
+          this.recaptchaToken = token
+          console.log('reCAPTCHA token generado')
         },
         error: (error) => {
-          console.error('Error en reCAPTCHA:', error);
-          this.recaptchaToken = 'error';
+          console.error('Error en reCAPTCHA:', error)
+          this.recaptchaToken = 'error'
         }
-      });
+      })
   }
 
   onSubmit() {
     if (this.contactoForm.valid && this.recaptchaToken && this.recaptchaToken !== 'error') {
-      this.enviando = true;
-      this.mensajeEstado = '';
+      this.enviando = true
+      this.mensajeEstado = ''
 
       const formData = {
         ...this.contactoForm.value,
         recaptchaToken: this.recaptchaToken
-      };
+      }
 
       this.formService.enviarFormulario(formData)
         .subscribe({
           next: (response: any) => {
-            this.enviando = false;
+            this.enviando = false
             if (response.status === 'success') {
-              this.mensajeEstado = '✅ Mensaje enviado correctamente';
-              this.contactoForm.reset();
-              this.executeRecaptcha();
+              this.mensajeEstado = '✅ Mensaje enviado correctamente'
+              this.contactoForm.reset()
+              this.executeRecaptcha()
             } else {
-              this.mensajeEstado = '❌ ' + response.message;
-              this.executeRecaptcha();
+              this.mensajeEstado = '❌ ' + response.message
+              this.executeRecaptcha()
             }
           },
           error: (error) => {
-            this.enviando = false;
-            this.mensajeEstado = '❌ Error de conexión';
+            this.enviando = false
+            this.mensajeEstado = '❌ Error de conexión'
             console.error('Error:', error);
             this.executeRecaptcha();
           }
