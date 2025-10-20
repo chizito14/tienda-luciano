@@ -31,12 +31,35 @@
     padding: 0.2em 1em;
     border-radius: 22px;
     transition: color 0.3s, background-color 0.5s;
+        position: relative; /* needed for the underline pseudo-element */
 }
 
 .nav-links p:hover {
     cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+        color: #000; /* keep text visible on hover */
+}
+
+/* línea animada debajo del texto (similar a las tabs) */
+.nav-links p::after {
+    content: '';
+    position: absolute;
+    left: 0; /* posicionar desde el inicio del texto */
+    right: 0; /* y hasta el final para centrar por ancho */
+    transform: scaleX(0);
+    transform-origin: center;
+    bottom: 2px; /* coloca la línea justo debajo del texto */
+    height: 3px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: #000; /* línea en color negro */
+    border-radius: 1px;
+    transition: transform 240ms ease, background 200ms ease;
+}
+
+.nav-links p:hover::after,
+.nav-links p.active::after {
+    transform: scaleX(1);
 }
 
 
@@ -50,13 +73,12 @@
 
 .header-banner {
     width: 100%;
-    /* altura responsive: mínimo 48px, máximo 80px, escala con viewport */
     height: 6em;
     overflow: hidden;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* fallback si usas background-image */
+    background-size: cover; 
 }
 
 .header-banner img {
