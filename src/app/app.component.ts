@@ -3,6 +3,8 @@ import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./presentation/widget/header/header.component";
 import { CartService, ITProduct } from './services/cart.service';
 import { FooterComponent } from './presentation/widget/footer/footer.component';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { fadeScale } from './presentation/animations/fade-scale';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,10 @@ import { FooterComponent } from './presentation/widget/footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     FooterComponent
-],
+  ],
+  animations: [
+    fadeScale
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
