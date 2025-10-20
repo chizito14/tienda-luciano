@@ -18,19 +18,19 @@
 }
 
 .card-cont:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s, box-shadow 0.6s;
+  transform: translateY(-10px) scale(1.02);
+  transition: transform 280ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms cubic-bezier(.2,.9,.2,1);
 }
 
 .card-cont {
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
+box-shadow: 10px 8px 16px rgba(9, 14, 24, 0.08),;
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.2s ease;
-  border: 1px solid #c7c7c7;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
+  border: 1px solid rgba(0,0,0,0.06);
   position: relative;
+  will-change: transform;
 }
 
 .card-body {
@@ -43,11 +43,11 @@
   left: 1em;
   position: absolute;
   display: inline-block;
-  background-color: rgb(255, 255, 120);
-  color: rgb(0, 0, 0);
+  background-color: rgb(246, 19, 19);
+  color: rgb(255, 255, 255);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
 }
 
 .card-title {
@@ -76,13 +76,13 @@
   background-color:#0a0a0a;
   color:#fff;
   cursor:pointer;
-  transition: background-color 0.4s, box-shadow 0.4s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 160ms ease;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
 }
 
 .btn-add:hover {
   background-color:#656565;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
 }
 
 .btn-add:active {
