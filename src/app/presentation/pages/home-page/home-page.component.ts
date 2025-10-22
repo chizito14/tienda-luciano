@@ -1,28 +1,31 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { BestSellerComponent } from '../../widget/best-seller/best-seller.component';
 import { TabsComponent } from '../../widget/tabs/tabs.component';
 import { QuestionFrequencyComponent } from '../../widget/question-frequency/question-frequency.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { FormService } from '../../../services/gmail.service';
 import { SeoService } from '../../../services/seo.service';
+import { fadeScale } from '../../animations/fade-scale';
+import { slideDown } from '../../animations/slide-down';
 
 @Component({
   selector: 'home-page',
   standalone: true,
   imports: [
-        CommonModule,
-        RouterModule,
-        RouterOutlet,
-        BestSellerComponent,
-        TabsComponent,
-        QuestionFrequencyComponent,
-        ReactiveFormsModule,
-  RecaptchaModule,
-  RecaptchaFormsModule,
+    CommonModule,
+    RouterModule,
+    TabsComponent,
+    QuestionFrequencyComponent,
+    ReactiveFormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+  ],
+  animations: [
+    fadeScale,
+    slideDown('100ms')
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
@@ -36,7 +39,6 @@ export class HomePageComponent implements OnInit {
     this.seo.meta.updateTag({ name: 'description', content: 'Compra de respuestos de vehiculos con envío gratis y descuentos exclusivos.' });
     this.seo.setCanonicalURL('https://web-gyyu6m1m320a.up-de-fra1-k8s-1.apps.run-on-seenode.com/');
     this.seo.setIndexFollow(true)
-    // No automatic v3 token generation: using reCAPTCHA v2 checkbox (user resolves it interactively)
   }
 
   private router: Router = inject(Router) 

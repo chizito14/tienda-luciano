@@ -63,7 +63,7 @@
         } @else {
             <div class="side-items">
                 @for( i of products; track $index ) {
-                    <card-item [inputData]=i></card-item>
+                    <card-item @slideDown [inputData]=i></card-item>
                 }
             </div>
         }

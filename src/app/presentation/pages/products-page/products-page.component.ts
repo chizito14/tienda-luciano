@@ -5,6 +5,8 @@ import { IProduct } from '../../../application/models/interface-product';
 import { ProductsData } from '../../../config/service/constants';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SeoService } from '../../../services/seo.service';
+import { fadeScale } from '../../animations/fade-scale';
+import { slideDown } from '../../animations/slide-down';
 
 @Component({
     selector: 'products-page',
@@ -12,6 +14,10 @@ import { SeoService } from '../../../services/seo.service';
     imports: [
         CardItemComponent,
         ReactiveFormsModule
+    ],
+    animations: [
+        fadeScale,
+        slideDown('100ms')
     ],
     templateUrl: './products-page.component.html',
     styleUrl: './products-page.component.scss'
