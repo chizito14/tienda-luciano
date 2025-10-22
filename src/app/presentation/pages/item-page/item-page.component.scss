@@ -11,9 +11,7 @@
 
     /* Area principal (encima del footer de 140px) */
     .content {
-
         display: flex;
-        gap: 60pxpx;
         padding: 24px;
         box-sizing: border-box;
         align-items: stretch;
@@ -25,7 +23,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
         overflow: hidden;
     }
 

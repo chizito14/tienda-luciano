@@ -2,12 +2,13 @@
 .main-cont{
     width: 100%;
     box-sizing:content-box ;
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 .main-center{
 
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 3rem 1rem;
     background: #f7f7f7;
 
 }
@@ -20,7 +21,6 @@
     /* less vertical padding to tighten the footer */
     padding: 1rem 0.6rem;
     background: #f7f7f7;
-    border-top: 1px solid rgba(0,0,0,0.06);
     justify-content: center;
     /* center content and limit total width so columns group centrally */
     max-width: 1100px;
