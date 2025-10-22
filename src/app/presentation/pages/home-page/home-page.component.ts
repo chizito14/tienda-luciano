@@ -1,16 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { TabsComponent } from '../../widget/tabs/tabs.component';
 import { QuestionFrequencyComponent } from '../../widget/question-frequency/question-frequency.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { FormService } from '../../../services/gmail.service';
 import { SeoService } from '../../../services/seo.service';
-import { fadeScale } from '../../animations/fade-scale';
-import { slideDown } from '../../animations/slide-down';
-import { fadeIn } from '../../animations/fade-in';
+import { expandCollapse } from '../../animations/animations';
 
 @Component({
   selector: 'home-page',
@@ -25,6 +23,7 @@ import { fadeIn } from '../../animations/fade-in';
     RecaptchaFormsModule,
   ],
   animations: [
+    expandCollapse
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
