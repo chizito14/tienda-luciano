@@ -10,6 +10,7 @@ import { FormService } from '../../../services/gmail.service';
 import { SeoService } from '../../../services/seo.service';
 import { fadeScale } from '../../animations/fade-scale';
 import { slideDown } from '../../animations/slide-down';
+import { fadeIn } from '../../animations/fade-in';
 
 @Component({
   selector: 'home-page',
@@ -24,8 +25,6 @@ import { slideDown } from '../../animations/slide-down';
     RecaptchaFormsModule,
   ],
   animations: [
-    fadeScale,
-    slideDown('100ms')
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
