@@ -22,6 +22,9 @@
                       <label for="message">Mensaje</label>
                       <textarea id="message" rows="3" formControlName="mensaje" placeholder="¿Qué necesitas?"></textarea>
 
+                      <!-- reCAPTCHA v2 visible checkbox -->
+                      <re-captcha siteKey="6Ld5gPIrAAAAAKg62mcM4tznchBwkXiAftNWlps8" (resolved)="onCaptchaResolved($event)"></re-captcha>
+
                       <button type="submit" class="btn-primary" [disabled]="enviando">Solicitar Cotización</button>
                     </form>
 

@@ -13,12 +13,8 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),{
       provide: RECAPTCHA_SETTINGS,
       useValue: {
-        siteKey: '6LfBEO4rAAAAAFkPqye6ALKIJKbj_6qJaQuAoi-o',
+        siteKey: '6Ld5gPIrAAAAAKg62mcM4tznchBwkXiAftNWlps8',
       } as RecaptchaSettings,
-    },
-    {
-      provide: RECAPTCHA_V3_SITE_KEY,
-      useValue: '6LfBEO4rAAAAAFkPqye6ALKIJKbj_6qJaQuAoi-o'
     },
     provideHttpClient(withFetch()),
     importProvidersFrom(BrowserAnimationsModule)

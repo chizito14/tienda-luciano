@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
 import { ProductsData } from '../../../config/service/constants';
 import { CartService } from '../../../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-item',
@@ -15,9 +16,16 @@ export class CardItemComponent {
   @Input()
   inputData: IProduct = ProductsData[0]
   cartService = inject(CartService)
+  private router = inject(Router)
   
   addItem() {
     this.cartService.addProduct(this.inputData) 
+  }
+
+  openItem() {
+    const codigo = this.inputData.codigo
+    console.log('navegar a item', codigo)
+    this.router.navigate(['/item', codigo])
   }
 
   getDiscountedPrice(p: IProduct): number {

@@ -18,19 +18,21 @@
 }
 
 .card-cont:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-6px) translateZ(0);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12), 0 6px 12px rgba(15,23,42,0.06);
   transition: transform 280ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms cubic-bezier(.2,.9,.2,1);
 }
 
 .card-cont {
-  cursor: pointer;
-box-shadow: 10px 8px 16px rgba(9, 14, 24, 0.08),;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   border-radius: 16px;
   overflow: hidden;
   transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
   border: 1px solid rgba(0,0,0,0.06);
   position: relative;
   will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .card-body {
@@ -81,10 +83,29 @@ box-shadow: 10px 8px 16px rgba(9, 14, 24, 0.08),;
 }
 
 .btn-add:hover {
-  background-color:#656565;
+  background-color:#404040;
   box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
 }
 
 .btn-add:active {
   background-color:#373737;
+}
+.btn-add-2{
+  padding: 0.3rem;
+  border-radius:6px;
+  border:none;
+  color: #8d8e92;
+  cursor:pointer;
+  background:none;
+
+}
+.btn-add-2:hover{
+  color:#0a0a0a;
+}
+.btn-add-2:active{
+  color:#444;
+}
+.card-actions{
+  display:flex;
+  gap:1rem
 }

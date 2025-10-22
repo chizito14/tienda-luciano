@@ -1,0 +1,42 @@
+
+<div class="page">
+    <div class="content" *ngIf="product as prod; else notFound">
+        <!-- Div para imagen del producto -->
+        <div class="product-image" aria-label="Imagen del producto">
+            <img [src]="prod.imagen" [alt]="prod.description">
+        </div>
+
+        <!-- Div dividido en varios divs: titulo, precio, disponibilidad, descripcion, caracteristicas, acciones -->
+        <div class="product-details">
+            <div class="div-1">
+                <div class="detail-title">{{ prod.description }}</div>
+                <div class="detail-price">{{ prod.precio | currency:'USD' }}</div>
+                <div class="detail-availability">En stock: Disponible</div>
+                <div class="detail-desc">Debido a la gran demanda de este producto, el envío se puede retrasar</div>
+            </div>
+            <div class="div-2">
+                <div class="detail-actions">
+                    <button class="btn-add-detail-2" (click)="openWhatsApp()">pedir al whatsapp</button>
+                    <button class="btn-add-detail" (click)="addToCart(product)">Agregar al carrito</button>
+                </div>
+            </div>
+
+            
+            <div class="detail-features" aria-label="Características" *ngIf="prod.especificaciones">
+                <div class="feature-item">{{ prod.especificaciones }}</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <ng-template #notFound>
+        <div style="padding:24px;">Producto no encontrado.</div>
+    </ng-template>
+
+    <div class="related" aria-label="Productos similares">
+        <div class="card" *ngFor="let p of products | slice:0:6" (click)="openItem(p); $event.stopPropagation()" style="cursor: pointer;">
+            <img [src]="p.imagen" [alt]="p.description" style="max-width:80px;max-height:80px;object-fit:cover;margin-bottom:6px;">
+            <small>{{ p.description }}</small>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@ import { BestSellerComponent } from '../../widget/best-seller/best-seller.compon
 import { TabsComponent } from '../../widget/tabs/tabs.component';
 import { QuestionFrequencyComponent } from '../../widget/question-frequency/question-frequency.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RecaptchaModule, RecaptchaFormsModule, RecaptchaV3Module, ReCaptchaV3Service } from 'ng-recaptcha';
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { FormService } from '../../../services/gmail.service';
 import { SeoService } from '../../../services/seo.service';
 
@@ -21,9 +21,8 @@ import { SeoService } from '../../../services/seo.service';
         TabsComponent,
         QuestionFrequencyComponent,
         ReactiveFormsModule,
-        RecaptchaModule,
-        RecaptchaFormsModule,
-        RecaptchaV3Module,
+  RecaptchaModule,
+  RecaptchaFormsModule,
   ],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
@@ -37,7 +36,7 @@ export class HomePageComponent implements OnInit {
     this.seo.meta.updateTag({ name: 'description', content: 'Compra de respuestos de vehiculos con envío gratis y descuentos exclusivos.' });
     this.seo.setCanonicalURL('https://web-gyyu6m1m320a.up-de-fra1-k8s-1.apps.run-on-seenode.com/');
     this.seo.setIndexFollow(true)
-    this.executeRecaptcha()
+    // No automatic v3 token generation: using reCAPTCHA v2 checkbox (user resolves it interactively)
   }
 
   private router: Router = inject(Router) 
@@ -54,7 +53,7 @@ export class HomePageComponent implements OnInit {
   // Inyectar servicios
   private fb = inject(FormBuilder)
   private formService = inject(FormService)
-  private recaptchaService = inject(ReCaptchaV3Service)
+  // For v2 checkbox we don't need ReCaptchaV3Service
 
   constructor() {
     this.contactoForm = this.fb.group({
@@ -65,18 +64,15 @@ export class HomePageComponent implements OnInit {
     })
   }
 
-  executeRecaptcha() {
-    this.recaptchaService.execute('contact_form')
-      .subscribe({
-        next: (token: string) => {
-          this.recaptchaToken = token
-          console.log('reCAPTCHA token generado')
-        },
-        error: (error) => {
-          console.error('Error en reCAPTCHA:', error)
-          this.recaptchaToken = 'error'
-        }
-      })
+  // Handler called when the reCAPTCHA v2 checkbox is resolved by the user.
+  onCaptchaResolved(token: string | null) {
+    if (token) {
+      this.recaptchaToken = token;
+      console.log('reCAPTCHA v2 token generado');
+    } else {
+      this.recaptchaToken = '';
+      console.warn('reCAPTCHA v2 no generó token');
+    }
   }
 
   onSubmit() {
@@ -89,30 +85,36 @@ export class HomePageComponent implements OnInit {
         recaptchaToken: this.recaptchaToken
       }
 
+      /*
+        Using EmailJS: enviarFormulario returns an Observable wrapping the EmailJS promise.
+        Typical successful response from EmailJS is an object like: { status: 200, text: 'OK' }
+      */
       this.formService.enviarFormulario(formData)
         .subscribe({
           next: (response: any) => {
             this.enviando = false
-            if (response.status === 'success') {
+            // EmailJS resolves with status 200 when successful
+            if (response && response.status === 200) {
               this.mensajeEstado = '✅ Mensaje enviado correctamente'
               this.contactoForm.reset()
-              this.executeRecaptcha()
+              // reset captcha token: user must resolve again if they want to submit
+              this.recaptchaToken = '';
             } else {
-              this.mensajeEstado = '❌ ' + response.message
-              this.executeRecaptcha()
+              this.mensajeEstado = '❌ Error al enviar el mensaje'
+              this.recaptchaToken = '';
             }
           },
           error: (error) => {
             this.enviando = false
-            this.mensajeEstado = '❌ Error de conexión'
+            this.mensajeEstado = '❌ Error de conexión al enviar'
             console.error('Error:', error);
-            this.executeRecaptcha();
+            this.recaptchaToken = '';
           }
         });
     } else {
       if (!this.recaptchaToken || this.recaptchaToken === 'error') {
-        this.mensajeEstado = '❌ Error de seguridad. Recarga la página.';
-        this.executeRecaptcha();
+        this.mensajeEstado = '❌ Error de seguridad. Marca el captcha antes de enviar.';
+        this.recaptchaToken = '';
       }
       this.marcarCamposInvalidos();
     }
