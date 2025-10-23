@@ -7,18 +7,23 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        background-color: grayscale($color: #e4e4e4);
     }
 
     /* Area principal (encima del footer de 140px) */
     .content {
         display: flex;
-        padding: 24px;
         box-sizing: border-box;
         align-items: stretch;
+        margin: 24px 48px 64px;
+        background-color: #f7f7f7;
+        border-radius: 24px;
     }
 
     .product-image {
+        margin: 24px 48px 64px;
         flex: 1.5;
+        border-radius: 24px;
         background: #f7f7f7;
         display: flex;
         align-items: center;
