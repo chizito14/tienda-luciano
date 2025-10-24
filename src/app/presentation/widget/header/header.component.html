@@ -5,15 +5,30 @@
         <p ft-14-400 >Con la compra mayor de 25$ tienes <strong style="font-size: 14px;">ENVÍO GRATIS!</strong> </p>
     </div>
 
-    <div @slideDown flex class="sub-bot">
+        <!-- Botón específico para móviles: sólo visible con la media query 600px -->
+                <div class="mobile-header-btn-wrap">
+                        <button class="mobile-header-btn" aria-label="Abrir menú" type="button" (click)="toggleMobileMenu()">
+                            {{ showMobileMenu ? '✕' : '☰' }}
+                        </button>
+                </div>
+
+                <!-- Menú móvil desplegable (sólo en mobile) -->
+                <nav class="mobile-menu" *ngIf="showMobileMenu" aria-label="Menú móvil">
+                    <p ft-14-500 (click)="goWhere('/')">Inicio</p>
+                    <p ft-14-500 (click)="goWhere('/products/')">Todo</p>
+                    <p ft-14-500 (click)="goWhere('/contact')">Contacto</p>
+                </nav>
+
+        <div *ngIf="showSubBot" @slideDown flex class="sub-bot">
         <section class="nav-links" role="navigation" aria-label="Categorías">
             <p ft-14-500 (click)="goWhere('/')" >Inicio</p>
             <p ft-14-500 (click)="goWhere('/products/')" >Todo</p>
             <p ft-14-500 (click)="goWhere('/products/motor')" >Motores</p>
             <p ft-14-500 (click)="goWhere('/products/electrico')" >Eléctricos</p>
             <p ft-14-500 (click)="goWhere('/products/refrigeracion')" >Refrigeración</p>
-            <p ft-14-500 (click)="goWhere('/products/interior')" >Interior</p>
+            <p ft-14-500 (click)="goWhere('/contact')" >contacto</p>
             <p ft-14-500 (click)="goWhere('/products/mantenimiento')" >Mantenimiento</p>
+
         </section>
 
     </div>

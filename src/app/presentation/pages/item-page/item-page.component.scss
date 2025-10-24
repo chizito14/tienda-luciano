@@ -173,10 +173,20 @@
 }
 
     /* Responsive adjustments */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
         .content {
             flex-direction: column;
         }
-        .product-image { flex-basis: auto; height: 260px; }
-        .product-details { flex-basis: auto; }
+        .product-image {
+            margin: 0;
+            height: 240px;
+            padding: 34px;
+        }
+        .product-details { 
+            flex-basis: auto;
+            gap: 1rem;
+         }
+        .detail-actions{
+            width: 100%;
+        }
     }

@@ -155,3 +155,112 @@
   padding: 2em 1em;
   justify-content: center;
 }
+
+/* Mobile container for the form that was moved below the background image */
+@media (max-width: 430px) {
+  .mobile-form-below {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.75rem 1rem;
+    margin: 0 auto 0.75rem auto;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* make sure we style the form-card when it's rendered below (outside .background-img) */
+  .mobile-form-below .form-card {
+    width: 100%;
+    max-width: 640px; /* allow larger phones but keep centered */
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .mobile-form-below .form-card h2 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+  .mobile-form-below .form-desc { margin-bottom: 0.75rem; }
+  .mobile-form-below .form-card label { margin-top: 0.5rem; font-size: 0.9rem; }
+  .mobile-form-below .form-card input,
+  .mobile-form-below .form-card textarea {
+    padding: 0.7rem 0.85rem;
+    font-size: 1rem;
+  }
+
+  .mobile-form-below .form-card textarea { min-height: 96px; }
+
+  .mobile-form-below .btn-primary {
+    margin-top: 0.9rem;
+    padding: 0.95rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    color:  rgba(255,255,255,0.95);
+  }
+
+  /* small screens tweaks */
+  @media (max-width: 430px) {
+    .mobile-form-below { padding: 0.5rem 0.8rem; }
+    .mobile-form-below .form-card { padding: 0.8rem; }
+    .mobile-form-below .form-card input, .mobile-form-below .form-card textarea { padding: 0.65rem 0.7rem; }
+    .mobile-form-below .btn-primary { padding: 0.9rem;color: rgba(255,255,255,0.95) }
+  }
+}
+
+/* Desktop / Mobile visibility helpers */
+.desktop-only { display: block; }
+.mobile-only  { display: none; }
+
+/* Match the component's responsive breakpoints - show mobile-only under 900px */
+@media (max-width: 900px) {
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: block !important; }
+
+  /* small tweaks for the mobile-hero inside .mobile-only */
+  .mobile-only .mobile-hero {
+    /* Aplicar el mismo overlay (filtro) que usa la versión de escritorio */
+    background: linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.21)), url('/assets/img/example1.jpg') center/cover no-repeat;
+    padding: 2.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+
+  .mobile-only .hero-title { color: #fff; font-size: 1.6rem; margin-bottom: 0.4rem; }
+  .mobile-only .hero-sub { color: rgba(255,255,255,0.95); margin-bottom: 0.75rem; }
+  .mobile-only .btn-primary {
+    display: inline-block;
+    width: auto;
+    padding: 0.7rem 1rem;
+    color:  rgba(255,255,255,0.95);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #5a5a5ab8;
+    border-radius: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Quitar subrayado de enlaces con clase .btn-primary
+   Esto se aplica a los estados comunes para asegurar que
+   el enlace no muestre la línea inferior (underline). */
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  text-decoration: none;
+}
+.btn-primary:active {
+  background-color: #343434a4;
+  cursor: pointer;
+}
+
+/* Mantener comportamiento de foco accesible (no removemos outline por completo),
+   pero si deseas cambiar el estilo de foco, podemos añadir aquí un box-shadow.
+   Ejemplo (opcional):
+   .btn-primary:focus { box-shadow: 0 0 0 3px rgba(13,110,253,0.18); }
+*/

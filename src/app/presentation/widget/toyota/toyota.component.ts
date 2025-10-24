@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { BestSellerComponent } from '../best-seller/best-seller.component';
 import { IProduct } from '../../../application/models/interface-product';
 import { CartService } from '../../../services/cart.service';
 import { bs_recambio } from '../../../config/service/BS-recambio';
+import { ProductsData } from '../../../config/service/constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toyota',
@@ -15,6 +17,9 @@ import { bs_recambio } from '../../../config/service/BS-recambio';
 export class ToyotaComponent {
   cartService = inject(CartService)
   products: IProduct[] = bs_recambio
+  @Input()
+  inputData: IProduct = ProductsData[0]
+  private router = inject(Router)
  
   addItem(item: IProduct) {
          this.cartService.addProduct(item)
@@ -52,5 +57,11 @@ export class ToyotaComponent {
   /** Formatea un número como precio en USD (ej. 199.99 -> '$199.99'). */
   formatPrice(value: number): string {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+  }
+
+  openItem() {
+    const codigo = this.inputData.codigo
+    console.log('navegar a item', codigo)
+    this.router.navigate(['/item', codigo])
   }
 }

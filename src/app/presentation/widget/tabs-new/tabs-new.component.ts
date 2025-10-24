@@ -1,8 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
 import { bs_recambio } from '../../../config/service/BS-recambio';
 import { CartService } from '../../../services/cart.service';
 import { CommonModule } from '@angular/common';
+import { ProductsData } from '../../../config/service/constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tabs-new',
@@ -11,18 +13,25 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   templateUrl: './tabs-new.component.html',
-  styleUrl: './tabs-new.component.scss'
+  styleUrls: ['./tabs-new.component.scss']
 })
 export class TabsNewComponent {
   products: IProduct[] = bs_recambio
   cartService = inject(CartService)
+  private router = inject(Router)
+   @Input()
+    inputData: IProduct = ProductsData[0]
+
+
 
   addItem(item: IProduct) {
         this.cartService.addProduct(item)
     }
+
   trackById(_: number, item: IProduct) {
     return item.id;
   }
+
   getDiscountedPrice(p: IProduct): number {
     if (!p.discount) return p.precio;
     const match = String(p.discount).match(/(\d+(?:\.\d+)?)/);
@@ -35,6 +44,12 @@ export class TabsNewComponent {
 
   formatPrice(value: number): string {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+  }
+
+  openItem() {
+    const codigo = this.inputData.codigo
+    console.log('navegar a item', codigo)
+    this.router.navigate(['/item', codigo])
   }
 
 }

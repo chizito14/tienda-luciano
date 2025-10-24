@@ -59,11 +59,57 @@
 }
 
 @media (max-width:900px){
-    .footer-content{ grid-template-columns: repeat(2, 1fr); max-width: 800px; }
+    .footer-content{ 
+        grid-template-columns: repeat(2, 1fr);
+         max-width: 800px; }
 }
 @media (max-width:600px){
-    .footer-content{ grid-template-columns: 1fr; max-width: 100%; }
+    .main-center{
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 100%; 
+        justify-content: start;
+        align-items: start;
+        padding: 1rem 0; /* espacio vertical consistente */
+    }
+    .footer-content{ 
+        grid-template-columns: 1fr;
+        max-width: 100%; 
+        padding: 1rem 0; /* espacio vertical consistente */
+    }
+
+    .footer-col{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* centrar elementos dentro de cada columna */
+        justify-content: center;
+        text-align: center; /* centrar texto para que se vea centrado en pantalla */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Ocultar estas secciones en móviles para simplificar el footer */
+    .footer-products{
+        display: none;
+    }
+    .footer-categories {
+        display: none;
+    }
+
+    .footer-social{
+        text-align: center;
+        color: #111; 
+        width: 100%;
+
+    }
+    .footer-contact{
+        text-align: center;
+        color: #111; 
+        width: 100%;
+    }
 }
+
 button{
     border: none;
     background:none;

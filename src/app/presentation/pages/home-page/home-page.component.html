@@ -1,6 +1,8 @@
-<div flex-col class="main">
+<div class="desktop-only">
 
-    <div flex class="background-img"> 
+    <div flex-col class="main">
+
+        <div flex class="background-img"> 
         <div class="hero-content">
             <div class="hero-panel">
                 <div class="hero-overlay">
@@ -36,8 +38,28 @@
         </div>
     </div>
 
+                <div class="contenido">
+                <app-tabs></app-tabs>    
+                <app-question-frequency></app-question-frequency>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Versión móvil simplificada: se muestra sólo en pantallas pequeñas -->
+<div class="mobile-only">
+    <div class="mobile-hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Repuestos Toyota Originales</h1>
+            <p class="hero-sub">La pieza perfecta para tu Toyota, siempre.</p>
+            <!-- En móviles mostramos un CTA que evita duplicar el formulario reactivo -->
+            <a class="btn-primary" (click)="goWhere('/contact')">Solicitar Cotización</a>
+        </div>
+    </div>
+
     <div class="contenido">
-        <app-tabs></app-tabs>    
+        <app-tabs></app-tabs>
         <app-question-frequency></app-question-frequency>
     </div>
 

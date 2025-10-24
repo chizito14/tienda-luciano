@@ -3,6 +3,7 @@ import { HomePageComponent } from './presentation/pages/home-page/home-page.comp
 import { ProductsPageComponent } from './presentation/pages/products-page/products-page.component';
 import { CartPageComponent } from './presentation/pages/cart-page/cart-page.component';
 import { ItemPageComponent } from './presentation/pages/item-page/item-page.component';
+import { ContactComponent } from './presentation/pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'item/:codigo',
     component: ItemPageComponent 
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: '**',

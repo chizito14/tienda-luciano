@@ -41,6 +41,14 @@
     gap: 12px;
 }
 
+/* Elementos específicos de la UI móvil: ocultos por defecto fuera del breakpoint */
+.mobile-top-row,
+.mobile-filter-btn,
+.mobile-filter-overlay,
+.mobile-close-btn {
+    display: none;
+}
+
 .side-bar {
     flex: 0.4;
     padding: 1.1em 1.5em;
@@ -87,4 +95,106 @@
 
 .inp-b:focus {
     border: 1px solid rgb(56, 56, 56);
+}
+
+/* Responsive: en pantallas pequeñas ocultar la barra lateral y mostrar 2 productos por fila */
+@media (max-width: 600px) {
+    .cont-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    /* ocultar por defecto la fila superior móvil fuera del breakpoint */
+    .mobile-top-row { display: none; }
+
+    /* ocultar sidebar para aprovechar todo el ancho en móviles */
+    .side-bar {
+        display: none;
+    }
+
+    /* cuando se active el toggle, mostramos la barra lateral como sección encima del listado */
+    .side-bar.show-on-mobile {
+        display: flex;
+        flex-direction: column;
+        /* panel fijo que ocupa la pantalla y no crea scroll en el body */
+        position: fixed;
+        inset: 0 0 0 0;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 0; /* en móvil ocupamos todo el viewport */
+        box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+        z-index: 1201;
+        overflow-y: auto;
+    }
+
+    /* botón de cerrar dentro del panel móvil */
+    .mobile-close-btn{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: rgba(0,0,0,0.06);
+        border: none;
+        color: #111;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 1202;
+    }
+    .mobile-close-btn:hover{ background: rgba(0,0,0,0.12); }
+
+    /* grid con 2 columnas en móviles (2 productos por fila) */
+    .side-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    /* botón que solo se ve en móviles */
+    .mobile-filter-btn{
+        display: block;
+        background: #0a0a0a;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 0.9rem;
+        border-radius: 8px;
+        cursor: pointer;
+        align-self: flex-start;
+        margin-bottom: 0.75rem;
+    }
+    .mobile-filter-btn:active{ transform: translateY(1px) }
+
+    /* Mostrar la fila superior en móviles y posicionar input al lado del botón */
+    .mobile-top-row{
+        display: flex;
+        width: 100%;
+        gap: 0.6rem;
+        align-items: center;
+    }
+
+    .mobile-top-row .mobile-search-input{
+        display: block;
+        flex: 1 1 auto;
+    }
+
+    /* overlay semitransparente que aparece cuando el panel está abierto */
+    .mobile-filter-overlay{
+        position: fixed;
+        inset: 0 0 0 0;
+        background: rgba(0,0,0,0.36);
+        z-index: 1200;
+    }
+
+    /* ajustar min-width en cards si existiera para evitar overflow */
+    .side-items > * {
+        min-width: 0;
+    }
 }

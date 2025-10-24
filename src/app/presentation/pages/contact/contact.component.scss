@@ -1,0 +1,53 @@
+/* Estilos simples para la página de contacto */
+.contact-page{
+	display:flex;
+	justify-content:center;
+	align-items:flex-start;
+	padding:2.5rem 1rem;
+}
+
+.form-card{
+	width:100%;
+	max-width:720px;
+	background: #fff;
+	border-radius: 12px;
+	padding: 2rem;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+	box-sizing: border-box;
+}
+
+.form-card h2{ margin:0 0 0.5rem 0; }
+.form-card .subtitle{ margin:0 0 1rem 0; color:#555 }
+
+label{ display:block; margin-top:0.75rem; font-weight:500; }
+input[type="text"], input[type="email"], input[type="tel"], textarea{
+	width:100%;
+	padding:0.65rem 0.75rem;
+	border:1px solid rgba(0,0,0,0.12);
+	border-radius:8px;
+	margin-top:0.25rem;
+	box-sizing:border-box;
+}
+
+.error{ color:#b00020; font-size:0.9rem; margin-top:0.35rem }
+
+.captcha-wrapper{ margin:1rem 0; }
+
+.btn-primary{
+	display:inline-block;
+	background:#0a0a0a;
+	color:#fff;
+	padding:0.85rem 1rem;
+	border-radius:8px;
+	border:none;
+	cursor:pointer;
+	margin-top:0.5rem;
+}
+
+.status{ margin-top:0.75rem; color:#111 }
+
+@media (max-width:600px){
+	.contact-page{ padding:1.25rem; }
+	.form-card{ padding:1rem; }
+}
+

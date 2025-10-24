@@ -4,9 +4,21 @@
     <div style="height: 2em; width: auto;"></div>
 
     <div flex class="cont-list">
-        <div flex-col class="side-bar">
+        <!-- Fila superior para móviles: input de búsqueda + botón de filtros (solo visible en <=600px) -->
+        <div class="mobile-top-row">
+            <input class="sub-top-inp inp-a mobile-search-input" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" />
+            <button class="mobile-filter-btn" (click)="toggleSidebarMobile()">Filtros</button>
+        </div>
 
-            <p ft-16-500>Búsqueda</p>
+        <!-- Overlay semitransparente que cierra el panel si se clickea -->
+        <div class="mobile-filter-overlay" *ngIf="showSidebarMobile" (click)="toggleSidebarMobile()"></div>
+
+    <div flex-col class="side-bar" [class.show-on-mobile]="showSidebarMobile">
+
+        <!-- Botón cerrar (X) visible sólo cuando el panel móvil está abierto -->
+        <button type="button" class="mobile-close-btn" aria-label="Cerrar filtros" (click)="toggleSidebarMobile()">✕</button>
+
+        <p ft-16-500>Búsqueda</p>
 
             <input 
                 class="sub-top-inp inp-a" [formControl]="inpSearch" placeholder="Buscar Producto" type="text" >

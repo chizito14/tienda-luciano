@@ -1,4 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { CardItemComponent } from '../../widget/card-item/card-item.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { IProduct } from '../../../application/models/interface-product';
@@ -13,7 +14,8 @@ import { slideDown } from '../../animations/slide-down';
     standalone: true,
     imports: [
         CardItemComponent,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CommonModule
     ],
     animations: [
         fadeScale,
@@ -32,8 +34,31 @@ export class ProductsPageComponent implements OnInit {
     router = inject(Router)
     paramURL: string = ''
     seo = inject(SeoService)
+    // control para mostrar u ocultar la barra lateral en móvil
+    showSidebarMobile = false
 
     constructor(private route: ActivatedRoute) {}
+
+    // alterna la visibilidad de la barra lateral en dispositivos móviles
+    toggleSidebarMobile() {
+        this.showSidebarMobile = !this.showSidebarMobile
+        // prevenir scroll del body cuando el panel está abierto (solo en navegador)
+        try {
+            if (isPlatformBrowser(PLATFORM_ID)) {
+                // (no-op) this check exists to satisfy types; actual PLATFORM_ID injected below
+            }
+        } catch (e) {
+            // ignore in SSR
+        }
+        // Usar document directamente con guardia de plataforma
+        if (typeof document !== 'undefined') {
+            if (this.showSidebarMobile) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    }
 
     ngOnInit(): void {
         this.seo.title.setTitle('Repuesto de Vehiculos | LuciShop');

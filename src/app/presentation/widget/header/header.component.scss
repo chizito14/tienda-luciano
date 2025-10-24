@@ -3,6 +3,34 @@
     width: 100%;
 }
 
+/* Botón que aparece sólo en pantallas pequeñas (<=600px) debajo de .sub-top */
+.mobile-header-btn-wrap {
+    display: none; /* oculto por defecto; se muestra en la media query */
+    width: 100%;
+    height: 4rem;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color:  rgb(252, 252, 252);
+}
+.mobile-header-btn{
+    background: #0a0a0a;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+/* Menú móvil desplegable: oculto por defecto, mostrado en la media query cuando se activa */
+.mobile-menu{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .sub-top {
     padding: 0.6em;
     justify-content: center;
@@ -11,13 +39,16 @@
 
 .sub-bot {
     border-bottom: 1px solid rgb(185, 185, 185);
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 54px;
     width: 100%;
     color: rgb(0, 0, 0);
-    gap: 10em;
+    gap: 2rem; /* reduced default gap to avoid overflow */
     box-sizing: border-box;
+    padding: 0 1rem;
+    flex-wrap: wrap; /* allow items to wrap on narrow screens */
 }
 .nav-links {
     display: flex;
@@ -66,9 +97,11 @@
 .sub-sub{
     color: black;
     height: 100%;
-    width: 14em;
+    max-width: 14em;
+    width: auto;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .header-banner {
@@ -88,4 +121,61 @@
     object-fit: cover; /* mantiene proporción y recorta para llenar el contenedor */
     object-position: center; /* centra la imagen dentro del contenedor */
     image-rendering: auto;
+}
+
+/* Responsive rules for narrow devices (iPhone width ~430px and smaller) */
+@media (max-width: 600px) {
+    .sub-bot {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    }
+
+    .nav-links {
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links p {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.95rem;
+    }
+
+    .sub-sub {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.25rem;
+
+    }
+    .header-banner{
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    }
+
+    /* Prevent horizontal overflow from long nav items */
+    .sub-bot, .nav-links { overflow-x: hidden; }
+
+    /* Mostrar el botón móvil justo debajo de .sub-top */
+    .mobile-header-btn-wrap { display: flex; }
+
+    /* Mostrar también el menú móvil cuando se active (renderizado controlado por *ngIf) */
+    .mobile-menu{ display: flex; flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+    .mobile-menu p{ margin:0; padding: 0.6rem 0.8rem; border-radius: 8px; cursor: pointer; }
+    .mobile-menu p:hover{ background: rgba(0,0,0,0.04); }
+}
+
+/* Keep large gap on wide screens */
+@media (min-width: 900px) {
+    .sub-bot { gap: 10em; }
 }

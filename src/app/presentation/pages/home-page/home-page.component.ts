@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -37,6 +37,22 @@ export class HomePageComponent implements OnInit {
     this.seo.meta.updateTag({ name: 'description', content: 'Compra de respuestos de vehiculos con envío gratis y descuentos exclusivos.' });
     this.seo.setCanonicalURL('https://web-gyyu6m1m320a.up-de-fra1-k8s-1.apps.run-on-seenode.com/');
     this.seo.setIndexFollow(true)
+    this.updateIsMobile()
+  }
+
+  isMobile = false
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateIsMobile()
+  }
+
+  private updateIsMobile() {
+    try {
+      this.isMobile = window.innerWidth <= 430
+    } catch (e) {
+      this.isMobile = false
+    }
   }
 
   private router: Router = inject(Router) 

@@ -91,7 +91,7 @@
 .btn-add:active {
   background-color:#373737;
 }
-.btn-add-2{
+.btn-open{
   padding: 0.3rem;
   border-radius:6px;
   border:none;
@@ -100,13 +100,41 @@
   background:none;
 
 }
-.btn-add-2:hover{
+.btn-open:hover{
   color:#0a0a0a;
 }
-.btn-add-2:active{
+.btn-open:active{
   color:#444;
 }
 .card-actions{
   display:flex;
   gap:1rem
+}
+
+/* Media query a partir de 600px: reducir altura visual de la tarjeta
+   - Se reduce la altura del wrapper de imagen para que la tarjeta sea "más baja"
+   - Se mantiene la anchura (100%) para no afectar el layout responsivo
+   - No se modifican tamaños de fuente (mantener legibilidad) */
+@media (max-width: 600px) {
+  .card-img-wrapper {
+    /* reducir altura de 320px a 240px (ajusta si quieres otro valor) */
+    height: 200px;
+    /* ajustar padding-top para mantener la relación si usas aspect-ratio fallback */
+    padding-top: 56.25%; /* 16:9 */
+  }
+
+  .card-img {
+    /* asegurar que la imagen se centre y se recorte si es necesario */
+    object-fit:contain ;
+  }
+
+  .card-cont {
+    /* no tocar ancho ni fuentes; limitar altura total si es necesario */
+    max-width: 100%;
+    /* opcional: puedes usar max-height para controlar overflow si tu card tiene mucho contenido */
+    /* max-height: 420px; */
+  }
+  .btn-open{
+    font-size: 10px;
+  }
 }
