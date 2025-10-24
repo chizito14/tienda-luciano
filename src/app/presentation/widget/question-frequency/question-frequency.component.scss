@@ -1,84 +1,92 @@
+
+.main {
+  padding: 4em 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.card-item {
+  row-gap: 1em;
+  background-color: white;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+  padding: 2em 1.4em;
+  border-radius: 6px;
+  min-height: 280px;
+  max-width: 320px;
+  justify-content: center;   
+  align-items: center;
+  text-align: justify;
+  transition: scale 0.6s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card-item:hover {
+  scale: 1.03;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.cont-main {
+  padding: 2em 4em;
+  gap: 12px;
+  justify-content: center;
+}
+
 :host {
   display: block;
 }
 
-.div-main {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  box-sizing: border-box;
-  align-content: start;
-  padding: 3em 3em;
-  gap: 2em;
-}
-
 .faq {
-  padding: 1rem;
-  flex: 1;
-}
-.faq h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-left: 4em;
 }
 
-.accordion-item + .accordion-item {
-  margin-top: 0.5rem;
+
+@media (max-width: 1200px) and (min-width: 601px) {
+  
+  .div-vid {
+    display: none;
+  }
+
+  .card-item {
+    max-width: 500px;
+  }
+  
 }
 
-.accordion-button {
-  width: 100%;
-  text-align: left;
-  padding: 0.75rem 1rem;
-  background: #fff;
-  border: 1px solid #b4b4b4;
+@media (max-width: 600px) {
+  
+  .div-vid {
+    display: none;
+  }
+
+  .card-item {
+    min-width: 100%;
+  }
+
+  .faq {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+.div-vid video {
+  height: 360px;
   border-radius: 6px;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 16px;
 }
 
-.accordion-button-on {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;  
-}
-
-.accordion-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
-}
-
-.accordion-panel {
-  padding: 0.75rem 1rem;
-  border-left: 1px solid #b4b4b4;
-  border-right: 1px solid #b4b4b4;
-  border-bottom: 1px solid #b4b4b4;
-  border-radius: 0 0 6px 6px;
-  background: #fafafa;
-}
-
-.accordion-panel p {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.div-video {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
+.div-main-2 {
   align-items: center;
-}
-
-.div-video video{
+  justify-content: center;
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  background: #000;
 }
 
-.div-video{
-	flex: 1;
-	background-color: #fff;
+.change-btt {
+  font-size: 18px;
+  transition: scale 0.4s, color 0.4s;
+  cursor: pointer;
+  color: rgb(56, 56, 56);
+}
+
+.change-btt:hover {
+  scale: 1.2;
+  color: black;
 }

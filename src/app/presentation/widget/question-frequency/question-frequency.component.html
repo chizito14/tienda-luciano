@@ -1,37 +1,21 @@
-<div class="div-main">
-	<div class="faq">
-	<h2>Preguntas frecuentes</h2>
+<div flex-col class="main" >
+	<p ft-24-500 class="faq" >Preguntas Frecuentes</p>
+	<div style="height: 2em; width: auto;"></div>
 
-	<div style="height: 16px; width: auto;"></div>
-
-	<div class="accordion" role="list">
-		<div class="accordion-item" *ngFor="let p of panels">
-			<h3>
-				<button
-					class="accordion-button"
-					[ngClass]="{ 'accordion-button-on': p.open }"
-					[attr.aria-expanded]="p.open"
-					[attr.aria-controls]="p.id + '-panel'"
-					id="{{p.id}}"
-					(click)="toggle(p.id)"
-				>
-					{{ p.title }}
-				</button>
-			</h3>
-
-			<div
-				class="accordion-panel"
-				role="region"
-				[attr.aria-labelledby]="p.id"
-				id="{{p.id}}-panel"
-				[hidden]="!p.open"
-			>
-				<p>{{ p.content }}</p>
-			</div>
+	<div flex class="div-main-2">
+	
+	<div flex class="cont-main" style="height: 100%; align-items: center;" >
+		<p icon class="change-btt" (click)="previous()">arrow_left</p>
+		<div [@fadeInOut] flex-col class="card-item">
+			<p icon style="font-size: 48px;">{{selected.mark}}</p>
+			<p style="width: auto; height: 4px;"></p>
+			<p ft-18-500>{{selected.title}}</p>
+			<p ft-14-400>{{selected.content}}</p>
 		</div>
+		<p icon class="change-btt" (click)="next()">arrow_right</p>
 	</div>
-</div>
-	<div class="div-video"> 
+
+	<div class="div-vid"> 
 		<video muted autoplay preload="metadata" >
 			<source src="./assets/video/video-mecanic.mp4" type="video/mp4">
 			<source src="./assets/video/video-mecanic.webm" type="video/webm">
@@ -39,4 +23,5 @@
 		</video>
 	</div>
 	
+	</div>
 </div>
