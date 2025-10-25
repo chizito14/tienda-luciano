@@ -5,14 +5,14 @@
 	<div flex class="div-main-2">
 	
 	<div flex class="cont-main" style="height: 100%; align-items: center;" >
-		<p icon class="change-btt" (click)="previous()">arrow_left</p>
+		<div icon class="change-btt" (click)="previous()">arrow_left</div>
 		<div [@fadeInOut] flex-col class="card-item">
-			<p icon style="font-size: 48px;">{{selected.mark}}</p>
+			<div icon style="font-size: 48px;">{{selected.mark}}</div>
 			<p style="width: auto; height: 4px;"></p>
 			<p ft-18-500>{{selected.title}}</p>
 			<p ft-14-400>{{selected.content}}</p>
 		</div>
-		<p icon class="change-btt" (click)="next()">arrow_right</p>
+		<div icon class="change-btt" (click)="next()">arrow_right</div>
 	</div>
 
 	<div class="div-vid"> 

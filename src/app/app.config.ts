@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import  {RECAPTCHA_SETTINGS, RECAPTCHA_V3_SITE_KEY, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -17,6 +17,7 @@ export const appConfig: ApplicationConfig = {
       } as RecaptchaSettings,
     },
     provideHttpClient(withFetch()),
-    importProvidersFrom(BrowserAnimationsModule)
+    importProvidersFrom(BrowserAnimationsModule),
+    provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })),
    ]
 };

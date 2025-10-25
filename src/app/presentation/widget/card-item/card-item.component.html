@@ -1,5 +1,5 @@
 
-<div flex-col class="card-cont" role="button" tabindex="0" (click)="openItem()" (keyup.enter)="openItem()">
+<div flex-col class="card-cont" role="button" tabindex="0" (click)="openItem()">
 
     <div class="card-img-wrapper">
         <img class="card-img" src="{{inputData.imagen}}" alt="{{inputData.description}}" loading="lazy">
@@ -20,9 +20,8 @@
 
         <div style="height: 12px; width: auto;"></div>
 
-        <div class="card-actions">
-            <button class="btn-add" (click)="addItem(); $event.stopPropagation()" >Agregar al Carrito</button>
-            <button class="btn-open" (click)="openItem(); $event.stopPropagation()" >Ver Detalles</button>
+        <div class="card-actions"> 
+            <button class="btn-add" (click)="openItem(); $event.stopPropagation()" >Agregar al Carrito</button>
         </div>
 
     </div>
