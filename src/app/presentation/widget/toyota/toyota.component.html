@@ -9,6 +9,7 @@
 
 	<div class="bs-grid">
 		<article
+			style="cursor: pointer;"
 			class="bs-card"
 			*ngFor="let p of products; trackBy: trackById"
 			
@@ -19,7 +20,7 @@
 			</div>
 
 			<div class="card-body">
-				<h3 ft-16-500 class="card-title">{{ p.description }}</h3>
+				<p ft-12-500 class="card-title">{{ p.description }}</p>
 
 				<p ft-12-400 class="card-meta" *ngIf="p.rating || p.soldCount">
 					<span *ngIf="p.rating">⭐ {{ p.rating }}</span>
@@ -27,7 +28,7 @@
 				</p>
 
 				<!-- Si existe descuento, mostramos precio original tachado y el precio con descuento -->
-				<p ft-14-600 class="card-price">
+				<p ft-16-600 class="card-price">
 					<ng-container *ngIf="p.discount; else noDiscount">
 						<span class="price-old">{{ formatPrice(p.precio) }}</span>
 						<span class="price-new">{{ formatPrice(getDiscountedPrice(p)) }}</span>

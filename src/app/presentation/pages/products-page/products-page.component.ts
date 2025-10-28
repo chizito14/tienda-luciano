@@ -38,23 +38,12 @@ export class ProductsPageComponent implements OnInit {
     router = inject(Router)
     paramURL: string = ''
     seo = inject(SeoService)
-    // control para mostrar u ocultar la barra lateral en móvil
     showSidebarMobile = false
 
     constructor(private route: ActivatedRoute) {}
 
-    // alterna la visibilidad de la barra lateral en dispositivos móviles
     toggleSidebarMobile() {
         this.showSidebarMobile = !this.showSidebarMobile
-        // prevenir scroll del body cuando el panel está abierto (solo en navegador)
-        try {
-            if (isPlatformBrowser(PLATFORM_ID)) {
-                // (no-op) this check exists to satisfy types; actual PLATFORM_ID injected below
-            }
-        } catch (e) {
-            // ignore in SSR
-        }
-        // Usar document directamente con guardia de plataforma
         if (typeof document !== 'undefined') {
             if (this.showSidebarMobile) {
                 document.body.style.overflow = 'hidden';
@@ -64,17 +53,21 @@ export class ProductsPageComponent implements OnInit {
         }
     }
 
+    goWhere(url: string) {
+        this.router.navigateByUrl(url)
+    }
+
     ngOnInit(): void {
         this.seo.title.setTitle('Repuesto de Vehiculos | LuciShop');
         this.seo.meta.updateTag({ name: 'description', content: 'Compra de respuestos de vehiculos con envío gratis y descuentos exclusivos.' });
         this.seo.setCanonicalURL('https://web-gyyu6m1m320a.up-de-fra1-k8s-1.apps.run-on-seenode.com/products/');
         this.seo.setIndexFollow(true)
-        
         this.route.params.subscribe(params => {
             this.paramURL = params['param'] ?? ''
+            this.inpSearch.setValue(this.paramURL)
+            this.filterProducts()
         });
         this.inpSearch.valueChanges.subscribe( e => this.filterProducts() )
-        // inicializar listado paginado
         this.updateDisplayedProducts()
     }
 

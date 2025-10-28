@@ -138,16 +138,17 @@
 }
 
 .side-bttn {
-    height: 100%;
     border: 1px solid rgb(199, 199, 199);
     border-radius: 5px;
     width: 40px;
     background-color: rgb(241, 241, 241);
     cursor: pointer;
+    padding: 4px;
+    transition: background-color 0.4s;
 }          
 
 .side-bttn:hover {
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(143, 143, 143);
 }
 
 .side-bttn:active {

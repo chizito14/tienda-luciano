@@ -45,17 +45,17 @@
             <div flex-col class="side-bar-categos">
                 <p ft-16-500>Tipo de Repuesto</p>
                 <div style="width: auto; height: 0.3em;"></div>
-                <p cp ft-14-400>Bujía</p>
-                <p cp ft-14-400>Ventilador</p>
-                <p cp ft-14-400>Bajante</p>
+                <p cp ft-14-400 (click)="goWhere('products/bujia')" >Bujías</p>
+                <p cp ft-14-400 (click)="goWhere('products/ventilador')" >Ventiladores</p>
+                <p cp ft-14-400 (click)="goWhere('products/bajante')" >Bajantes</p>
             </div>
 
             <div flex-col class="side-bar-categos">
                 <p ft-16-500>Modelo de Auto</p>
                 <div style="width: auto; height: 0.3em;"></div>
-                <p cp ft-14-400>Hilux</p>
-                <p cp ft-14-400>Autana</p>
-                <p cp ft-14-400>Optra</p>
+                <p cp ft-14-400 (click)="goWhere('products/hilux')">Hilux</p>
+                <p cp ft-14-400 (click)="goWhere('products/autana')">Autana</p>
+                <p cp ft-14-400 (click)="goWhere('products/machito')">Machito</p>
             </div>
 
         </div>
