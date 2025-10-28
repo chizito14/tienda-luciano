@@ -1,7 +1,7 @@
 
 <div class="main-cont">
 
-    <div @slideDown flex class="sub-top">
+    <div flex class="sub-top">
         <p ft-14-400 >Con la compra mayor de 25$ tienes <strong style="font-size: 14px;">ENVÍO GRATIS!</strong> </p>
     </div>
 
@@ -19,21 +19,21 @@
                     <p ft-14-500 (click)="goWhere('/contact')">Contacto</p>
                 </nav>
 
-        <div *ngIf="showSubBot" @slideDown flex class="sub-bot">
+        <div *ngIf="showSubBot" flex class="sub-bot">
         <section class="nav-links" role="navigation" aria-label="Categorías">
             <p ft-14-500 (click)="goWhere('/')" >Inicio</p>
             <p ft-14-500 (click)="goWhere('/products/')" >Todo</p>
             <p ft-14-500 (click)="goWhere('/products/motor')" >Motores</p>
             <p ft-14-500 (click)="goWhere('/products/electrico')" >Eléctricos</p>
             <p ft-14-500 (click)="goWhere('/products/refrigeracion')" >Refrigeración</p>
-            <p ft-14-500 (click)="goWhere('/contact')" >contacto</p>
             <p ft-14-500 (click)="goWhere('/products/mantenimiento')" >Mantenimiento</p>
+            <p ft-14-500 (click)="goWhere('/contact')" >Contacto</p>
 
         </section>
 
     </div>
 
-    <div @slideDown class="header-banner">
+    <div class="header-banner">
         <img src="./assets/img/beneficio-bnner.jpg" alt="Beneficio banner" loading="lazy"/>
     </div>
 
