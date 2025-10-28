@@ -40,12 +40,7 @@ export class BestSellerComponent {
   trackById(_: number, item: IProduct) {
     return item.id;
   }
-  /**
-   * Calcula el precio después de aplicar el descuento.
-   * - `p.precio` debe ser un número (precio original).
-   * - `p.discount` es una cadena con porcentaje (ej. '20%').
-   * Devuelve el precio con descuento como número.
-   */
+  
   getDiscountedPrice(p: IProduct): number {
     if (!p.discount) return p.precio;
     // Extrae solo el número del string '20%'
@@ -57,14 +52,18 @@ export class BestSellerComponent {
     
   }
 
-  /** Formatea un número como precio en USD (ej. 199.99 -> '$199.99'). */
   formatPrice(value: number): string {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
   }
 
-   openItem() {
-    const codigo = this.inputData.codigo
-    console.log('navegar a item', codigo)
-    this.router.navigate(['/item', codigo])
+  /**
+   * Navega al detalle del producto recibido.
+   * Acepta tanto el objeto `IProduct` como directamente su `id`.
+   */
+  openItem(productOrId: IProduct | string | number) {
+    const id = typeof productOrId === 'object' && productOrId !== null ? (productOrId as IProduct).id : productOrId;
+    console.log('navegar a item', id);
+    this.router.navigate(['/item', id]);
   }
+
 }

@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { IProduct } from '../../../application/models/interface-product';
-import { bs_recambio } from '../../../config/service/BS-recambio';
+import { bs_recambio, News_recambio } from '../../../config/service/BS-recambio';
 import { CartService } from '../../../services/cart.service';
 import { CommonModule } from '@angular/common';
 import { ProductsData } from '../../../config/service/constants';
@@ -16,13 +16,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./tabs-new.component.scss']
 })
 export class TabsNewComponent {
-  products: IProduct[] = bs_recambio
+  products: IProduct[] = News_recambio
   cartService = inject(CartService)
   private router = inject(Router)
    @Input()
     inputData: IProduct = ProductsData[0]
-
-
 
   addItem(item: IProduct) {
         this.cartService.addProduct(item)
@@ -46,10 +44,10 @@ export class TabsNewComponent {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
   }
 
-  openItem() {
-    const codigo = this.inputData.codigo
-    console.log('navegar a item', codigo)
-    this.router.navigate(['/item', codigo])
+  openItem(productId: IProduct | string | number) {
+    const id = typeof productId === 'object' && productId !== null ? (productId as IProduct).id : productId;
+    console.log('navegar a item', id);
+    this.router.navigate(['/item', id]);
   }
 
 }

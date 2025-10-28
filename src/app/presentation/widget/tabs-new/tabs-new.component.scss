@@ -39,25 +39,28 @@
 
 .bs-card{
   background: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
+  cursor: default;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+  height: auto;
 }
 
 .card-media {
-  aspect-ratio: 16 / 9;    /* fija una proporción del contenedor */
-  overflow: hidden;
   width: 100%;
-  border-radius: 6px 6px 0 0; /* si aplicas borde redondeado */
+  aspect-ratio: 16 / 9; /* fija una proporción del contenedor */
+  overflow: hidden;
+  border-radius: 6px 6px 0 0; /* borde redondeado en la parte superior */
   position: relative; /* para colocar badge */
+  flex: 0 0 auto;
 }
 
 .card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* cover = llena y recorta, contain = ajusta sin recortar */
+  object-fit: contain;       /* cover = llena y recorta, contain = ajusta sin recortar */
   object-position: center; /* centra el recorte */
   display: block;
 }
@@ -77,11 +80,12 @@
 
 .card-body{
   padding:0.85rem;
-  flex:1 1 auto;
-  display:flex;
-  flex-direction:column;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
   margin: 0; /* eliminar márgenes grandes para que la tarjeta no se vea amplia */
+  flex: 0 0 auto; 
 }
 
 .card-title{

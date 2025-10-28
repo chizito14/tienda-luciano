@@ -172,6 +172,7 @@
 
   /* make sure we style the form-card when it's rendered below (outside .background-img) */
   .mobile-form-below .form-card {
+    height: 350px;
     width: 100%;
     max-width: 640px; /* allow larger phones but keep centered */
     padding: 1rem 1rem;
@@ -197,14 +198,11 @@
     border-radius: 10px;
     color:  rgba(255,255,255,0.95);
   }
-
-  /* small screens tweaks */
-  @media (max-width: 430px) {
-    .mobile-form-below { padding: 0.5rem 0.8rem; }
-    .mobile-form-below .form-card { padding: 0.8rem; }
-    .mobile-form-below .form-card input, .mobile-form-below .form-card textarea { padding: 0.65rem 0.7rem; }
-    .mobile-form-below .btn-primary { padding: 0.9rem;color: rgba(255,255,255,0.95) }
-  }
+  /* small screens tweaks: suavizado sin anidar media queries duplicadas */
+  .mobile-form-below { padding: 0.5rem 0.8rem; }
+  .mobile-form-below .form-card { padding: 0.8rem; }
+  .mobile-form-below .form-card input, .mobile-form-below .form-card textarea { padding: 0.65rem 0.7rem; }
+  .mobile-form-below .btn-primary { padding: 0.9rem; color: rgba(255,255,255,0.95) }
 }
 
 /* Desktop / Mobile visibility helpers */
@@ -219,6 +217,7 @@
   /* small tweaks for the mobile-hero inside .mobile-only */
   .mobile-only .mobile-hero {
     /* Aplicar el mismo overlay (filtro) que usa la versión de escritorio */
+    height: 300px;
     background: linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.21)), url('/assets/img/example1.jpg') center/cover no-repeat;
     padding: 2.2rem 1rem;
     display: flex;

@@ -46,8 +46,8 @@ export class ItemPageComponent  {
   }
 
   openItem(item: IProduct) {
-    console.log('navegar a item', item.codigo)
-    this.router.navigate(['/item', item.codigo])
+    console.log('navegar a item', item.id)
+    this.router.navigate(['/item', item.id])
   }
 }
 

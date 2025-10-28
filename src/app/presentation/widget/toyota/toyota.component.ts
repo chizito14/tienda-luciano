@@ -5,6 +5,7 @@ import { IProduct } from '../../../application/models/interface-product';
 import { CartService } from '../../../services/cart.service';
 import { JsonDataService } from '../../../services/json-data.service';
 import { Router } from '@angular/router';
+import { bs_recambio, TY_recambio } from '../../../config/service/BS-recambio';
 
 @Component({
   selector: 'app-toyota',
@@ -15,26 +16,14 @@ import { Router } from '@angular/router';
 })
 export class ToyotaComponent {
   cartService = inject(CartService)
-  products: IProduct[] = []
+  products: IProduct[] = bs_recambio
   @Input()
   inputData?: IProduct
-  private jsonService = inject(JsonDataService)
   private router = inject(Router)
  
   // Usamos OnInit para cargar los productos desde el servicio
   ngOnInit(): void {
-    this.jsonService.getProducts().subscribe({
-      next: (res) => {
-        if (Array.isArray(res)) {
-          this.products = res;
-          if (!this.inputData && res.length) this.inputData = res[0];
-        }
-      },
-      error: (err) => {
-        // Si falla la carga del JSON, dejamos products vacío (o podría usarse un fallback)
-        console.warn('No se pudieron cargar productos desde assets:', err);
-      }
-    })
+    this.products = TY_recambio;
   }
  
   addItem(item: IProduct) {
@@ -75,13 +64,13 @@ export class ToyotaComponent {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
   }
 
-  openItem() {
-    const codigo = this.inputData?.codigo;
-    if (!codigo) {
-      console.warn('openItem: producto sin código');
-      return;
-    }
-    console.log('navegar a item', codigo);
-    this.router.navigate(['/item', codigo]);
+  /**
+   * Navega al detalle del producto dado.
+   * Acepta el objeto `IProduct` o directamente su `codigo`.
+   */
+  openItem(productId: IProduct | string | number) {
+    const id = typeof productId === 'object' && productId !== null ? (productId as IProduct).id : productId;
+    console.log('navegar a item', id);
+    this.router.navigate(['/item', id]);
   }
 }

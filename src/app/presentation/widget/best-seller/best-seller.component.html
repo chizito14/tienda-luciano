@@ -14,7 +14,7 @@
 			*ngFor="let p of products; trackBy: trackById"
 		>
 			<div class="card-media">
-				<img [src]="p.imagen" [alt]="p.description" loading="lazy" (click)="openItem(); $event.stopPropagation()" />
+				<img [src]="p.imagen" [alt]="p.description" loading="lazy" (click)="openItem(p); $event.stopPropagation()" />
 				<span class="badge-discount" *ngIf="p.discount">{{ p.discount }}</span>
 				
 			</div>
