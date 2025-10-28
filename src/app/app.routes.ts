@@ -19,7 +19,7 @@ export const routes: Routes = [
     component: CartPageComponent 
   },
   {
-    path: 'item/:codigo',
+    path: 'item/:id',
     component: ItemPageComponent 
   },
   {

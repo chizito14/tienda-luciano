@@ -23,9 +23,8 @@ export class CardItemComponent {
   }
 
   openItem() {
-    const codigo = this.inputData.codigo
-    console.log('navegar a item', codigo)
-    this.router.navigate(['/item', codigo])
+    const id = this.inputData.id
+    this.router.navigate(['/item', id])
   }
 
   getDiscountedPrice(p: IProduct): number {

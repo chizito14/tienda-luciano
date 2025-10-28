@@ -24,13 +24,12 @@ export class ItemPageComponent  {
   contact = '584140530043'
   whatsapp = `https://wa.me/${this.contact}?text=Hola%2C%20quiero%20más%20información%20sobre:%20`
 
-
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
-      this.paramURL = params['codigo'] ?? ''
+      this.paramURL = params['id'] ?? ''
       if (this.paramURL) {
-        const codigo = String(this.paramURL)
-        this.product = ProductsData.find(p => p.codigo === codigo) ?? ProductsData[0]
+        const id = String(this.paramURL)
+        this.product = ProductsData.find(p => p.id === Number(id) ) ?? ProductsData[0]
       }
     })
   }
