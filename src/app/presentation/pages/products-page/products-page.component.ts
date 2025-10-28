@@ -28,6 +28,10 @@ export class ProductsPageComponent implements OnInit {
     
     data: IProduct[] = ProductsData
     products: IProduct[] = ProductsData    
+    displayedProducts: IProduct[] = []
+    pageSize = 20
+    currentPage = 1
+    totalPages = 1
     inpSearch = new FormControl('')
     inpMin = new FormControl(null)
     inpMax = new FormControl(null)
@@ -70,6 +74,8 @@ export class ProductsPageComponent implements OnInit {
             this.paramURL = params['param'] ?? ''
         });
         this.inpSearch.valueChanges.subscribe( e => this.filterProducts() )
+        // inicializar listado paginado
+        this.updateDisplayedProducts()
     }
 
     filterPrice() {
@@ -78,7 +84,9 @@ export class ProductsPageComponent implements OnInit {
             const value = this.inpMax.value 
             this.products = this.products.filter( p => value >= p.precio )
         }
-
+        // actualizar paginación tras filtrar por precio
+        this.currentPage = 1
+        this.updateDisplayedProducts()
         if (this.inpMin.value) {
             const value = this.inpMin.value 
             this.products = this.products.filter( p => value <= p.precio )
@@ -95,5 +103,55 @@ export class ProductsPageComponent implements OnInit {
             temp = temp.filter( p => p.description.toLowerCase().includes(str) )        
         }
         this.products = temp
+        // reset pagina actual y actualizar vista
+        this.currentPage = 1
+        this.updateDisplayedProducts()
+    }
+    
+    // --- métodos de paginación ---
+    updateDisplayedProducts() {
+        const total = this.products ? this.products.length : 0
+        this.totalPages = Math.max(1, Math.ceil(total / this.pageSize))
+        if (this.currentPage > this.totalPages) this.currentPage = this.totalPages
+        if (total === 0) {
+            this.displayedProducts = []
+            return
+        }
+        const start = (this.currentPage - 1) * this.pageSize
+        this.displayedProducts = this.products.slice(start, start + this.pageSize)
+    }
+
+    nextPage() {
+        if (this.currentPage < this.totalPages) {
+            this.currentPage++
+            this.updateDisplayedProducts()
+        }
+    }
+
+    prevPage() {
+        if (this.currentPage > 1) {
+            this.currentPage--
+            this.updateDisplayedProducts()
+        }
+    }
+
+    goToPage(n: number) {
+        if (n >= 1 && n <= this.totalPages) {
+            this.currentPage = n
+            this.updateDisplayedProducts()
+        }
+    }
+
+    get totalItems() {
+        return this.products ? this.products.length : 0
+    }
+
+    get startIndex() {
+        if (this.totalItems === 0) return 0
+        return (this.currentPage - 1) * this.pageSize + 1
+    }
+
+    get endIndex() {
+        return Math.min(this.currentPage * this.pageSize, this.totalItems)
     }
 }

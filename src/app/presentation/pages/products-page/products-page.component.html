@@ -74,12 +74,35 @@
             </div>
         } @else {
             <div class="side-items">
-                @for( i of products; track $index ) {
+                @for( i of displayedProducts; track $index ) {
                     <card-item @slideDown [inputData]=i></card-item>
                 }
             </div>
+
+            
+            
         }
 
     </div>
+
+            <!-- Paginación (fuera del contenedor principal para que quede debajo del grid) -->
+            <div class="pagination-block" aria-label="Paginación de productos">
+                <div class="pagination-inner">
+                    <button class="pagination-btn" (click)="prevPage()" [disabled]="currentPage===1" aria-label="Anterior">←</button>
+
+                    <div class="pagination-info">
+                        <span class="page-label">Página</span>
+                        <span class="page-current">{{currentPage}}</span>
+                        <span class="page-sep">/</span>
+                        <span class="page-total">{{totalPages}}</span>
+                    </div>
+
+                    <button class="pagination-btn" (click)="nextPage()" [disabled]="currentPage===totalPages" aria-label="Siguiente">→</button>
+                </div>
+
+                <div class="pagination-meta">
+                    Mostrando <strong>{{startIndex}}</strong> - <strong>{{endIndex}}</strong> de <strong>{{ totalItems }}</strong>
+                </div>
+            </div>
 
 </div>

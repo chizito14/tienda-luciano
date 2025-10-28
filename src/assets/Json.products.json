@@ -1,0 +1,2012 @@
+[
+  {
+    "id": 1,
+    "name": "ULTRA SLICK",
+    "description": "Lubricante de alto rendimiento para piezas automotrices",
+    "imagen": "./assets/img-product/WhatsApp Image 2025-10-07 at 1.56.40 PM (4).jpeg",
+    "precio": 25,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 2,
+    "name": "COOPER SPRAY",
+    "description": "Spray lubricante para mantenimiento preventivo",
+    "imagen": "./assets/img-product/cooper-spray.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 3,
+    "name": "SELLOS DE CAMARA",
+    "description": "Juego de sellos para cámaras de vehículos",
+    "imagen": "./assets/img-product/sello-camaras.jpeg",
+    "precio": 8,
+    "cantidad": 8,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 4,
+    "name": "GRASA AZUL",
+    "description": "Grasa lubricante de color azul para aplicaciones específicas",
+    "imagen": "./assets/img-product/grasa-azul.jpeg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 5,
+    "name": "ROTOR DISTRIBUIDOR COROLLA STARLET ",
+    "description": "Rotor de distribuidor para Toyota Corolla Starlet",
+    "imagen": "./assets/img-product/rotor distribuir corolla stalet supuestamente.jpeg",
+    "precio": 10,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "19102-11031"
+  },
+  {
+    "id": 6,
+    "name": "ROTOR DISTRIBUIDOR NOSE DE QUE",
+    "description": "Rotor de distribuidor universal marca Century",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 7,
+    "name": "ROTOR DISTRIBUIDOR 2F 3F",
+    "description": "Rotor de distribuidor para motores Toyota 2F y 3F",
+    "imagen": "./assets/img-product/WhatsApp Image 2025-10-07 at 1.56.40 PM (3).jpeg",
+    "precio": 10,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "19102-41010"
+  },
+  {
+    "id": 8,
+    "name": "TAPA DE DISTRIBUIDOR 2F 3F",
+    "description": "Tapa de distribuidor para motores Toyota 2F y 3F",
+    "imagen": "./assets/img-product/tapa de distribuidor 2f 3f.jpeg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "19101-45060"
+  },
+  {
+    "id": 9,
+    "name": "KIT TERMINALES AUTANA BURBUJA 4.5 1FZ",
+    "description": "Kit completo de terminales para Toyota Land Cruiser 4.5 1FZ",
+    "imagen": "./assets/img-product/kit terminales autana-burbuja 4.5.jpeg",
+    "precio": 140,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "SE-2950LX"
+  },
+  {
+    "id": 10,
+    "name": "KIT TERMINALES MACHITO 4.0 1GR 4.5 1FZ",
+    "description": "Kit de terminales para modelos 4.0 1GR y 4.5 1FZ",
+    "imagen": "./assets/img-product/kit terminales machito 4.0 1gr 4.5 1fz.jpeg",
+    "precio": 160,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "SE-2752LX"
+  },
+  {
+    "id": 11,
+    "name": "BUJE BARRA CORTA TRASERA 4.5 1FZ",
+    "description": "Buje para barra corta trasera Toyota 4.5 1FZ",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "SAB-2955"
+  },
+  {
+    "id": 12,
+    "name": "BUJE BARRA LARGA TRASERA 4.5 1FZ",
+    "description": "Buje para barra larga trasera Toyota 4.5 1FZ",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 13,
+    "name": "RODAMIENTO TRASERO DE CIGÜEÑAL O ENTRADA DE CLUTCH 4.5 1FZ",
+    "description": "Rodamiento trasero de cigüeñal o entrada de clutch para 4.5 1FZ",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": "15X40X14",
+    "codigo": "15BC04-S18SSU"
+  },
+  {
+    "id": 14,
+    "name": "RODAMIENTO DE AGUJA PUNTA DE EJE DELANTERA 4.5 1FZ",
+    "description": "Rodamiento de aguja para punta de eje delantera 4.5 1FZ",
+    "imagen": "./assets/img-product/rodamiento de aguja punta de eje delantera 4.5 1fz.jpeg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "BTM344017A"
+  },
+  {
+    "id": 15,
+    "name": "CABLE DE BUJIA 4.5 1FZ MACHITO HEMBRITA AUTANA BURBUJA DIST 7 CABLES",
+    "description": "Juego de cables de bujía para Toyota 4.5 1FZ con 7 cables",
+    "imagen": "./assets/img-product/cables bujía imta 4.5.jpeg",
+    "precio": 70,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "50053"
+  },
+  {
+    "id": 16,
+    "name": "MANGUERA INF BURBUJA AUTANA 4.5 1FZ",
+    "description": "Manguera inferior para radiador Toyota 4.5 1FZ",
+    "imagen": "./assets/img-product/manguera inf autana burbuja 4.5 1fz.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0790"
+  },
+  {
+    "id": 17,
+    "name": "MANGUERA INTERMEDIA BURBUJA AUTANA 4.5 1FZ",
+    "description": "Manguera intermedia para sistema de refrigeración 4.5 1FZ",
+    "imagen": "./assets/img-product/manguera intermedia burbuja autana 4.5 1fz.jpeg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0791"
+  },
+  {
+    "id": 18,
+    "name": "MANGUERA PCV DESFOGUE GASES BURBUJA AUTAMA 4.5 1FZ",
+    "description": "Manguera PCV para desfogue de gases 4.5 1FZ",
+    "imagen": "./assets/img-product/manguera pvc gases burbuja autama 4.5 1fz.jpeg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0306"
+  },
+  {
+    "id": 19,
+    "name": "CRUCETA CARDAN TRASERO HILUX FORTUNER 4.5 ETC GUT-29/354",
+    "description": "Cruceta para cardán trasero Hilux Fortuner 4.5",
+    "imagen": "./assets/img-product/cruceta cardan trasero hilux-fortuner-4.5 etc gut 29-354.jpeg",
+    "precio": 30,
+    "cantidad": 3,
+    "especificaciones": "EXT:92 INT:86 DADO:27 DINT:17 RTEXT",
+    "codigo": "GUT-29"
+  },
+  {
+    "id": 20,
+    "name": "CRUCETA 4RUNNER HILUX MACHITO SAMURAI ETC GUT-23",
+    "description": "Cruceta universal para 4Runner, Hilux, Samurai",
+    "imagen": "./assets/img-product/cruceta 4runner-hilux-machito-samurai gut 23.jpeg",
+    "precio": 30,
+    "cantidad": 3,
+    "especificaciones": "EXT:78 INT:70 DADO:29 DINT:18 RTINT",
+    "codigo": "GUT-23"
+  },
+  {
+    "id": 21,
+    "name": "CRUCETA MACHITO 4.5 SAMURAI DYNA FJ40 ETC GUT-20",
+    "description": "Cruceta para múltiples modelos Toyota 4x4",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 35,
+    "cantidad": 3,
+    "especificaciones": "EXT:92 INT:85 DADO:32 DINT:20 RTINT",
+    "codigo": "GUT-20"
+  },
+  {
+    "id": 22,
+    "name": "BOMBA AGUA AUTANA BURBUJA MACHITO 4.5 1FZ",
+    "description": "Bomba de agua para Toyota 4.5 1FZ",
+    "imagen": "./assets/img-product/bomba de agua toyota 4.5l 1fz.jpeg",
+    "precio": 90,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 23,
+    "name": "BOMBA GASOLINA 4RUNNER 4.5 1FZ CON GANCHO",
+    "description": "Bomba de gasolina eléctrica para 4Runner 4.5 1FZ",
+    "imagen": "./assets/img-product/bomba electrica (pila de gasolina ).jpeg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "GIP-514"
+  },
+  {
+    "id": 24,
+    "name": "1/2 KIT CHARNELA MACHITO HEMBRITA 4.5",
+    "description": "Medio kit de charnela para suspensión 4.5",
+    "imagen": "./assets/img-product/1.2 kit charnela machito-hembrita 4.5.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 25,
+    "name": "BUJE BARRA SUSPENSION DELANTERA AUTANA BURBUJA MACHITO",
+    "description": "Buje para barra de suspensión delantera",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 25,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 26,
+    "name": "BUJE BARRA LATERAL PANHARD DELANTERA MACHITO AUTANA BURBUJA",
+    "description": "Buje para barra Panhard delantera",
+    "imagen": "./assets/img-product/buje barra panhard del 4.5.jpeg",
+    "precio": 20,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 27,
+    "name": "ESTOPERA TRANSFER UNION CARDAN DEL 4.5",
+    "description": "Estopera para transfer y unión de cardán 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": "50x70x10x16",
+    "codigo": "AH2854-F0"
+  },
+  {
+    "id": 28,
+    "name": "ESTOPERA DELANTERA TRANSFER TRASERO CARDAN 4.5",
+    "description": "Estopera delantera para transfer y cardán trasero 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": "58x78x10",
+    "codigo": "T1274"
+  },
+  {
+    "id": 29,
+    "name": "ESTOPERA RUEDA DELANTERA 2F/3F/4.5",
+    "description": "Estopera para rueda delantera múltiples modelos",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": "62x85x10",
+    "codigo": "T1095"
+  },
+  {
+    "id": 30,
+    "name": "KIT CADENA TIEMPO AUTANA BURBUJA MACHITO 4.5 1FZ",
+    "description": "Kit completo de cadena de tiempo para 4.5 1FZ",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 250,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "T020K-OSK"
+  },
+  {
+    "id": 31,
+    "name": "SILICON GRIS HAMMER 85G",
+    "description": "Silicona selladora gris Hammer 85 gramos",
+    "imagen": "./assets/img-product/silicon tva grande 105gr.jpeg",
+    "precio": 10,
+    "cantidad": 3,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 32,
+    "name": "SILICON NEGRO HAMMER 85G",
+    "description": "Silicona selladora negra Hammer 85 gramos",
+    "imagen": "./assets/img-product/silicon negro hammer 85g.jpeg",
+    "precio": 10,
+    "cantidad": 21,
+    "especificaciones": null,
+    "codigo": "SH0102"
+  },
+  {
+    "id": 33,
+    "name": "PILA GAS UNIVERSAL E2068 CARBON",
+    "description": "Pila de gasolina universal modelo E2068",
+    "imagen": "./assets/img-product/pila gas universal E2068 carbon.jpeg",
+    "precio": 30,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "PG0150"
+  },
+  {
+    "id": 34,
+    "name": "PILA GAS 4RUNNER CARBON",
+    "description": "Pila de gasolina para 4Runner",
+    "imagen": "./assets/img-product/Pila gas 4runner carbon.jpeg",
+    "precio": 35,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "PG0451"
+  },
+  {
+    "id": 35,
+    "name": "FILTRO GAS EXT HILUX FORTUNER",
+    "description": "Filtro de gasolina externo para Hilux Fortuner",
+    "imagen": "./assets/img-product/filtro gas ext hilux fortuner.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "FG0105"
+  },
+  {
+    "id": 36,
+    "name": "FILTRO GAS EXT PRADO 4RUNNER 5VZ",
+    "description": "Filtro de gasolina externo para Prado 4Runner 5VZ",
+    "imagen": "./assets/img-product/filtro gas ext prado 4runner 5vz.jpeg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "FG0106"
+  },
+  {
+    "id": 37,
+    "name": "FILTRO GAS EXT KAVAK MACHITO 4.0 FJ 4RUNNER 1GR",
+    "description": "Filtro de gasolina externo para múltiples modelos",
+    "imagen": "./assets/img-product/filtro gas ext kavak machito 4.0 fj 4runner 1gr.jpeg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "FG0108"
+  },
+  {
+    "id": 38,
+    "name": "FILTRO GAS EXT TOYOTA AUTANA MACHITO 4.5 INY",
+    "description": "Filtro de gasolina externo para Toyota 4.5 inyección",
+    "imagen": "./assets/img-product/filtro gas ext toyota autana machito 4.5 iny.jpeg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "FG0109"
+  },
+  {
+    "id": 39,
+    "name": "FILTRO GAS EXT FORD TRITON-EXPLORER-FX4-SPORT-TRACK-FORTALEZA",
+    "description": "Filtro de gasolina externo para modelos Ford",
+    "imagen": "./assets/img-product/filtro gas ext ford triton-explorer-fx4-sport-track.jpeg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "FG0110"
+  },
+  {
+    "id": 40,
+    "name": "FILTRO GAS EXT CHEV CORSA, AVEO, SPARK,LUV DMAX",
+    "description": "Filtro de gasolina externo para modelos Chevrolet",
+    "imagen": "./assets/img-product/filtro gas ext chev corsa, aveo, spark luv dmax.jpeg",
+    "precio": 10,
+    "cantidad": 3,
+    "especificaciones": null,
+    "codigo": "FG0103"
+  },
+  {
+    "id": 41,
+    "name": "MANGUERA PILA CORRUGADA NYLON 18CM",
+    "description": "Manguera corrugada para pila de gasolina 18cm",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 10,
+    "especificaciones": null,
+    "codigo": "AG0101"
+  },
+  {
+    "id": 42,
+    "name": "MANGUERA PILA CORRUGADA NYLON 21CM",
+    "description": "Manguera corrugada para pila de gasolina 21cm",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 10,
+    "especificaciones": null,
+    "codigo": "AG0102"
+  },
+  {
+    "id": 43,
+    "name": "MANGUERA PILA CORRUGADA NYLON 33CM",
+    "description": "Manguera corrugada para pila de gasolina 33cm",
+    "imagen": "./assets/img-product/manguera pila corrugada nylon 33cm.jpeg",
+    "precio": 5,
+    "cantidad": 10,
+    "especificaciones": null,
+    "codigo": "AG0103"
+  },
+  {
+    "id": 44,
+    "name": "SILICON TVA GRANDE 105GR",
+    "description": "Silicona selladora TVA grande 105 gramos",
+    "imagen": "./assets/img-product/silicon tva grande 105gr.jpeg",
+    "precio": 8,
+    "cantidad": 12,
+    "especificaciones": null,
+    "codigo": "TVA8001"
+  },
+  {
+    "id": 45,
+    "name": "SILICON TVA PEQUENO 55GR",
+    "description": "Silicona selladora TVA pequeño 55 gramos",
+    "imagen": "./assets/img-product/silicon tva pequeño 55gr.jpeg",
+    "precio": 6,
+    "cantidad": 12,
+    "especificaciones": null,
+    "codigo": "TVA8002"
+  },
+  {
+    "id": 46,
+    "name": "BUJE BALLESTA MACHITO HEMBRITA 4-19 AUTANA AMARILLO",
+    "description": "Buje para ballesta color amarillo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "18X40X43",
+    "codigo": "K-18009-A"
+  },
+  {
+    "id": 47,
+    "name": "BUJE BALLESTA MACHITO HEMBRITA 4-19 AUTANA ROJO",
+    "description": "Buje para ballesta color rojo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "18X40X43",
+    "codigo": "K-18009-R"
+  },
+  {
+    "id": 48,
+    "name": "BUJE BALLESTA MACHITO HEMBRITA 84-03 SAMURAI AMARILLO",
+    "description": "Buje para ballesta Samurai color amarillo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "18X35X44",
+    "codigo": "K-18002-A"
+  },
+  {
+    "id": 49,
+    "name": "BUJE BALLESTA MACHITO HEMBRITA 84-03 SAMURAI ROJO",
+    "description": "Buje para ballesta Samurai color rojo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "18X35X44",
+    "codigo": "K-18002-R"
+  },
+  {
+    "id": 50,
+    "name": "BUJE BALLESTA 22R FJ40 AMARILLO",
+    "description": "Buje para ballesta 22R FJ40 color amarillo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "15X24X36",
+    "codigo": "K188-A"
+  },
+  {
+    "id": 51,
+    "name": "BUJE BALLESTA 22R FJ40 ROJO",
+    "description": "Buje para ballesta 22R FJ40 color rojo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "15X24X36",
+    "codigo": "K188-R"
+  },
+  {
+    "id": 52,
+    "name": "ANTIRUIDO SEPARADOR BALLESTA REDONDO",
+    "description": "Separador anti-ruido redondo para ballestas",
+    "imagen": "./assets/img-product/antiruido separador ballesta redondo.jpeg",
+    "precio": 5,
+    "cantidad": 6,
+    "especificaciones": "12X58.5X5",
+    "codigo": "AB-252"
+  },
+  {
+    "id": 53,
+    "name": "ANTIRUIDO SEPARADOR BALLESTA CUADRADO",
+    "description": "Separador anti-ruido cuadrado para ballestas",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 6,
+    "especificaciones": "60X62X4",
+    "codigo": "AB-253"
+  },
+  {
+    "id": 54,
+    "name": "GOMA AMORTIGUADOR UNIV PEQ",
+    "description": "Goma para amortiguador universal pequeño",
+    "imagen": "./assets/img-product/goma amortiguador pana univ peq.jpeg",
+    "precio": 3,
+    "cantidad": 8,
+    "especificaciones": "60X62X4",
+    "codigo": "K-1015"
+  },
+  {
+    "id": 55,
+    "name": "FILTRO PILA GASOLINA AUTANA MACHO BURBUJA 4.5",
+    "description": "Filtro para pila de gasolina Toyota 4.5",
+    "imagen": "./assets/img-product/filtro pila gasolina autana macho burbuja 4.5.jpeg",
+    "precio": 5,
+    "cantidad": 10,
+    "especificaciones": null,
+    "codigo": "YFBGT0011"
+  },
+  {
+    "id": 56,
+    "name": "CONDENSADOR TOYOTA UNIVERSAL",
+    "description": "Condensador universal para Toyota",
+    "imagen": "./assets/img-product/condensador toyota universal.jpeg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 57,
+    "name": "MANGUERA INT BURBUJA AUTANA 4.5",
+    "description": "Manguera intermedia para Toyota 4.5",
+    "imagen": "./assets/img-product/manguera int burbuja autana 4.5.jpeg",
+    "precio": 25,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "TX0791 19173"
+  },
+  {
+    "id": 58,
+    "name": "MANGUERA SUP MACHITO 4.5 M/V",
+    "description": "Manguera superior para Toyota 4.5",
+    "imagen": "./assets/img-product/manguera sup machito 4.5 M-v.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0788 19569"
+  },
+  {
+    "id": 59,
+    "name": "MANGUERA INF AUTANA BURBUJA",
+    "description": "Manguera inferior para Toyota 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0790 19570"
+  },
+  {
+    "id": 60,
+    "name": "MANGUERA SUP MACHITO Y CHASIS LARGO HEMBRITA 4.5 3 BOBINAS",
+    "description": "Manguera superior larga para Toyota 4.5",
+    "imagen": "./assets/img-product/manguera sup machito y chasis largo.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0277 19769"
+  },
+  {
+    "id": 61,
+    "name": "MANGUERA DESFOGUE PCV AUTANA BURBUJA 4.5",
+    "description": "Manguera PCV para Toyota 4.5",
+    "imagen": "./assets/img-product/WhatsApp Image 2025-10-07 at 1.56.21 PM.jpeg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0307 19771"
+  },
+  {
+    "id": 62,
+    "name": "RODAMIENTO CHARNELA MACHITO SAMURAI 2F 3F",
+    "description": "Rodamiento para charnela múltiples modelos",
+    "imagen": "./assets/img-product/rodamiento charnela machito samurai 2f 3f.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": "17X47X15.5",
+    "codigo": "30303"
+  },
+  {
+    "id": 63,
+    "name": "RODAMIENTO PIÑON AUTANA BURBUJA 2F JAPONES 72-83",
+    "description": "Rodamiento para piñón diferencial",
+    "imagen": "./assets/img-product/rodamiento piñon autana burbuja 2f japones 72-83.jpeg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "30308"
+  },
+  {
+    "id": 64,
+    "name": "BOMBA SUP CLUTCH 2F 3F 3/4\" DOBLE HUECO",
+    "description": "Bomba superior de clutch para 2F 3F",
+    "imagen": "./assets/img-product/bomba sup clutch 2f 3f 3-4 doble hueco.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 65,
+    "name": "BOMBIN INF CLUTCH LAND CRUISER FZJ70 75 4.5",
+    "description": "Bombín inferior de clutch para Land Cruiser",
+    "imagen": "./assets/img-product/bombin inf clutch land cruiser fzj70 75 4.5.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 66,
+    "name": "RODAMIENTO DIFERENCIAL 4.5 1FZ F250 F350",
+    "description": "Rodamiento para diferencial 4.5 y modelos Ford",
+    "imagen": "./assets/img-product/rodamiento diferencial 4.5 1fz f250 f350.jpeg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": "57.15X96.84X25.4",
+    "codigo": "SET-75"
+  },
+  {
+    "id": 67,
+    "name": "MANGUERA AUTANA BURBUJA 4.5 3F SUP",
+    "description": "Manguera superior para Toyota 4.5 3F",
+    "imagen": "./assets/img-product/manguera autana burbuja 4.5 3f sup.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "5259"
+  },
+  {
+    "id": 68,
+    "name": "MANGUERA INF LAND CRUISER F2 J70 F2J75 4.5 MACHITO",
+    "description": "Manguera inferior para Land Cruiser",
+    "imagen": "./assets/img-product/manguera inf land cruiser f2 fj70 fj750.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX0789 7201"
+  },
+  {
+    "id": 69,
+    "name": "MANGUERA INF MACHITO M/V 4.5",
+    "description": "Manguera inferior para Toyota 4.5",
+    "imagen": "./assets/img-product/manguera inf machito m-v4.5.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "7202"
+  },
+  {
+    "id": 70,
+    "name": "MANGUERA SUP AUTANA BURBUJA 4.5",
+    "description": "Manguera superior para Toyota 4.5",
+    "imagen": "./assets/img-product/manguera sup autana burbuja 4.5.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TX 0792 7713"
+  },
+  {
+    "id": 71,
+    "name": "ESTOPERA EJE TRAS EXT 4.5 ETC",
+    "description": "Estopera para eje trasero 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 10,
+    "especificaciones": "35X41X5.5/9",
+    "codigo": "T1008"
+  },
+  {
+    "id": 72,
+    "name": "ESTOPERA CAJETIN SIN FIN CREMALLERA HILUX DINA 2F 3F 4.5 ETC",
+    "description": "Estopera para cajetín de cremallera",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 10,
+    "especificaciones": "18X30X6",
+    "codigo": "T1139"
+  },
+  {
+    "id": 73,
+    "name": "ESTOPERA DIFERENCIAL TUNEL DEL 2F 3F ETC",
+    "description": "Estopera para diferencial y túnel",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 10,
+    "especificaciones": "33X44X8",
+    "codigo": "T1143"
+  },
+  {
+    "id": 74,
+    "name": "ESTOPERA TRANSFER FJ40",
+    "description": "Estopera para transfer case FJ40",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 10,
+    "especificaciones": "42X60X9",
+    "codigo": "T1156"
+  },
+  {
+    "id": 75,
+    "name": "BOMBA SUP CLUTCH 4.5 BURBUJA AUTANA",
+    "description": "Bomba superior de clutch para 4.5",
+    "imagen": "./assets/img-product/bomba sup clutch 4.5 burbuja autana.jpeg",
+    "precio": 110,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CMT-053"
+  },
+  {
+    "id": 76,
+    "name": "BOMBA SUP CLUTCH 4.5 MACHITO FZJ75",
+    "description": "Bomba superior de clutch para FZJ75",
+    "imagen": "./assets/img-product/bomba Sup clutch 4.5 machito fzj75.jpeg",
+    "precio": 90,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CMT-098"
+  },
+  {
+    "id": 77,
+    "name": "BOMBIN INF CLUTCH MACHITO AUTANA BURBUJA 4.5 COBRE",
+    "description": "Bombín inferior de clutch cobre para 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 70,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CRT-025"
+  },
+  {
+    "id": 78,
+    "name": "FAN CLUTCH MACHITO BURBUJA AUTANA 4.5 1FZ-FE",
+    "description": "Embrague de ventilador para 4.5 1FZ-FE",
+    "imagen": "./assets/img-product/fan clutch Machito burbuja autana 4.5 1fz.jpeg",
+    "precio": 160,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "FCT-004"
+  },
+  {
+    "id": 79,
+    "name": "ASPA VENTILADOR MACHITO AUTANA BURBUJA 4.5 1FZ",
+    "description": "Aspa de ventilador para 4.5 1FZ",
+    "imagen": "./assets/img-product/aspa ventilador machito autana.jpeg",
+    "precio": 70,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "FNT-004"
+  },
+  {
+    "id": 80,
+    "name": "TERMINAL DIRECCION AUTANA BURBUJA MACHITO PEQ CORTO",
+    "description": "Terminal de dirección pequeño corto",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 30,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "JTRT-4061"
+  },
+  {
+    "id": 81,
+    "name": "TERMINAL DIRRECCION BURBUJA AUTANA MACHITO EXT DER MEDIANO",
+    "description": "Terminal de dirección derecho mediano",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 50,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "JTRT-8046"
+  },
+  {
+    "id": 82,
+    "name": "TERMINAL DIRECCION AUTANA BURBUJA MACHITO 4.5 IZQ LARGO",
+    "description": "Terminal de dirección izquierdo largo",
+    "imagen": "./assets/img-product/terminal direccion autana machito.jpeg",
+    "precio": 50,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "JTRT-8047"
+  },
+  {
+    "id": 83,
+    "name": "KIT CARBURADOR SAMURAI MACHO F40",
+    "description": "Kit de reparación para carburador Samurai",
+    "imagen": "./assets/img-product/kit carburador samurai macho.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K11-368A"
+  },
+  {
+    "id": 84,
+    "name": "KIT CARBURADOR SAMURAI MACHO 2F",
+    "description": "Kit de reparación para carburador 2F",
+    "imagen": "./assets/img-product/kit carburador samurai macho 2f.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K11-371A"
+  },
+  {
+    "id": 85,
+    "name": "KIT CARBURADOR SAMURAI MACHO",
+    "description": "Kit de reparación para carburador Samurai",
+    "imagen": "./assets/img-product/kit carburador samurai macho.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K11-384A"
+  },
+  {
+    "id": 86,
+    "name": "KIT CARBURADOR SAMURAI MACHO",
+    "description": "Kit de reparación para carburador Samurai",
+    "imagen": "./assets/img-product/kit carburador samurai macho.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K11-4000A"
+  },
+  {
+    "id": 87,
+    "name": "KIT CARBURADOR AUTANA BURBUJA MACHITO 4.5 TANQUE PEQ",
+    "description": "Kit de reparación para carburador 4.5 tanque pequeño",
+    "imagen": "./assets/img-product/kit carburador autana burbuja machito 4.5 tanque peq.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K11-4018A"
+  },
+  {
+    "id": 88,
+    "name": "KIT CARBURADOR AUTANA BURBUJA MACHITO 4.5 TANQUE LARGO",
+    "description": "Kit de reparación para carburador 4.5 tanque largo",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "K-607"
+  },
+  {
+    "id": 89,
+    "name": "BOMBA AGUA TOYOTA 4.5L 1FZ",
+    "description": "Bomba de agua para Toyota 4.5L 1FZ",
+    "imagen": "./assets/img-product/bomba de agua toyota 4.5l 1fz.jpeg",
+    "precio": 150,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "WPT-023"
+  },
+  {
+    "id": 90,
+    "name": "ROTOR BOMBA DE ACEITE 4.5L 1FZ",
+    "description": "Rotor para bomba de aceite 4.5L 1FZ",
+    "imagen": "./assets/img-product/rotor bomba de aceite 4.5 1fz.jpeg",
+    "precio": 60,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 91,
+    "name": "ESTOPERA PUNTA DE EJE TRASERA BURBUJA AUTANA",
+    "description": "Estopera para punta de eje trasera",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": "50X70X9",
+    "codigo": "T1086"
+  },
+  {
+    "id": 92,
+    "name": "ESTOPERA GUIA DE COLLARIN EJE DE MANDO",
+    "description": "Estopera para guía de collarín",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": "35X48X6.5",
+    "codigo": null
+  },
+  {
+    "id": 93,
+    "name": "ESTOPERA GUIA DE COLLARIN EJE DE MANDO",
+    "description": "Estopera para guía de collarín",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": "35X48X6.5",
+    "codigo": "T1227"
+  },
+  {
+    "id": 94,
+    "name": "ESTOPERA TRAS PIÑON DE ATAQUE DIFERENCIAL CUPLON FLOTANTE",
+    "description": "Estopera trasera para piñón de ataque",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 95,
+    "name": "ESTOPERA DEL TRANSFER FRONTAL COJINETE SALIDA",
+    "description": "Estopera para transfer frontal",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 2,
+    "especificaciones": "48X74X10X15",
+    "codigo": "T1190"
+  },
+  {
+    "id": 96,
+    "name": "ESTOPERA TRANSFER UNION CARDAN DEL 4.5",
+    "description": "Estopera para transfer y unión de cardán 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": "50x70x10x16",
+    "codigo": "AH2854-F0"
+  },
+  {
+    "id": 97,
+    "name": "ESTOPERA DEL CIGÜEÑAL 1FZ 4.5L",
+    "description": "Estopera del cigüeñal para 1FZ 4.5L",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": "52X70X8",
+    "codigo": null
+  },
+  {
+    "id": 98,
+    "name": "ESTOPERA DEL CIGÜEÑAL 1FZ 4.5L",
+    "description": "Estopera del cigüeñal para 1FZ 4.5L",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": "52X70X8",
+    "codigo": "T1293"
+  },
+  {
+    "id": 99,
+    "name": "ESTOPERA DEL CIGÜEÑAL 1FZ-FE 4.5L",
+    "description": "Estopera del cigüeñal para 1FZ-FE 4.5L",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": "52X70X8",
+    "codigo": "90311-52013"
+  },
+  {
+    "id": 100,
+    "name": "ESTOPERA TRAS CIGUEÑAL 4.5L",
+    "description": "Estopera trasera del cigüeñal 4.5L",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": "99X119X9.5",
+    "codigo": "BH4790-G0"
+  },
+  {
+    "id": 101,
+    "name": "TAPA RADIADOR 0.9KG/CM BAJA 13LBRS 88KPA",
+    "description": "Tapa de radiador baja presión 0.9kg/cm²",
+    "imagen": "./assets/img-product/tapa radiador 0.9kg-cm bja 13lbrs 88kpa.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "CER329"
+  },
+  {
+    "id": 102,
+    "name": "TAPA RADIADOR 0.9KG/CM ALTA 13LBRS 88KPA",
+    "description": "Tapa de radiador alta presión 0.9kg/cm²",
+    "imagen": "./assets/img-product/tapa radiador 0.9kg-cm alta 13lbrs 88kpa.jpeg",
+    "precio": 15,
+    "cantidad": 4,
+    "especificaciones": "TERIO",
+    "codigo": "CER109"
+  },
+  {
+    "id": 103,
+    "name": "TAPA RADIADOR 1.1KG/CM BAJA 16LBRS 108KPA",
+    "description": "Tapa de radiador baja presión 1.1kg/cm²",
+    "imagen": "./assets/img-product/tapa radiador 1.1kg-cm baja 16lbrs 108kpa.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "CER331"
+  },
+  {
+    "id": 104,
+    "name": "TAPA RADIADOR 1.1KG/CM ALTA 16LBRS 108KPA",
+    "description": "Tapa de radiador alta presión 1.1kg/cm²",
+    "imagen": "./assets/img-product/tapa radiador 1.1kg-cm alta 16 lbrs 108kpa.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "CER111"
+  },
+  {
+    "id": 105,
+    "name": "CABLES DE BUJIAS MACHITO 4.5L FULL INY.",
+    "description": "Cables de bujías para 4.5L inyección completa",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "50067"
+  },
+  {
+    "id": 106,
+    "name": "CABLES DE BUJIAS MACHITO HEMBRITA 4.5L FULL INY",
+    "description": "Cables de bujías hembra para 4.5L inyección",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 107,
+    "name": "RODAMIENTO ALTERNADOR 4.5",
+    "description": "Rodamiento para alternador 4.5",
+    "imagen": "../assets/img-product/rodamiento alternador 4.5.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": "15X35X13",
+    "codigo": "ZV-B15-69BT1X"
+  },
+  {
+    "id": 108,
+    "name": "RODAMIENTO PUNTA EJE TRAS 2F FJ40 3F FJ70",
+    "description": "Rodamiento para punta de eje trasero",
+    "imagen": "./assets/img-product/rodamiento punta eje tras 2f fj40 fj70.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "R139B1YDCS60"
+  },
+  {
+    "id": 109,
+    "name": "RODAMIENTO DEL EXT PEQ 4.5 2F 3F",
+    "description": "Rodamiento del extremo pequeño 4.5 2F 3F",
+    "imagen": ".src/assets/img-product/placeholder.svg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "SET-47"
+  },
+  {
+    "id": 110,
+    "name": "BOMBIN INF CLUTH 1FZ 4.5L",
+    "description": "Bombín inferior de clutch para 1FZ 4.5L",
+    "imagen": "./assets/img-product/bombin inf clutch land cruiser fzj70 75 4.5.jpeg",
+    "precio": 60,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CRT-027"
+  },
+  {
+    "id": 111,
+    "name": "BOMBA ELECTRICA (PILA DE GASOLINA)",
+    "description": "Bomba eléctrica de gasolina",
+    "imagen": "./assets/img-product/bomba electrica (pila de gasolina ).jpeg",
+    "precio": 120,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "951-0007"
+  },
+  {
+    "id": 112,
+    "name": "PILA DE GASOLINA MACHITO",
+    "description": "Pila de gasolina para modelos Machito",
+    "imagen": "./assets/img-product/pila de gasolina machito.jpeg",
+    "precio": 70,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CFP-107"
+  },
+  {
+    "id": 113,
+    "name": "CONECTOR MODULO GASOLINA TOYOTAS KIA HYUNDAI 5P",
+    "description": "Conector para módulo de gasolina 5 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 3,
+    "especificaciones": null,
+    "codigo": "1054-CO16"
+  },
+  {
+    "id": 114,
+    "name": "CONECTOR BOBINA TOYOTAS 4.0 1GR 2GR 2.7 2TR YARIS BEGO 4P",
+    "description": "Conector para bobina 4 pines múltiples modelos",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 8,
+    "especificaciones": null,
+    "codigo": "0970-CO18"
+  },
+  {
+    "id": 115,
+    "name": "CONECTOR ALTERNADOR TOYOTA HONDA 4P",
+    "description": "Conector para alternador 4 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0962-CO20"
+  },
+  {
+    "id": 116,
+    "name": "CONECTOR VELOCIDAD TOYOTA CHEV GM 3P",
+    "description": "Conector para sensor de velocidad 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "1332-CO37"
+  },
+  {
+    "id": 117,
+    "name": "CONECTOR IAC TOYOTAS 4.5 6P",
+    "description": "Conector IAC para Toyota 4.5 6 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0688-CO45"
+  },
+  {
+    "id": 118,
+    "name": "CONECTOR VELOCIDAD TOYOTA CHEV GM 3P",
+    "description": "Conector para sensor de velocidad 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0672-CO48"
+  },
+  {
+    "id": 119,
+    "name": "CONECTOR ALTERNADOR TOYOTA DENSO NIPPON NISSAN CHERY 3P",
+    "description": "Conector para alternador 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0670-CO49"
+  },
+  {
+    "id": 120,
+    "name": "CONECTOR IAC TOYOTA BOBINA DMAX 3P",
+    "description": "Conector IAC y bobina 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0620-CO58"
+  },
+  {
+    "id": 121,
+    "name": "CONECTOR VVTI TOYOTA HYUNDAI 2 GUIAS",
+    "description": "Conector VVTI 2 guías",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0604-CO62"
+  },
+  {
+    "id": 122,
+    "name": "SOCATE BOMBILLO MUELITA",
+    "description": "Socket para bombillo muelita",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0602-CO63"
+  },
+  {
+    "id": 123,
+    "name": "CONECTOR BOBINA TOYOTA 4.5 RENAULT WIPER UNIVERSAL",
+    "description": "Conector universal para bobina",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0590-CO64"
+  },
+  {
+    "id": 124,
+    "name": "CONECTOR VALVULA PRECION ACEITE TOYOTA 1P",
+    "description": "Conector para válvula de presión de aceite 1 pin",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0844-CO65"
+  },
+  {
+    "id": 125,
+    "name": "CONECTOR BOMBILLO 9005",
+    "description": "Conector para bombillo 9005",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 6,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0568-CO69"
+  },
+  {
+    "id": 126,
+    "name": "CONECTOR VVTI TOYOTA HYUNDAI 4 GUIAS",
+    "description": "Conector VVTI 4 guías",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0500-CO78"
+  },
+  {
+    "id": 127,
+    "name": "SOCATE BOMBILLO H11 H8",
+    "description": "Socket para bombillo H11 H8",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0444-CO79"
+  },
+  {
+    "id": 128,
+    "name": "CONECTOR BOBINA TOYOTA 4.5 RENAULT WIPER UNIVERSAL",
+    "description": "Conector universal para bobina",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0398-CO81"
+  },
+  {
+    "id": 129,
+    "name": "CONECTOR SENSOR ABS TOYOTA",
+    "description": "Conector para sensor ABS Toyota",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0366-CO84"
+  },
+  {
+    "id": 130,
+    "name": "CONECTOR ELECTROVENTILADOR TOYOTA CHEV HEMBRA",
+    "description": "Conector hembra para electroventilador",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0314-CO90"
+  },
+  {
+    "id": 131,
+    "name": "CONECTOR UNIVERSAL INYECTOR LEVA CHEV ETC 2 PIN",
+    "description": "Conector universal inyector 2 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0302-CO91"
+  },
+  {
+    "id": 132,
+    "name": "CONECTOR MODULO BOMBA GASOLINA HYUNDAI MAF TOYOTA",
+    "description": "Conector para módulo bomba gasolina y MAF",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0280-CO94"
+  },
+  {
+    "id": 133,
+    "name": "CONETOR BOMBILLO 9005",
+    "description": "Conector para bombillo 9005",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0278-CO95"
+  },
+  {
+    "id": 134,
+    "name": "CONECTOR LEVA TOYOTA 3P",
+    "description": "Conector para sensor de leva 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0780-CO104"
+  },
+  {
+    "id": 135,
+    "name": "SOCATE BOMBILLO H7",
+    "description": "Socket para bombillo H7",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0092-CO105"
+  },
+  {
+    "id": 136,
+    "name": "SOCATE UNIVERSAL BOMBILLO 1 CONTACTO",
+    "description": "Socket universal 1 contacto",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0090-CO106"
+  },
+  {
+    "id": 137,
+    "name": "CONECTOR INYECTOR TOYOTA MITSUBISHI",
+    "description": "Conector para inyector Toyota Mitsubishi",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 6,
+    "especificaciones": null,
+    "codigo": "0058-CO111"
+  },
+  {
+    "id": 138,
+    "name": "CONECTOR VALVULA TEMPERATURA TOYOTA 2P",
+    "description": "Conector para válvula de temperatura 2 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0054-CO112"
+  },
+  {
+    "id": 139,
+    "name": "CONECTOR INYECTOR TOYOTA YARIS COROLLA TERIO ETC",
+    "description": "Conector para inyector múltiples modelos",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 6,
+    "especificaciones": null,
+    "codigo": "0012-CO114"
+  },
+  {
+    "id": 140,
+    "name": "CONECTOR CIGUEÑAL TOYOTA",
+    "description": "Conector para sensor de cigüeñal Toyota",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0358-CO118"
+  },
+  {
+    "id": 141,
+    "name": "CONECTOR BOMBILLO H7",
+    "description": "Conector para bombillo H7",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "00H7-CO120"
+  },
+  {
+    "id": 142,
+    "name": "CONECTOR ARRANQUE TOYOTAS",
+    "description": "Conector para arranque Toyotas",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "2802-CO126"
+  },
+  {
+    "id": 143,
+    "name": "CONECTOR DETONACION TOYOTAS",
+    "description": "Conector para sensor de detonación",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0824-CO127"
+  },
+  {
+    "id": 144,
+    "name": "CONECTOR CIGUEÑAL TOYOTAS",
+    "description": "Conector para sensor de cigüeñal Toyotas",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "2806-CO128"
+  },
+  {
+    "id": 145,
+    "name": "CONECTOR TPS TOYOTAS 4P",
+    "description": "Conector TPS Toyotas 4 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0930-CO135"
+  },
+  {
+    "id": 146,
+    "name": "CONECTOR TEMPERATURA YARIS TERIO 3P",
+    "description": "Conector temperatura Yaris Terio 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0768-CO137"
+  },
+  {
+    "id": 147,
+    "name": "CONECTOR INTERNO MODULO GASOLINA A LA PILA TOYOTA ETC",
+    "description": "Conector interno módulo gasolina",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "2800-CO138"
+  },
+  {
+    "id": 148,
+    "name": "CONECTOR UNIVERSAL CIGUEÑAL CHEV ETC 3P",
+    "description": "Conector universal cigüeñal 3 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "1296-CO141"
+  },
+  {
+    "id": 149,
+    "name": "CONECTOR ELECTROVENTILADOR TOYOTA CHEV MACHO 2P",
+    "description": "Conector macho electroventilador 2 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0062-CO145"
+  },
+  {
+    "id": 150,
+    "name": "CONECTOR VALVULA RETROCESO 2P",
+    "description": "Conector válvula retroceso 2 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "0196-CO146"
+  },
+  {
+    "id": 151,
+    "name": "CONECTOR PARENEUTRO TOYOTAS 9P",
+    "description": "Conector pare neutro Toyotas 9 pines",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "2818-CO161"
+  },
+  {
+    "id": 152,
+    "name": "SOCATE UNIVERSAL BOMBILLO 2 CONTACTO",
+    "description": "Socket universal 2 contactos",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "1684-CO166"
+  },
+  {
+    "id": 153,
+    "name": "CONECTOR BOMBILLO H4",
+    "description": "Conector para bombillo H4",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "1686-CO167"
+  },
+  {
+    "id": 154,
+    "name": "CONECTOR BOMBILLO 880",
+    "description": "Conector para bombillo 880",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 4,
+    "especificaciones": null,
+    "codigo": "0540-CO195"
+  },
+  {
+    "id": 155,
+    "name": "BOMBA SUP CLUCTH 3/4 FJ80 AUTANA BURBUJA CON HIDROVAC",
+    "description": "Bomba superior clutch FJ80 con hidrovac",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 100,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "CMT-068"
+  },
+  {
+    "id": 156,
+    "name": "CRUCETA MACHITO HEMBRITA 4.5",
+    "description": "Cruceta para cardán 4.5",
+    "imagen": "./assets/img-product/cruceta machito hembrita 4.5.jpeg",
+    "precio": 30,
+    "cantidad": 2,
+    "especificaciones": "EXT:94 DADO:27 INT:86 DADO INT: 16",
+    "codigo": "354 G5-213X"
+  },
+  {
+    "id": 157,
+    "name": "RODAMIENTO PIÑON DEL PEQUEÑO 4.5",
+    "description": "Rodamiento para piñón pequeño 4.5",
+    "imagen": "./assets/img-product/rodamiento piñon del pequeño 4.5.jpeg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": "30X72X21",
+    "codigo": "TRO607J-1LFT"
+  },
+  {
+    "id": 158,
+    "name": "RODAMIENTO TRANFER TOYOTA 2F 3F",
+    "description": "Rodamiento para transfer 2F 3F",
+    "imagen": "./assets/img-product/rodamiento tranfer toyota 2f 3f.jpeg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": "35X85X22",
+    "codigo": "TRO70902"
+  },
+  {
+    "id": 159,
+    "name": "RODAMIENTO PTA EJE TRASERA TOYOTA FORD 4X4 DANA 60",
+    "description": "Rodamiento punta eje trasera",
+    "imagen": "./assets/img-product/rodamiento Pta eje trasera toyota ford 4x4 dana 60.jpeg",
+    "precio": 25,
+    "cantidad": 1,
+    "especificaciones": "45X80X26",
+    "codigo": "SET-80 TRO70902"
+  },
+  {
+    "id": 160,
+    "name": "RODAMIENTO RUEDA TRASERA 4.5 TRASMISION FLOTANTE",
+    "description": "Rodamiento rueda trasera 4.5",
+    "imagen": "./assets/img-product/rodamiento rueda trasera 4.5 trasmision flotante.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": "76X30",
+    "codigo": "YM-4330=R1561TV"
+  },
+  {
+    "id": 161,
+    "name": "COLLARIN DE MACHITO 4.5 BAJO",
+    "description": "Collarín para 4.5 bajo",
+    "imagen": "./assets/img-product/collarin de machito 4.5 bajo.jpeg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TKS68-46K"
+  },
+  {
+    "id": 162,
+    "name": "COLLARIN DE BURBUJA AUTANA 4.5 ALTO",
+    "description": "Collarín para 4.5 alto",
+    "imagen": "./assets/img-product/collarin de burbuja-autana 4.5 alto.jpeg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "TKS68-53K"
+  },
+  {
+    "id": 163,
+    "name": "RODAMIENTO DE COLLARIN PEQ 2F 3 VELOCIDADES",
+    "description": "Rodamiento collarín pequeño 2F",
+    "imagen": "./assets/img-product/rodamiento de collarin peq 2f 3 velocidades.jpeg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": "45X74X16",
+    "codigo": null
+  },
+  {
+    "id": 164,
+    "name": "RODAMIENTO DEL COLLARIN PEQ 2F 3 VELOCIDADES",
+    "description": "Rodamiento collarín pequeño 2F",
+    "imagen": "./assets/img-product/rodamiento del collarin peq 2f 3 velocidades.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": "45X73X16",
+    "codigo": null
+  },
+  {
+    "id": 165,
+    "name": "RODAMIENTO COLLARIN GRANDE TOYOTA 2F 3F",
+    "description": "Rodamiento collarín grande 2F 3F",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": "53X94X26",
+    "codigo": "RCT-52S"
+  },
+  {
+    "id": 166,
+    "name": "BOMBA SUP CLUCTH 2F 3F 3 HUECOS HIERRO",
+    "description": "Bomba superior clutch 2F 3F hierro",
+    "imagen": "./assets/img-product/bomba sup clutch 2f 3f 3 huecos hierro.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 167,
+    "name": "BOMBA SUP CLUTCH 5/8 FJ60 2F HIERRO",
+    "description": "Bomba superior clutch FJ60 2F hierro",
+    "imagen": "./assets/img-product/bomba sup cltuch 5-8 fj60 2f hierro.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 168,
+    "name": "BOMBA SUP CLUCTH 3/4 3F FJ70 75 HIERRO",
+    "description": "Bomba superior clutch 3F FJ70 hierro",
+    "imagen": "./assets/img-product/bomba sup clutch 3-4 3f fj70 75 hierro.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 169,
+    "name": "BOMBA SUP CLUCTH BURBUJA AUTANA 4.5",
+    "description": "Bomba superior clutch 4.5",
+    "imagen": "./assets/img-product/bomba sup clutch 4.5 burbuja autana.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 170,
+    "name": "BOMBA SUP CLUCTH MACHITO HEMBRITA 4.5",
+    "description": "Bomba superior clutch 4.5 hembra",
+    "imagen": "./assets/img-product/Bomba sup clutch machito hembrita 4.5.jpeg",
+    "precio": 30,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 171,
+    "name": "BOMBIN INF CLUCTH TOYOTA 2F 3F",
+    "description": "Bombín inferior clutch 2F 3F",
+    "imagen": "./assets/img-product/bombin inf clutch toyota 2f 3f.jpeg",
+    "precio": 25,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 172,
+    "name": "BOMBIN INF CLUCTH 4.5",
+    "description": "Bombín inferior clutch 4.5",
+    "imagen": "./assets/img-product/bombin inf clutch 4.5.jpeg",
+    "precio": 20,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 173,
+    "name": "BOMBA DE GASOLINA 4.5 CARBURADO",
+    "description": "Bomba de gasolina 4.5 carburado",
+    "imagen": "./assets/img-product/bomba de gasolina 4.5 carburado.jpeg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "GFUP-T35 TP-802"
+  },
+  {
+    "id": 174,
+    "name": "TERMINAL DE MACHITO 4.5 MODELO NUEVO",
+    "description": "Terminal dirección 4.5 modelo nuevo",
+    "imagen": "./assets/img-product/terminal de machito 4.5 modelo nuevo.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "SE-2951R"
+  },
+  {
+    "id": 175,
+    "name": "JUEGO DE EMPACADURA 2F(94MM)",
+    "description": "Juego empacadura 2F 94mm",
+    "imagen": "./assets/img-product/juego de empacadura 2f (94mm).jpeg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 176,
+    "name": "JUEGO DE EMPACADURA 3F",
+    "description": "Juego empacadura 3F",
+    "imagen": "./assets/img-product/juego de empacadura 3f.jpeg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 177,
+    "name": "JUEGO DE EMPACADURA COMPLETO 4.5",
+    "description": "Juego empacadura completo 4.5",
+    "imagen": "./assets/img-product/juego de empacadura 4.5 1fz.jpeg",
+    "precio": 160,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 178,
+    "name": "EMPACADURA DE BAJANTE 2F",
+    "description": "Empacadura bajante 2F",
+    "imagen": "./assets/img-product/empacadura de bajante 2f.jpeg",
+    "precio": 5,
+    "cantidad": 2,
+    "especificaciones": "68X79X6",
+    "codigo": null
+  },
+  {
+    "id": 179,
+    "name": "EMPACADURA DE BAJANTE 3F COROLLA",
+    "description": "Empacadura bajante 3F Corolla",
+    "imagen": "./assets/img-product/empacadura de bajante 3f corolla.jpeg",
+    "precio": 5,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 180,
+    "name": "EMPACADURA DE BAJANTE COROLLA AE-100 101",
+    "description": "Empacadura bajante Corolla AE-100",
+    "imagen": "./assets/img-product/empacadura de bajante corolla Ae-100 101.jpeg",
+    "precio": 5,
+    "cantidad": 2,
+    "especificaciones": "40X56X6",
+    "codigo": null
+  },
+  {
+    "id": 181,
+    "name": "EMPACADURA DE BAJANTE HILUX 3F",
+    "description": "Empacadura bajante Hilux 3F",
+    "imagen": "./assets/img-product/empacadura de bajantehilux 3f.jpeg",
+    "precio": 5,
+    "cantidad": 2,
+    "especificaciones": "45X56X5",
+    "codigo": null
+  },
+  {
+    "id": 182,
+    "name": "EMPACADURA DE BAJANTE 4.5",
+    "description": "Empacadura bajante 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 5,
+    "cantidad": 4,
+    "especificaciones": "50X62X6",
+    "codigo": null
+  },
+  {
+    "id": 183,
+    "name": "BUJE GOMA DE BARRA ESTABILIZADORA DEL MACHITO",
+    "description": "Buje barra estabilizadora",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 184,
+    "name": "TAPA DE RADIADOR MOT-2F 3F 0.9KG 13LBR",
+    "description": "Tapa radiador 2F 3F",
+    "imagen": "./assets/img-product/tapa de radiador mot-2f 3f 0.9kg 13lbr.jpeg",
+    "precio": 15,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "CER-219"
+  },
+  {
+    "id": 185,
+    "name": "ESTOPERA GUIA DE COLLARIN 2F",
+    "description": "Estopera guía collarín 2F",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": "28X46X6",
+    "codigo": "ADD923-AO"
+  },
+  {
+    "id": 186,
+    "name": "ESTOPERA PIÑON DEL AUTANA BURBUJA FJ-80",
+    "description": "Estopera piñón FJ-80",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 15,
+    "cantidad": 1,
+    "especificaciones": "38X74X11",
+    "codigo": "BDD-1394-AO"
+  },
+  {
+    "id": 187,
+    "name": "ESTOPERA DEL TRANSFER SALIDA CARDAN TOYOTA",
+    "description": "Estopera transfer salida cardán",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 10,
+    "cantidad": 2,
+    "especificaciones": "48X74X10",
+    "codigo": "48009"
+  },
+  {
+    "id": 188,
+    "name": "ESTOPERA DE CIGUEÑAL TRASERA 4.5",
+    "description": "Estopera cigüeñal trasera 4.5",
+    "imagen": "./assets/img-product/placeholder.svg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": "99X119X9.5",
+    "codigo": "BH-4790-GO"
+  },
+  {
+    "id": 189,
+    "name": "KIT COMPLETO DE CHARNELA AUTANA BURBUJA",
+    "description": "Kit completo charnela 4.5",
+    "imagen": "./assets/img-product/kit completo de charnela autana.jpeg",
+    "precio": 50,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 190,
+    "name": "1/2 KIT CHARNELLACABEZOTE TOYOTA 3F",
+    "description": "Medio kit charnela cabezote 3F",
+    "imagen": "./assets/img-product/1-2-kit-charnellacabezote-toyota-3f.jpeg",
+    "precio": 25,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 191,
+    "name": "ALTERNADOR TOYOTA 4.5 1FZ",
+    "description": "Alternador Toyota 4.5 1FZ",
+    "imagen": "./assets/img-product/alternador toyota 4.5 1fz.jpeg",
+    "precio": 200,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 192,
+    "name": "KIT DE CLUCTH SUP FJ70 4.5",
+    "description": "Kit clutch superior FJ70",
+    "imagen": "./assets/img-product/kit de clutch sup fj70 4.5.jpeg",
+    "precio": 10,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 193,
+    "name": "KIT DE CLUCTH INFERIOR 2F 3F",
+    "description": "Kit clutch inferior 2F 3F",
+    "imagen": "./assets/img-product/kit de clutch inferior 2f 3f.jpeg",
+    "precio": 10,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": null
+  },
+  {
+    "id": 194,
+    "name": "GOMAS DE VALVULAS ESCAPE DE 4.5 12UND",
+    "description": "Gomas válvulas escape 4.5",
+    "imagen": "./assets/img-product/gomas de valvulas admision y escape.jpeg",
+    "precio": 40,
+    "cantidad": 12,
+    "especificaciones": null,
+    "codigo": "BVS-1411-AO"
+  },
+  {
+    "id": 195,
+    "name": "GOMAS DE VALVULAS ADMISION DE 4.5 12UND",
+    "description": "Gomas válvulas admisión 4.5",
+    "imagen": "./assets/img-product/gomas de valvulas admision y escape.jpeg",
+    "precio": 40,
+    "cantidad": 12,
+    "especificaciones": null,
+    "codigo": "BVV1265-CO"
+  },
+  {
+    "id": 196,
+    "name": "PLATO MACHITO HEMBRITA 4.5",
+    "description": "Plato clutch 4.5",
+    "imagen": "./assets/img-product/Plato Machito Hembrita 4.5.jpeg",
+    "precio": 140,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "N309TOY"
+  },
+  {
+    "id": 197,
+    "name": "DISCO MACHITO HEMBRITA 4.5",
+    "description": "Disco clutch 4.5",
+    "imagen": "./assets/img-product/disco machito hembrita 4.5.jpeg",
+    "precio": 80,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "N1044TOY"
+  },
+  {
+    "id": 198,
+    "name": "CILINDRO FRENO 4.5 MACHITO AUTANA BURBUJA ETC",
+    "description": "Cilindro freno 4.5",
+    "imagen": "./assets/img-product/cilindro freno 4.5 machito autana burbuja.jpeg",
+    "precio": 40,
+    "cantidad": 2,
+    "especificaciones": null,
+    "codigo": "47550-69105"
+  },
+  {
+    "id": 199,
+    "name": "BOMBIN INF 4.5 MACHITO AUTANA BURBUJA ETC",
+    "description": "Bombín inferior clutch 4.5",
+    "imagen": "./assets/img-product/bombin inf 4.5 machito autana.jpeg",
+    "precio": 40,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "31470-60171"
+  },
+  {
+    "id": 200,
+    "name": "PLATO BURBUJA AUTANA 4.5 300MM",
+    "description": "Plato clutch 4.5 300mm",
+    "imagen": "./assets/img-product/plato burbuja autana 4.5 300mm.jpeg",
+    "precio": 200,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "N310TOY"
+  },
+  {
+    "id": 201,
+    "name": "DISCO BURBUJA AUTANA 4.5",
+    "description": "Disco clutch 4.5",
+    "imagen": "./assets/img-product/disco burbuja autana 4.5.jpeg",
+    "precio": 120,
+    "cantidad": 1,
+    "especificaciones": null,
+    "codigo": "N1048TOY"
+  }
+]

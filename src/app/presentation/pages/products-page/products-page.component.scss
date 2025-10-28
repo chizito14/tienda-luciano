@@ -39,6 +39,10 @@
 .cont-list {
     width: 100%;
     gap: 12px;
+    /* En escritorio: colocar sidebar y listado en una fila */
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 /* Elementos específicos de la UI móvil: ocultos por defecto fuera del breakpoint */
@@ -50,18 +54,75 @@
 }
 
 .side-bar {
-    flex: 0.4;
+    /* ancho fijo razonable para la sidebar en escritorio; en móvil se oculta */
+    flex: 0 0 20rem;
     padding: 1.1em 1.5em;
     row-gap: 2em;
-    min-width: 20em;
+    min-width: 18rem;
+    box-sizing: border-box;
 }
 
 
 .side-items {
-    flex: 2;
+    flex: 1 1 auto;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.2rem;
+    min-width: 0; 
+}
+
+.pagination-block .side-bttn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-block {
+    margin-top: 2rem; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pagination-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.pagination-btn {
+    border: none;
+    background: linear-gradient(180deg,#3360e4,#0b38b0);
+    color: #fff;
+    padding: 0.45rem 0.65rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+.pagination-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(15,23,42,0.12); }
+.pagination-btn:active { transform: translateY(0); }
+.pagination-btn[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.pagination-info { display:flex; align-items:center; gap:0.4rem; color:#333; font-weight:600 }
+.pagination-info .page-current, .pagination-info .page-total { color:#000000 }
+
+.pagination-meta { color: #666; font-size: 0.95rem }
+
+/* Responsive: compact layout on small screens */
+@media (max-width: 600px) {
+    .pagination-inner { gap: 0.5rem; padding: 0.4rem; }
+    .pagination-btn { padding: 0.35rem 0.5rem; min-width: 36px }
+    .pagination-meta { font-size: 0.85rem }
 }
 
 .side-bar-categos {
@@ -97,7 +158,6 @@
     border: 1px solid rgb(56, 56, 56);
 }
 
-/* Responsive: en pantallas pequeñas ocultar la barra lateral y mostrar 2 productos por fila */
 @media (max-width: 600px) {
     .cont-list {
         display: flex;
@@ -105,19 +165,18 @@
         gap: 1.4rem;
     }
 
-    /* ocultar por defecto la fila superior móvil fuera del breakpoint */
+    
     .mobile-top-row { display: none; }
 
-    /* ocultar sidebar para aprovechar todo el ancho en móviles */
+    
     .side-bar {
         display: none;
     }
 
-    /* cuando se active el toggle, mostramos la barra lateral como sección encima del listado */
+   
     .side-bar.show-on-mobile {
         display: flex;
         flex-direction: column;
-        /* panel fijo que ocupa la pantalla y no crea scroll en el body */
         position: fixed;
         inset: 0 0 0 0;
         width: 100%;
@@ -125,7 +184,7 @@
         box-sizing: border-box;
         padding: 1rem;
         background: #fff;
-        border-radius: 0; /* en móvil ocupamos todo el viewport */
+        border-radius: 0;
         box-shadow: 0 8px 28px rgba(0,0,0,0.08);
         z-index: 1201;
         overflow-y: auto;

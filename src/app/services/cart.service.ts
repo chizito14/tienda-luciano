@@ -32,6 +32,12 @@ export class CartService {
         quantity: 1
       }])
       this.setStorage()
+    } else {
+      // si ya existe el producto, aumentar la cantidad
+      result.quantity = (result.quantity || 0) + 1
+      // emitir nueva referencia para que los subscribers detecten el cambio
+      this.productsSubject.next([...current])
+      this.setStorage()
     }
     
   }

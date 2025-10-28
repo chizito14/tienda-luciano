@@ -1,13 +1,39 @@
-import { Observable } from "rxjs";
 import { IProduct } from "../../application/models/interface-product";
 
-export const ProductsData: IProduct[] = [
-    { id: 1, imagen: './assets/img-product/alternador toyota 4.5 1fz.jpeg', cantidad: 10, precio: 199.99, description: 'Smartphone de alta gama con cámara de 48MP.', especificaciones: 'Pantalla: 6.5" OLED, Cámara: 48MP, Batería: 4000mAh', codigo: 'SPH-001', discount: '20%' },
-    { id: 2, imagen: './assets/img-product/1-2-kit-charnellacabezote-toyota-3f.jpeg', cantidad: 15, precio: 89.99, description: 'Auriculares inalámbricos con cancelación de ruido', especificaciones: 'Tipo: Inalámbricos, Cancelación de ruido, Batería: 20h', codigo: 'AUR-002' },
-    { id: 3, imagen: './assets/img-product/1.2 kit charnela machito-hembrita 4.5.jpeg', cantidad: 8, precio: 129.99, description: 'Reloj inteligente con monitor de ritmo cardíaco ', especificaciones: 'Monitor de ritmo cardíaco, GPS, Resistente al agua', codigo: 'REL-003', discount: '15%' },
-    { id: 4, imagen: './assets/img-product/aspa ventilador machito autana.jpeg', cantidad: 20, precio: 59.99, description: 'Altavoz Bluetooth portátil con sonido de alta calidad', especificaciones: 'Bluetooth 5.0, Sonido de alta calidad, Batería: 12h', codigo: 'ALT-004' },
-    { id: 5, imagen: './assets/img-product/bomba de agua autana-burbuja-machito.jpeg', cantidad: 5, precio: 299.99, description: 'Tablet de 10" con pantalla Retina y almacenamiento de 128GB.', especificaciones: 'Pantalla: 10" Retina, Almacenamiento: 128GB, Cámara: 12MP', codigo: 'TAB-005', discount: '10%' },
-    { id: 5, imagen: './assets/img-product/buje barra panhard del 4.5.jpeg', cantidad: 5, precio: 299.99, description: 'Tablet de 10" con pantalla Retina y almacenamiento de 128GB.', especificaciones: 'Pantalla: 10" Retina, Almacenamiento: 128GB, Cámara: 12MP', codigo: 'TAB-005' },
-    { id: 5, imagen: './assets/img-product/cruceta machito 4.5 samurai-dyna-fj40.jpeg', cantidad: 5, precio: 299.99, description: 'Tablet de 10" con pantalla Retina y almacenamiento de 128GB.', especificaciones: 'Pantalla: 10" Retina, Almacenamiento: 128GB, Cámara: 12MP', codigo: 'TAB-005' },
-    { id: 5, imagen: './assets/img-product/empacadura de bajantehilux 3f.jpeg', cantidad: 5, precio: 299.99, description: 'Tablet de 10" con pantalla Retina y almacenamiento de 128GB.', especificaciones: 'Pantalla: 10" Retina, Almacenamiento: 128GB, Cámara: 12MP', codigo: 'TAB-005' },  
-]
+/**
+ * ProductsData: intenta cargar el archivo JSON colocado en
+ * `src/assets/data/deepseek_json_20251007_f5aa3a.json` en tiempo de ejecución.
+ * Si el archivo no existe o falla la carga (por ejemplo en desarrollo sin el asset),
+ * se devuelve un pequeño conjunto de fallback (útil para que la app siga funcionando).
+ *
+ * Instrucciones:
+ * - Copia el JSON que me pasaste a: `src/assets/data/deepseek_json_20251007_f5aa3a.json`
+ * - El código intentará require() ese archivo y usarlo como `ProductsData`.
+ */
+
+// Fallback pequeño para que la app no rompa si aún no copiaste el JSON completo.
+const DefaultProductsData: IProduct[] = [
+    { id: 36, imagen: './assets/img-product/alternador toyota 4.5 1fz.jpeg', cantidad: 10, precio: 199.99, description: 'Alternador Toyota 4.5', especificaciones: 'Original', codigo: 'ALT-4.5' },
+    { id: 2, imagen: './assets/img-product/1-2-kit-charnellacabezote-toyota-3f.jpeg', cantidad: 15, precio: 89.99, description: 'Kit charnela', especificaciones: '', codigo: 'KIT-3F' },
+];
+
+// Intenta cargar el archivo JSON desde assets (require funciona en tiempo de compilación/bundle si resolveJsonModule está activo
+// o si el archivo es copiado a `assets` en el build). Si no está presente, se usa el fallback.
+declare const require: any;
+let productsData: IProduct[] = DefaultProductsData;
+try {
+    // ruta relativa desde este archivo a `src/assets/data/...`
+    const json = require('../../../assets/Json.products.json');
+    if (Array.isArray(json)) {
+        productsData = json as IProduct[];
+    } else if (json && json.default && Array.isArray(json.default)) {
+        // en algunos setups el import de JSON queda en .default
+        productsData = json.default as IProduct[];
+    }
+} catch (e) {
+    // si falla, no hacemos throw para no romper la app en runtime; el fallback seguirá funcionando.
+    // Se recomienda copiar el JSON a `src/assets/data/` para que éste sea usado.
+    // console.warn('No se encontró JSON de productos en assets; usando fallback. Error:', e);
+}
+
+export const ProductsData: IProduct[] = productsData;

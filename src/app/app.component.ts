@@ -27,12 +27,43 @@ export class AppComponent implements OnInit {
   whatsapp = `https://wa.me/${this.contact}?text=Hola%2C%20quiero%20más%20información%20sobre:%20`
   private router = inject(Router)
   cart: ITProduct[] = []
+  // para animar el contador cuando se agrega un item
+  bump = false
+  private prevCount = 0
+  private _bumpTimer: any = null
 
   ngOnInit(): void {
     this.cartService.initProducts()
     this.cartService.products$.subscribe(data => {
-      this.cart = data
+      // datos del carrito (array de ITProduct)
+      const items = data ?? []
+      // contar unidades totales (sum of quantities)
+      const newCount = items.reduce((s, it) => s + (it.quantity || 0), 0)
+      if (newCount > this.prevCount) {
+        this.triggerBump()
+      }
+      this.prevCount = newCount
+      this.cart = items
     })
+  }
+
+  private triggerBump() {
+    // reiniciar timer si hay sucesivas adiciones
+    if (this._bumpTimer) {
+      clearTimeout(this._bumpTimer)
+      this._bumpTimer = null
+    }
+    this.bump = false
+    // small timeout to re-trigger CSS animation reliably
+    setTimeout(() => this.bump = true, 10)
+    this._bumpTimer = setTimeout(() => {
+      this.bump = false
+      this._bumpTimer = null
+    }, 600)
+  }
+
+  get totalUnits() {
+    return this.cart.reduce((s, it) => s + (it.quantity || 0), 0)
   }
 
   openWhatsApp() {

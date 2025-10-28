@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { BestSellerComponent } from '../best-seller/best-seller.component';
 import { IProduct } from '../../../application/models/interface-product';
 import { CartService } from '../../../services/cart.service';
-import { bs_recambio } from '../../../config/service/BS-recambio';
-import { ProductsData } from '../../../config/service/constants';
+import { JsonDataService } from '../../../services/json-data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,10 +15,27 @@ import { Router } from '@angular/router';
 })
 export class ToyotaComponent {
   cartService = inject(CartService)
-  products: IProduct[] = bs_recambio
+  products: IProduct[] = []
   @Input()
-  inputData: IProduct = ProductsData[0]
+  inputData?: IProduct
+  private jsonService = inject(JsonDataService)
   private router = inject(Router)
+ 
+  // Usamos OnInit para cargar los productos desde el servicio
+  ngOnInit(): void {
+    this.jsonService.getProducts().subscribe({
+      next: (res) => {
+        if (Array.isArray(res)) {
+          this.products = res;
+          if (!this.inputData && res.length) this.inputData = res[0];
+        }
+      },
+      error: (err) => {
+        // Si falla la carga del JSON, dejamos products vacío (o podría usarse un fallback)
+        console.warn('No se pudieron cargar productos desde assets:', err);
+      }
+    })
+  }
  
   addItem(item: IProduct) {
          this.cartService.addProduct(item)
@@ -60,8 +76,12 @@ export class ToyotaComponent {
   }
 
   openItem() {
-    const codigo = this.inputData.codigo
-    console.log('navegar a item', codigo)
-    this.router.navigate(['/item', codigo])
+    const codigo = this.inputData?.codigo;
+    if (!codigo) {
+      console.warn('openItem: producto sin código');
+      return;
+    }
+    console.log('navegar a item', codigo);
+    this.router.navigate(['/item', codigo]);
   }
 }
