@@ -33,8 +33,8 @@ export class ProductsPageComponent implements OnInit {
     currentPage = 1
     totalPages = 1
     inpSearch = new FormControl('')
-    inpMin = new FormControl(null)
-    inpMax = new FormControl(null)
+    inpMin = new FormControl()
+    inpMax = new FormControl()
     router = inject(Router)
     paramURL: string = ''
     seo = inject(SeoService)
@@ -72,18 +72,30 @@ export class ProductsPageComponent implements OnInit {
     }
 
     filterPrice() {
+        // Reaplicar filtros base (búsqueda u otros) y luego aplicar rango de precio
         this.filterProducts()
-        if (this.inpMax.value) {
-            const value = this.inpMax.value 
-            this.products = this.products.filter( p => value >= p.precio )
+
+        // Aplicar máximo, mínimo sobre el conjunto ya filtrado
+        const maxRaw = this.inpMax.value
+        const minRaw = this.inpMin.value
+
+        if (maxRaw !== null && maxRaw !== undefined && maxRaw !== '') {
+            const max = Number(maxRaw)
+            if (!isNaN(max)) {
+                this.products = this.products.filter(p => p.precio <= max)
+            }
         }
+
+        if (minRaw !== null && minRaw !== undefined && minRaw !== '') {
+            const min = Number(minRaw)
+            if (!isNaN(min)) {
+                this.products = this.products.filter(p => p.precio >= min)
+            }
+        }
+
         // actualizar paginación tras filtrar por precio
         this.currentPage = 1
         this.updateDisplayedProducts()
-        if (this.inpMin.value) {
-            const value = this.inpMin.value 
-            this.products = this.products.filter( p => value <= p.precio )
-        }
 
     }
 

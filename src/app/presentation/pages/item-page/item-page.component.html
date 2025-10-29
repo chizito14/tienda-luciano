@@ -36,7 +36,7 @@
     <p ft-18-500>Productos Relacionados</p>
 
     <div flex class="related" aria-label="Productos similares">
-        <div flex-col class="card" *ngFor="let p of products | slice:0:6" (click)="openItem(p); $event.stopPropagation()" style="cursor: pointer;">
+        <div flex-col class="card" *ngFor="let p of relatedProducts" (click)="openItem(p); $event.stopPropagation()" style="cursor: pointer;">
             <img [src]="p.imagen" [alt]="p.description" >
             <div style="height: 2px; width: auto;"></div>
             <p ft-12-400>{{ p.description }}</p>

@@ -17,6 +17,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 export class ItemPageComponent  {
   product: IProduct = ProductsData[0]
   products: IProduct[] = ProductsData 
+  relatedProducts: IProduct[] = []
   router = inject(Router)
   paramURL: string = ''
   seo = inject(SeoService)
@@ -30,8 +31,22 @@ export class ItemPageComponent  {
       if (this.paramURL) {
         const id = String(this.paramURL)
         this.product = ProductsData.find(p => p.id === Number(id) ) ?? ProductsData[0]
+        // calcular productos relacionados por cercanía de id
+        const currentId = Number(id)
+        this.computeRelatedById(currentId)
       }
     })
+  }
+
+  private computeRelatedById(currentId: number) {
+    // Ordenar productos por la diferencia absoluta de id y excluir el actual
+    const neighbors = this.products
+      .filter(p => p.id !== currentId)
+      .map(p => ({ p, diff: Math.abs(p.id - currentId) }))
+      .sort((a, b) => a.diff - b.diff)
+      .slice(0, 6)
+      .map(x => x.p)
+    this.relatedProducts = neighbors
   }
 
   addToCart(product: IProduct | null) {
